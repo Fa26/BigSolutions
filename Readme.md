@@ -17,11 +17,11 @@ Agregar instrucciones de uso
 
 ## Créditos
 
-Responsable del equipo: León Canto Ángel Efraín
-Responsable de colaboración: Venegas Guerrero Fatima Alejandra
-Responsable de colaboración: Vázquez García Palemón
-Responsable de calidad: López Martínez Andrés
-Responsable técnico: Hernández Chacón Carlos Alberto
+* Responsable del equipo: León Canto Ángel Efraín
+* Responsable de colaboración: Venegas Guerrero Fatima Alejandra
+* Responsable de colaboración: Vázquez García Palemón
+* Responsable de calidad: López Martínez Andrés
+* Responsable técnico: Hernández Chacón Carlos Alberto
 
 
 ## Licencia
