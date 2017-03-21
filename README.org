@@ -1,0 +1,14 @@
+Proyecto de Ingenieria de Software
+León Canto Angel 
+
+Hay que rrelllenar esto 
+Es es un ejemplo de descripción para mi primer proyecto en git. Seguro contendrá
+  el modo de uso y un proyecto en maven.
+
+  ,* ¿Cómo compilar el proyecto?
+  ,** Como configurar la base de datos para que compile el proyecto
+  ,** ¿Qué dependencias son necesarias?
+  ,* Estilo de codificación
+  ,* Gotchas
+
+
