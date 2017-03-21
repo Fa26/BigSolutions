@@ -12,7 +12,7 @@
         <link rel="stylesheet" type="text/css" href="css/layout.css" />
     </head>
     <body>
-        <h1>Food Ciencias</h1>
+        <img src="imagenes/foodCiencias.jpg" width="200" height="50"/> 
         <h2>Pagina principal</h2>
         
         <form action="resultados_consulta.jsp" method="post" style="text-align: center">
