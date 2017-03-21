@@ -1,5 +1,4 @@
 <%-- 
-<<<<<<< 1cc4915cb5701449922e045e206c8b79282d392b
     Document   : index
     Created on : 20-mar-2017, 21:58:49
     Author     : FaVenegas
@@ -7,13 +6,7 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-=======
-    Document   : resultados_consulta
-    Created on : Mar 20, 2017, 9:00:00 PM
-    Author     : Andres
---%>
 
->>>>>>> Caso de uso buscar
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -26,16 +19,14 @@
         <title>AdministradorIH</title>
     </head>
     <body>
-<<<<<<< 1cc4915cb5701449922e045e206c8b79282d392b
-=======
-        <h1>Food Ciencias</h1>
+        <img src="imagenes/foodCiencias.jpg" width="200" height="50"/> 
         <h2>Pagina principal</h2>
         
         <form action="resultados_consulta.jsp" method="post" style="text-align: center">
             Buscar puesto: <input type="text" name="puesto">
         <input type ="submit" value="Buscar">
         </form>
->>>>>>> Caso de uso buscar
+
         
 
 <div class="icon-bar">
