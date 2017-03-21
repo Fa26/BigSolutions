@@ -1,18 +1,18 @@
 <html>
-<head><title>First JSP</title></head>
-<body>
-  <%
-    double num = Math.random();
-    if (num > 0.95) {
-  %>
-      <h2>You'll have a luck day!</h2><p>(<%= num %>)</p>
-  <%
-    } else {
-  %>
-      <h2>Well, life goes on ... </h2><p>(<%= num %>)</p>
-  <%
-    }
-  %>
-  <a href="<%= request.getRequestURI() %>"><h3>Try Again</h3></a>
-</body>
+    <head>
+        <title>Food Ciencias</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/layout.css" />
+    </head>
+    <body>
+        <h1>Food Ciencias</h1>
+        <h2>Pagina principal</h2>
+        
+        <form action="index.jsp" method="post" style="text-align: center">
+            Buscar puesto: <input type="text" name="puesto">
+        <input type ="submit" value="Buscar">
+        </form>
+        
+    </body>
 </html>
