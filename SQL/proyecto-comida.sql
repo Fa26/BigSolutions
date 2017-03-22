@@ -24,3 +24,4 @@ CREATE TABLE `persona` (
   `contraseña` varchar(255) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`)
+  );
