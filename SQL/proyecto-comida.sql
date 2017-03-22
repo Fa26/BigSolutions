@@ -9,8 +9,7 @@ CREATE TABLE comentario (
   idComentario int AUTO_INCREMENT,
   fecha date DEFAULT NULL,
   texto varchar(255) DEFAULT NULL,
-  PRIMARY KEY (idComentario),
-  UNIQUE KEY idComentario (idComentario),
+  PRIMARY KEY (idComentario)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
