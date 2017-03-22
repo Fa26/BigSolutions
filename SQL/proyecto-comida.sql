@@ -10,7 +10,7 @@ CREATE TABLE comentario (
   fecha date DEFAULT NULL,
   texto varchar(255) DEFAULT NULL,
   PRIMARY KEY (idComentario)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) 
 
 
 
