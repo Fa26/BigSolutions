@@ -13,6 +13,7 @@ CREATE TABLE `administrador` (
 
 
 DROP TABLE IF EXISTS `persona`;
+
 CREATE TABLE `persona` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `nombre` varchar(255) NOT NULL,
@@ -30,3 +31,4 @@ CREATE TABLE comentario (
   texto varchar(255) DEFAULT NULL,
   PRIMARY KEY (idComentario)
 );
+
