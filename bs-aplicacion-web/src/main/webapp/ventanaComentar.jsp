@@ -8,7 +8,7 @@
 </span>
 <br>
 <span>
- 	<button class="btn btn-default" type="button" >Comentar</button>
+ 	<button class="btn btn-default" type="button" >Publicar</button>
 </span> 
 
 </body>

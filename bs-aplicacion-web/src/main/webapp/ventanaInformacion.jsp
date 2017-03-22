@@ -21,7 +21,7 @@
 		<span>
 		<p> 
 		<span>
-			<img src="imagenes/puesto.jpeg" align="rightx">
+			<img src="imagenes/puesto.jpeg" align="right">
 		</span>
 		<span class="jumbotron">
   			<h3><west>Informacion!</west></h3>
@@ -45,4 +45,4 @@
 	</header>
 	<br>
 </body>
-</html>/
+</html>
