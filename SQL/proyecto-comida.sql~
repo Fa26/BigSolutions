@@ -11,6 +11,7 @@ CREATE TABLE comentario (
   texto varchar(255) DEFAULT NULL,
   PRIMARY KEY (idComentario),
   UNIQUE KEY idComentario (idComentario),
+FOREING KEY ()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
