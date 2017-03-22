@@ -1,6 +1,5 @@
---
+
 -- Tabla de comentario
---
 DROP TABLE IF EXISTS comentario;
 CREATE TABLE comentario (
   idComentario int AUTO_INCREMENT,
