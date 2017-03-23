@@ -6,6 +6,7 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -18,6 +19,14 @@
         <title>AdministradorIH</title>
     </head>
     <body>
+        <img src="imagenes/foodCiencias.jpg" width="200" height="50"/> 
+        <h2>Pagina principal</h2>
+        
+        <form action="resultados_consulta.jsp" method="post" style="text-align: center">
+            Buscar puesto: <input type="text" name="puesto">
+        <input type ="submit" value="Buscar">
+        </form>
+
         
 
 <div class="icon-bar">
