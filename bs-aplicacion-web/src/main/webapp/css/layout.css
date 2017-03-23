@@ -38,7 +38,8 @@ h2 {
 }
 
 p {
-    color: red;
+    color: white;
+    opacity: 0.8;
 }
 a:link {
     font-size: 12pt;
