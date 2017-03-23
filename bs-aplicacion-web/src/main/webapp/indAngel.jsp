@@ -1,4 +1,3 @@
-<<<<<<< c71fdcd4b059559d9a77b6b98d3bfb4d7e01f2eb
 <%-- 
     Document   : index
     Created on : 20-mar-2017, 21:58:49
@@ -104,5 +103,4 @@ Horario: <input nombre="tcomida" type="text" placeholder="Horario"/><br/><br/>
 </div>
       <!--  <h1>Hello World!</h1>-->
     </body>
-
 </html>
