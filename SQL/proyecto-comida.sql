@@ -68,7 +68,6 @@ CREATE TABLE Registrar(
 				   		 PRIMARY KEY (nid_registro),
 						 	 FOREIGN KEY (idPersona) REFERENCES Administrador(idPersona),
 							 	 FOREIGN KEY (nId_puesto) REFERENCES Puesto(nId_puesto)
-
 );
 
 
@@ -118,4 +117,3 @@ create procedure muestra_puesto
   /*exec muestra_puesto 'Tacos';
  --Eliminamos
  /*drop procedure muestra_puesto;
-
