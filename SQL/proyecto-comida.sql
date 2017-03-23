@@ -11,9 +11,6 @@ CREATE TABLE `administrador` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
---
--- Table structure for table `persona`
---
 
 DROP TABLE IF EXISTS `persona`;
 CREATE TABLE `persona` (
