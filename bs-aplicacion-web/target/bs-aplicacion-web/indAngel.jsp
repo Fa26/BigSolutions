@@ -1,4 +1,3 @@
-<<<<<<< c71fdcd4b059559d9a77b6b98d3bfb4d7e01f2eb
 <%-- 
     Document   : index
     Created on : 20-mar-2017, 21:58:49
@@ -21,7 +20,7 @@
     </head>
     <body>
         <img src="imagenes/foodCiencias.jpg" width="200" height="50"/> 
-        
+        <h2>Pagina principal</h2>
         
         <form action="resultados_consulta.jsp" method="post" style="text-align: center">
             Buscar puesto: <input type="text" name="puesto">
@@ -104,5 +103,4 @@ Horario: <input nombre="tcomida" type="text" placeholder="Horario"/><br/><br/>
 </div>
       <!--  <h1>Hello World!</h1>-->
     </body>
-
 </html>

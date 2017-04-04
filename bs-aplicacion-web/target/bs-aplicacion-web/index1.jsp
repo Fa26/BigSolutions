@@ -6,11 +6,11 @@
 		</head>
 		<body>
 	      <div class="contenedor">
-			<form action="/action_page.php">
+			<form action="entrar.jsp">
 			  Usuario:<br>
   				<input type="text" name="firstname" value="">
   				<br>
-  				ContraseÃ±a:<br>
+  				Contraseña:<br>
   				<input type="text" name="lastname" value="">
   				<br><br>
   				<input type="submit" value="Entrar">
@@ -18,3 +18,4 @@
 		</div>
 		</body>
 	</html>
+        

@@ -17,12 +17,14 @@
 				<img src="imagenes/foodCiencias.jpg" width="350px" height="80px">
 			</span>
  			<span class="col-4">
-                            <form action="resultados_consulta.jsp">
-                                   <input type="text" class="form-control" placeholder="Busca...">
-                                                   
-                                 <input type="submit" value="Buscar" >
-                            </form> 
-                         </span>
+ 				<span   id="barra" class="input-group">
+      				<span class="input-group-btn">
+      					  <input type="text" class="form-control" placeholder="Busca...">
+
+     				 </span>
+     				 <button class="btn btn-default" type="button" >Buscar</button>
+   				 </span>
+ 			</span>
  		</span>
        
 		  <span class="foto">
