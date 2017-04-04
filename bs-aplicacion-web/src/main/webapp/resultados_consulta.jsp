@@ -16,7 +16,7 @@
         <%
             String texto = request.getParameter("puesto");  
         %>
-        <a href="index.jsp">Pagina principal</a>  
+        <a href="indAngel.jsp">Pagina principal</a>  
         <h2>Resultados</h2>
         <p>Aqui se despliegan los resultados de la consulta realizada con el 
             texto introducido por el usuario: "<%=texto%>"

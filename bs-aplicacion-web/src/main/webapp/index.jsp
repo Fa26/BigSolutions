@@ -21,7 +21,7 @@
     </head>
     <body>
         <img src="imagenes/foodCiencias.jpg" width="200" height="50"/> 
-        <h2>Pagina principal</h2>
+        
         
         <form action="resultados_consulta.jsp" method="post" style="text-align: center">
             Buscar puesto: <input type="text" name="puesto">

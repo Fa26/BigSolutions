@@ -19,13 +19,18 @@
  			<div class="col-4">
  				<div  id="barra" class="input-group">
       				<span class="input-group-btn">
-        				<button class="btn btn-default" type="button" >Buscar</button>
-     				 </span>
-     				 <input type="text" class="form-control" placeholder="Busca...">
-   				 </div>
+                                    <form action="resultados_consulta.jsp">
+                                          <input type="text" class="form-control" placeholder="Busca...">                                                  
+                                        <input type="submit" value="Buscar" >
+                                    </form>
+     				
+   				</span> 
+                                </div>
  			</div>
  			<div class="col-1">
- 				<button id="boton1" type="button" class="btn btn-primary">Entrar!!!!</button>
+                            <form action="index1.jsp">                                                   
+                                 <input type="submit" value="Entrar" >
+                            </form> 
  			</div>
 			<div class="col-1">
 				<button id="boton2" type="button" class="btn btn-danger">Registrarse</button>
