@@ -24,12 +24,12 @@
         <span>
           <span class="row">
             <span class="col-4">
-              <img src="images/foodCiencias.jpg" width="350px" height="80px">
+              <img src="imagenes/foodCiencias.jpg" width="350px" height="80px">
             </span>
           </span>
         </span>
         <span>
-          <img src="images/puesto.jpeg" align="right">
+          <img src="imagenes/puesto.jpeg" align="right">
         </span>
         <span class="jumbotron">
           <h3><west>Informacion!</west></h3>
@@ -40,13 +40,14 @@
         </span>
         <br>
       </p>
-    </div><!--fin informaciÃ³n puesto-->
-
+    </div><!--fin información puesto-->
+<br>
+<br>
 <div id="Comentar"> <!--Inicia Caja Comentar-->
   <!--botones-->
   <center>
     <input type="button" name="calificar" Value = "Calificar" href="#EmergenteCalificar" data-toggle="modal" class="btn btn-large">
-    <input type="button" name="calificar" Value = "Calificar" href="#EmergenteComentar" data-toggle="modal" class="btn btn-large">
+    <input type="button" name="comentar" Value = "Comentar" href="#EmergenteComentar" data-toggle="modal" class="btn btn-large">
    <!-- <a href="#EmergenteCalificar" data-toggle="modal" class="btn btn-large">Calificar</a>
     <a href="#EmergenteComentar" data-toggle="modal" class="btn btn-large">Comentar</a>
     -->
@@ -103,17 +104,17 @@
       Escribe un comentario en el campo de texto y da click en publicar o en otro caso cancelar.
     </div>
 
-    <form action="VentanaInformaciÃ³n.jsp" method="get"> 
+    <form action="ventanaInformacion.jsp" method="get"> 
     <div class="form-group">
       <label for="comment">Comentario:</label> 
       <textarea name = "texto" class="form-control" rows="5" id="comentario" placeholder="Escribe..."></textarea>
     </div>
-
-  <%
+    
+ <%/*
    String texto = request.getParameter("texto");
-    /* Crear una  url con la direccion con el numero de puerto y el nombre de la bd */
+    // Crear una  url con la direccion con el numero de puerto y el nombre de la bd 
     String connectionURL = "jdbc:mysql://localhost:8080/my_db";
-    // Declarar una conexiÃ³n mediante la interfaz de conecciÃ³n 
+    // Declarar una conexión mediante la interfaz de conección 
     Connection connection = null;
     // Declaramos el objeto de interfaz Statement que se usa para ejecutar instrucciones sql.
     PreparedStatement pstatement = null;
@@ -121,36 +122,34 @@
      Class.forName("com.mysql.jdbc.Driver").newInstance();
           int updateQuery = 0;
      
-       //  Revisar si el esto estÃ¡ vacÃ­o. 
-   if(name!=null && city!=null && phone!=null){
+       //  Revisar si el esto está vacío. 
+   if(texto!=null){
        // Revisar si el testo tiene solo espacios en blanco.
-       if(name!="" && city!="" && phone!="") {
+       if(texto!="") {
                    try {
-              /* Crear una conexion mediante el metodo getConnection() que toma los parametros de tipo string de la conexion url, el texto para conectarse a la base de datos.*/
+              // Crear una conexion mediante el metodo getConnection() que toma los parametros de tipo string de la conexion url, el texto para conectarse a la base de datos.
               connection = DriverManager.getConnection
               (connectionURL, "root", "root");
               // Consulta sql para insertar el valor especificado en la tabla.
-              String queryString = "INSERT INTO Comentario(nIdComentario,
-              fecha, texto, nIdPuesto, nIdUsuario) VALUES (?, ?, ?, ?, ?)";
-              /* createStatement() es usado para crear una instruccion de objeto que es usado para enviar instrucciones sql  a la base de datos especificado. */
+              String queryString = "INSERT INTO Comentario(nIdComentario,fecha, texto, nIdPuesto, nIdUsuario) VALUES (?, ?, ?, ?, ?)";
+              //createStatement() es usado para crear una instruccion de objeto que es usado para enviar instrucciones sql  a la base de datos especificado. 
               pstatement = connection.prepareStatement(queryString);
-              pstatement.setString(1, nIdComentario);
+              pstatement.setInt(1, 1);
               var d = new Date();
               var f = d.getFullYear()+"/ " + d.getMonth() +"/ "+ d.getDay();
               //document.getElementById("demo").innerHTML = f;
-              pstatement.setString(2, f);
+              pstatement.setString(2, "f");
               pstatement.setString(3, texto);
-              pstatement.setString(4, nIdPuesto);
-              pstatement.setString(5, nIdUsuario);
+              pstatement.setInt(4, 1);
+              pstatement.setInt(5, 1);
               updateQuery = pstatement.executeUpdate();
-                            if (updateQuery != 0) { %>
+               if (updateQuery != 0) {**/ %>
              <br>
              <TABLE style="background-color: #E3E4FA;" 
                    WIDTH="30%" border="1">
-          <tr><th>Data is inserted successfully 
-                    in database.</th></tr>
+          <tr><th>El dato fue insertado.</th></tr>
        </table>
-              <%
+              <%/*
               }
             } 
             catch (Exception ex) {
@@ -163,10 +162,10 @@
                 connection.close();
             }
     }
-  }
-%>
-    </form>>
-
+  }*/
+  %>        
+    </form>
+<!---->
 
     <footer class="modal-footer">
       <!--<a href="#" class="btn" id="closewin02">Cancelar</a>-->
@@ -177,65 +176,5 @@
 
   </div> <!-- Termina ventana modal comentar -->
 
-<FORM >
-
-<%
-   String name = request.getParameter("name");
-
-
-          // declare a connection by using Connection interface 
-    Connection connection = null;
-        // declare object of Statement interface that uses for 
-    executing sql statements.
-     PreparedStatement pstatement = null;
-         // Load JBBC driver "com.mysql.jdbc.Driver"
-     Class.forName("com.mysql.jdbc.Driver").newInstance();
-          int updateQuery = 0;
-     
-       // check if the text box is empty
-   if(name!=null && city!=null && phone!=null){
-       // check if the text box having only blank spaces
-       if(name!="" && city!="" && phone!="") {
-                   try {
-              /* Create a connection by using getConnection()
-              method that takes parameters of string type 
-              connection url, user name and password to connect 
-    to database. */
-              connection = DriverManager.getConnection
-              (connectionURL, "root", "root");
-                            // sql query to insert values in the secified table.
-              String queryString = "INSERT INTO stu_info(Name,
-              Address,Phone) VALUES (?, ?, ?)";
-                      /* createStatement() is used for create statement
-              object that is used for 
-    sending sql statements to the specified database. */
-              pstatement = connection.prepareStatement(queryString);
-              pstatement.setString(1, name);
-        pstatement.setString(2, city);
-        pstatement.setString(3, phone);
-              updateQuery = pstatement.executeUpdate();
-                            if (updateQuery != 0) { %>
-             <br>
-             <TABLE style="background-color: #E3E4FA;" 
-                   WIDTH="30%" border="1">
-          <tr><th>Data is inserted successfully 
-                    in database.</th></tr>
-       </table>
-              <%
-              }
-            } 
-            catch (Exception ex) {
-            out.println("Unable to connect to batabase.");
-   
-               }
-            finally {
-                // close all the connections.
-                pstatement.close();
-                connection.close();
-            }
-    }
-  }
-%>
-  </FORM>
 </body>
 </html>
