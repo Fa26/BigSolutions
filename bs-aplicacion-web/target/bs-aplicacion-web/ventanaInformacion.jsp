@@ -110,7 +110,7 @@
       <textarea name = "texto" class="form-control" rows="5" id="comentario" placeholder="Escribe..."></textarea>
     </div>
     
- <%/**
+ <%/*
    String texto = request.getParameter("texto");
     // Crear una  url con la direccion con el numero de puerto y el nombre de la bd 
     String connectionURL = "jdbc:mysql://localhost:8080/my_db";
@@ -149,7 +149,7 @@
                    WIDTH="30%" border="1">
           <tr><th>El dato fue insertado.</th></tr>
        </table>
-              <%/**
+              <%/*
               }
             } 
             catch (Exception ex) {
@@ -162,8 +162,8 @@
                 connection.close();
             }
     }
-  }**/
-%>        
+  }*/
+  %>        
     </form>
 <!---->
 
