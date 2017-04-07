@@ -52,7 +52,7 @@
 	<span class="row">
 			<span class="jumbotron">
   				<h3><center>Sugerencias!</center></h3>
-  				<p>Lugar 1</p>
+                                <p> <a href="ventanaInformacion.jsp">lugar 1</a> </p>
   			
   				<p>Lugar 2</p>
   			
