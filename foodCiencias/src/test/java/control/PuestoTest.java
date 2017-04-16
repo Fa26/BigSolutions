@@ -130,7 +130,7 @@ public class PuestoTest extends DatabaseTestCase{
     @Override
     protected IDatabaseConnection getConnection() throws Exception {
         Class.forName("com.mysql.jdbc.Driver");
-        String connectionUrl = "jdbc:mysql://localhost:3306/FoodCiencias";  
+        String connectionUrl = "jdbc:mysql://localhost:3306/FoodCienciasTest";  
 
         Connection jdbcConnection = DriverManager.getConnection(
                 connectionUrl, "root", "password");
