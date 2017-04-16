@@ -14,7 +14,8 @@ import java.sql.Statement;
 import java.util.ArrayList;
 
 /**
- *
+ * Clase que permite la conexion con una base de datos especifica, 
+ * asi como realizar distintas operaciones sobre esta. 
  * @author Andres
  */
 public class ConexionBD {
@@ -23,7 +24,9 @@ public class ConexionBD {
     private Statement stmt;
     private ResultSet rs;
     
-    //Constructor inicializando los parametros en null   
+    /**
+     * Constructor inicializando los parametros en null.
+     */ 
     public ConexionBD() {
         stmt = null;
         con = null;
@@ -32,8 +35,7 @@ public class ConexionBD {
 
     /*
      * Metodo que nos permite abrir la conexion con una base de datos 
-     * especifica para el presente proyecto
-     * @author  Andres
+     * especifica para el presente proyecto.
      * @version 1.0
      */
     public void conectar()
@@ -44,16 +46,14 @@ public class ConexionBD {
             String connectionUrl = "jdbc:mysql://localhost:3306/FoodCiencias";  
             con = DriverManager.getConnection(connectionUrl, "root", "password");
         } catch (ClassNotFoundException | SQLException e) {
-            System.out.println("SQLException: " + e.getMessage() + " conectar =(");
+            System.out.println("SQLException: " + e.getMessage() + " conectar :(");
         }
     }
 
     /*
-     * Metodo que nos permite cerrar la conexion con una base de datos 
-     * el metodo debe ser invocado en la capa de Control
-     * @author  Andres
+     * Metodo que nos permite cerrar la conexion con una base de datos. 
+     * Este metodo debe ser invocado en la capa de Control.
      * @version 1.0
-     * @param   sin parametros     
      */
     public void desconectar()
             throws SQLException {
@@ -67,8 +67,8 @@ public class ConexionBD {
     /**
      * Metodo encargado de obtener los puestos registrados en la base de datos.
      * @return ArrayList - Lista resultado de puestos
-     * @throws Exception en caso de que ocurra alguna anomalia en la obtencion de 
-     * los datos
+     * @throws Exception en caso de que ocurra alguna anomalia
+     * @version 1.0
      */
     public ArrayList obtenerPuestos(String aBuscar) throws Exception {
         ArrayList puestos = new ArrayList();

@@ -22,6 +22,7 @@ import org.dbunit.dataset.xml.FlatXmlDataSet;
  * @author Andres
  */
 public class PuestoTest extends DatabaseTestCase{
+    
     /**
      * Metodo que prueba el metodo "getId" para la clase
      * "Puesto".
@@ -54,6 +55,70 @@ public class PuestoTest extends DatabaseTestCase{
         String nombre = testPuesto.getNombrePuesto();
 
         assertEquals(nombre, testString);
+    }
+    
+    /**
+     * Metodo que prueba el metodo "getDuenioPuesto" para la clase
+     * "Puesto".
+     * @throws Exception si ocurre alguna anomalia.
+     */
+    public void testGetDuenioPuesto() throws Exception {
+        String testString = "Duenio1";
+
+        Puesto testPuesto = new Puesto();
+        testPuesto.setDuenioPuesto(testString);
+
+        String duenio = testPuesto.getDuenioPuesto();
+
+        assertEquals(duenio, testString);
+    }
+    
+    /**
+     * Metodo que prueba el metodo "getTipoComida" para la clase
+     * "Puesto".
+     * @throws Exception si ocurre alguna anomalia.
+     */
+    public void testGetTipoComida() throws Exception {
+        String testString = "Japonesa";
+
+        Puesto testPuesto = new Puesto();
+        testPuesto.setTipoComida(testString);
+
+        String tipoComida = testPuesto.getTipoComida();
+
+        assertEquals(tipoComida, testString);
+    }
+    
+    /**
+     * Metodo que prueba el metodo "getHoraApertura" para la clase
+     * "Puesto".
+     * @throws Exception si ocurre alguna anomalia.
+     */
+    public void testGetHoraApertura() throws Exception {
+        String testString = "08:00:00";
+
+        Puesto testPuesto = new Puesto();
+        testPuesto.setHoraApertura(testString);
+
+        String horaApertura = testPuesto.getHoraApertura();
+
+        assertEquals(horaApertura, testString);
+    }
+    
+    /**
+     * Metodo que prueba el metodo "getHoraCierre" para la clase
+     * "Puesto".
+     * @throws Exception si ocurre alguna anomalia.
+     */
+    public void testGetHoraCierre() throws Exception {
+        String testString = "20:00:00";
+
+        Puesto testPuesto = new Puesto();
+        testPuesto.setHoraCierre(testString);
+
+        String horaCierre = testPuesto.getHoraCierre();
+
+        assertEquals(horaCierre, testString);
     }
     
     /**
@@ -90,15 +155,15 @@ public class PuestoTest extends DatabaseTestCase{
     public void testObtenerPuestos() throws Exception{
         Puesto p = new Puesto();
         p.conecta();
-        ArrayList puestos = p.buscarPuestos("Rusa");
+        ArrayList puestos = p.buscarPuestos("Polaca");
         p.desconecta();
         
         assertNotNull("puestos no deberia ser null", puestos);
         assertEquals("deberia ser Puesto4", 
                 "Puesto4", 
                 ((Puesto)puestos.get(0)).getNombrePuesto());
-        assertEquals("deberia ser Duenio4", 
-                "Duenio4", 
+        assertEquals("deberia ser Duenio1", 
+                "Duenio1", 
                 ((Puesto)puestos.get(0)).getDuenioPuesto());
     }
 }

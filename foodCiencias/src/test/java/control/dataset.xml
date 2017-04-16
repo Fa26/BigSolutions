@@ -2,6 +2,6 @@
   <PUESTO nombre="Puesto1" nom_duenio="Duenio1" tipo_comida="Japonesa"/>
   <PUESTO nombre="Puesto2" nom_duenio="Duenio2" tipo_comida="Mexicana"/>
   <PUESTO nombre="Puesto3" nom_duenio="Duenio3" tipo_comida="Japonesa"/>
-  <PUESTO nombre="Puesto4" nom_duenio="Duenio4" tipo_comida="Rusa"/>
+  <PUESTO nombre="Puesto4" nom_duenio="Duenio1" tipo_comida="Polaca"/>
   <PUESTO nombre="Puesto5" nom_duenio="Duenio2" tipo_comida="Mexicana"/>
 </dataset>
