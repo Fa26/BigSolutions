@@ -1,4 +1,4 @@
-package com.miguel.proyecto;
+package com.palemon.proyecto;
 
 import java.io.IOException;
 import java.io.PrintWriter;

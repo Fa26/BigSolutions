@@ -27,7 +27,7 @@ import javax.xml.bind.annotation.XmlRootElement;
  * @author miguel
  */
 @Entity
-@Table(catalog = "miPrimerBase", schema = "", name = "comentario", uniqueConstraints = {@UniqueConstraint(columnNames = {"id"})})
+@Table(catalog = "miBase", schema = "", name = "comentario", uniqueConstraints = {@UniqueConstraint(columnNames = {"id"})})
 @XmlRootElement
 @NamedQueries({@NamedQuery(name = "Comentario.findAll", query = "SELECT c FROM Comentario c"), @NamedQuery(name = "Comentario.findById", query = "SELECT c FROM Comentario c WHERE c.id = :id")})
 public class Comentario implements Serializable {
