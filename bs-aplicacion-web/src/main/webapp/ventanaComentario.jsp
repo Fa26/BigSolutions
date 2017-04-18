@@ -1,4 +1,4 @@
-<<!doctype html>
+<!doctype html>
 <%@ page import="java.sql.*" %> 
 <%@ page import="java.io.*" %> 
 <html lang="es-MX">
