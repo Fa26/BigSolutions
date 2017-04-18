@@ -12,7 +12,7 @@ import javax.persistence.EntityNotFoundException;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 
-import com.miguel.proyecto.db.Comentario;
+import com.palemon.proyecto.db.Comentario;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,9 +20,9 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 
-import com.miguel.proyecto.db.Lugar;
-import com.miguel.proyecto.db.controller.exceptions.IllegalOrphanException;
-import com.miguel.proyecto.db.controller.exceptions.NonexistentEntityException;
+import com.palemon.proyecto.db.Lugar;
+import com.palemon.proyecto.db.controller.exceptions.IllegalOrphanException;
+import com.palemon.proyecto.db.controller.exceptions.NonexistentEntityException;
 
 /**
  *

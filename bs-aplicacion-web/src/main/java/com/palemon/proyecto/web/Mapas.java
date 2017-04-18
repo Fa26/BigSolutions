@@ -21,8 +21,8 @@ import javax.faces.context.FacesContext;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
-import com.miguel.proyecto.db.Lugar;
-import com.miguel.proyecto.db.controller.LugarJpaController;
+import com.palemon.proyecto.db.Lugar;
+import com.palemon.proyecto.db.controller.LugarJpaController;
 
 /**
  *
