@@ -8,10 +8,10 @@
     <class>com.miguel.proyecto.db.Lugar</class>
     <exclude-unlisted-classes>false</exclude-unlisted-classes>
     <properties>
-      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/miPrimerBase?zeroDateTimeBehavior=convertToNull&amp;amp;nullNamePatternMatchesAll=true"/>
-      <property name="javax.persistence.jdbc.user" value="miguel1"/>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:8080/miBase"/>
+      <property name="javax.persistence.jdbc.user" value="palemon"/>
       <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
-      <property name="javax.persistence.jdbc.password" value=" tfMgDc97GgP4a68WKIHmpKP5O_"/>
+      <property name="javax.persistence.jdbc.password" value="palemonroot"/>
     </properties>
   </persistence-unit>
 </persistence>
