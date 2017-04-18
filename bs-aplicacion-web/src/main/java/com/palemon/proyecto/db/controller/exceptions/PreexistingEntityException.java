@@ -1,4 +1,4 @@
-package com.miguel.proyecto.db.controller.exceptions;
+package com.palemon.proyecto.db.controller.exceptions;
 
 public class PreexistingEntityException extends Exception {
     public PreexistingEntityException(String message, Throwable cause) {

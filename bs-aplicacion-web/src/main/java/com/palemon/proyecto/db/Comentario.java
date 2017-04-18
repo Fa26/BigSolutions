@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.miguel.proyecto.db;
+package com.palemon.proyecto.db;
 
 import java.io.Serializable;
 

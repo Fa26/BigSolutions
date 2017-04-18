@@ -1,4 +1,4 @@
-package com.miguel.proyecto.db.controller.exceptions;
+package com.palemon.proyecto.db.controller.exceptions;
 
 import java.util.ArrayList;
 import java.util.List;

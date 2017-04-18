@@ -1,4 +1,4 @@
-package com.miguel.proyecto.db.controller.exceptions;
+package com.palemon.proyecto.db.controller.exceptions;
 
 public class NonexistentEntityException extends Exception {
     public NonexistentEntityException(String message, Throwable cause) {

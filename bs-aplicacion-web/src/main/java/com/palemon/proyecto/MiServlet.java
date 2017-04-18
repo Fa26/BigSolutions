@@ -11,8 +11,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.miguel.proyecto.db.Persona;
-import com.miguel.proyecto.db.controller.PersonaJpaController;
+import com.palemon.proyecto.db.Persona;
+import com.palemon.proyecto.db.controller.PersonaJpaController;
 
 /**
  * Modifico mi comentario.
