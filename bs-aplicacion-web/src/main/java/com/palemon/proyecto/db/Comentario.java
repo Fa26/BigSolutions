@@ -24,7 +24,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
- * @author miguel
+ * @author palemon
  */
 @Entity
 @Table(catalog = "miBase", schema = "", name = "comentario", uniqueConstraints = {@UniqueConstraint(columnNames = {"id"})})
