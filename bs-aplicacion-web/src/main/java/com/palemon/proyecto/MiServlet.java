@@ -11,8 +11,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.palemon.proyecto.db.Persona;
-import com.palemon.proyecto.db.controller.PersonaJpaController;
 
 /**
  * Modifico mi comentario.
@@ -23,8 +21,6 @@ public class MiServlet extends HttpServlet {
     private void foo(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("MiProyectoPU");
-        PersonaJpaController pjc = new PersonaJpaController(emf);
-        List<Persona> lp = pjc.findPersonaEntities();
 //        Persona p = pjc.findPersona(1L);
 
         response.setContentType("text/html");
@@ -35,11 +31,6 @@ public class MiServlet extends HttpServlet {
         pw.println("<H2>Leyendo parámetros desde un formulario html</H2><P>");
         pw.println("<UL>\n");
 
-        for (Persona p : lp) {
-            pw.println(String.format("<b>Nombre:</b> %s <br/> <b>Apellido:</b> %s <br/> <b> Apellido 2:</b> %s <br/>"
-                                     , p.getNombre(), p.getApellido1(), p.getApellido2()));
-            pw.println("<hr/>");
-        }
         pw.println("</BODY></HTML>");
         pw.close();
     }

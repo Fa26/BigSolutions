@@ -67,3 +67,6 @@ CREATE TABLE Comentario(
 	CONSTRAINT fk_comentario_puesto 	FOREIGN KEY (nIdPuesto) 		REFERENCES Puesto(nIdPuesto)			ON DELETE CASCADE,
 	CONSTRAINT fk_comentario_usuario 	FOREIGN KEY (nIdUsuario) 		REFERENCES Usuario(nIdUsuario)			ON DELETE SET NULL
 );
+--LLave primaria de comentario
+--llave foranea de comentario esnIdPuesto que hace referenia nIdPuesto de Puesto.
+--Lave foranea de comentario es nIdUsuario que hace refencia IdUsuario en Usuario.
