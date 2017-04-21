@@ -1,184 +1,119 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html>
-    <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../css/modal.css" type="text/css">
-    <style>
-/* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-    -webkit-animation-name: fadeIn; /* Fade in the background */
-    -webkit-animation-duration: 0.4s;
-    animation-name: fadeIn;
-    animation-duration: 0.4s
-}
+<!doctype html>
+<html lang="es-MX">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <title>Food Ciencias</title>
+    
+    <link rel="shortcut icon" href="http://vandelaydesign.com/favicon.ico">
+    <link rel="icon" href="http://vandelaydesign.com/favicon.ico">
+    <link rel="stylesheet" type="text/css" media="all" href="css/ventanaEmergente.css">
+    <link rel="stylesheet" type="text/css" media="all" href="css/informacion.css">
 
-/* Modal Content */
-.modal-content {
-    position: fixed;
-    bottom: 0;
-    background-color: #fefefe;
-    width: 100%;
-    -webkit-animation-name: slideIn;
-    -webkit-animation-duration: 0.4s;
-    animation-name: slideIn;
-    animation-duration: 0.4s
-}
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/modals.js"></script>
 
-/* The Close Button */
-.close {
-    color: white;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
+  </head>
 
-.close:hover,
-.close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.modal-header {
-    padding: 2px 16px;
-    background-color: #5cb85c;
-    color: white;
-}
-
-.modal-body {padding: 2px 16px;}
-
-.modal-footer {
-    padding: 2px 16px;
-    background-color: #5cb85c;
-    color: white;
-}
-
-/* Add Animation */
-@-webkit-keyframes slideIn {
-    from {bottom: -300px; opacity: 0} 
-    to {bottom: 0; opacity: 1}
-}
-
-@keyframes slideIn {
-    from {bottom: -300px; opacity: 0}
-    to {bottom: 0; opacity: 1}
-}
-
-@-webkit-keyframes fadeIn {
-    from {opacity: 0} 
-    to {opacity: 1}
-}
-
-@keyframes fadeIn {
-    from {opacity: 0} 
-    to {opacity: 1}
-}
-</style>
-
-    </head>
-    <body>
-        <!--Inicia informacion puesto-->
-    <div id="Informacion" class="contenedor">
-      <p>
-          <img src="imagenes/foodCiencias.jpg" width="350" height="80">
-       
+  <body>
+    <!--Inicia informacion puesto-->
+    <div id="Informacion" class="container center">
+        <span>
+          <span class="row">
+            <span class="col-4">
+              <img src="imagenes/foodCiencias.jpg" width="350" height="80">
+            </span>
+          </span>
+        </span>
+        <span>
           <img src="imagenes/puesto.jpeg" align="right">
-            <h3>Informacion!</h3>
+        </span>
+          <h3>Informacion!</h3>
           <p>Menu 1</p>
           <p>Menu 2</p>
           <p>Menu 3</p>
-          <p>Menu 4</p>
+          <p>Menu 4</p>           
         <br>
-    </div><!--fin informaciÃ³n puesto-->
-    
-    <div>  <!--botones-->
-      <center>
-          
-<h2>Bottom Modal</h2>
+      
+    </div><!--fin información puesto-->
+<br>
+<br>
+<div id="Comentar"> <!--Inicia Caja Comentar-->
+  <!--botones-->
+  <center>
+    <a href="#EmergenteCalificar" data-toggle="modal" class="btn btn-large">Calificar</a>
+    <a href="#EmergenteComentar" data-toggle="modal" class="btn btn-large">Comentar</a> 
+  </center>
+  <!--fin botones-->
 
-<!-- Trigger/Open The Modal -->
-<button id="myBtn">Open Modal</button>
+  <br><br>
+  <!--Pila de comentarios-->
+    <h3>Comentarios!</h3>
+    <ul id="comments" class="comments">
+      <li class="comment">
+	<div class="clearfix">
+	  <h4 class="pull-left">John</h4>
+	  <p class="pull-right">9:41 PM on August 24, 2013</p>
+	</div>
+	<p>
+	  <em>I don't believe in astrology but still your writing style is really great!</em>
+	</p>
+      </li>
 
-<!-- The Modal -->
-<div id="myModal" class="modal">
+      <li class="comment clearfix">
+	<div class="clearfix">
+	  <h4 class="pull-left">John</h4>
+	  <p class="pull-right">9:41 PM on August 24, 2013</p>
+	</div>
+	<p>
+	  <em>I don't believe in astrology but still your writing style is really great!</em>
+	</p>
+      </li>
+    </ul>
 
-  <!-- Modal content -->
-  <div class="modal-content">
-    <div class="modal-header">
-      <span class="close">&times;</span>
-      <h2>Modal Header</h2>
+    <!--finde pila comentarios-->
+    <hr>
+</div><!--termina Caja Comentar-->
+
+<!-- Ventana emergente de Calificar puesto-->
+<div id="EmergenteCalificar" class="modal hide fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <footer class="modal-footer">
+    <input type="button" name="calificar" Value = "Calificar" class="btn btn-primary" id="okwin01">    
+  </footer>
+</div> <!--fin ventana modal calificar -->
+
+<!--Ventana modal Comentar -->
+<div id="EmergenteComentar" class="modal hide fade dark" role="dialog" aria-labelledby="bgModalUpdate" aria-hidden="true">
+  <header class="modal-header">
+    <input type="button" Value = "x" class="close" data-dismiss="modal" onclick="javascript:borrarTexto();">     
+    <h3>Comentar puesto <small>escribe un comentario</small></h3>
+  </header>
+
+  <div class="modal-body">
+    <div class="alert alert-info">
+      <input type="button" Value = "x" class="close" data-dismiss="alert" onclick="javascript:borrarTexto();">      
+      Escribe un comentario en el campo de texto y da click en publicar o en otro caso cancelar.
     </div>
-    <div class="modal-body">
-       <form action="movimientos/AgregaComentario.jsp" method="post" style="text-align: center">
-            <label for="texto">
-            <span>Comentario</span><input type="text" name="texto" />
-            </label>
-       <input type ="submit" value="Cometar">
-        </form>
+
+    <form action="movimientos/AgregaComentario.jsp" method="post"> 
+    <div class="form-group">
+      <label for="texto">
+      <textarea name = "texto" class="form-control" rows="5" id="comentario" placeholder="Escribe..."></textarea>
+      </label>   
+        <input type ="submit" value="Publicar" class="btn btn-primary"  name="publicar">
     </div>
-    <div class="modal-footer">
-      <h3>Modal Footer</h3>
-    </div>
+    </form>
   </div>
+<!---->
 
-</div>
+    <footer class="modal-footer">
+      <!--<a href="#" class="btn" id="closewin02">Cancelar</a>-->
+      <input type="button" name="cancelar" Value = "Cancelar" class="btn" id="closewin02" onclick="javascript:borrarTexto();">
+      <input type="button" name="publicar" Value = "Publicar" class="btn btn-primary" id="okwin02" onclick="getwords();">
+     <!-- <a href="#" class="btn btn-primary" id="okwin02">publicar</a>-->
+    </footer>
 
+  </div> <!-- Termina ventana modal comentar -->
 
-
-   
-
-      <!--  <input type="button" name="calificar" Value = "Calificar" data-toggle="modal" class="btn btn-large">
-        <input type="button" name="comentar" Value = "Comentar" data-toggle="modal" class="btn btn-large">
-      <a href="#EmergenteCalificar" data-toggle="modal" class="btn btn-large">Calificar</a>
-        <a href="#EmergenteComentar" data-toggle="modal" class="btn btn-large">Comentar</a>
-        -->
-      </center>
-    </div><!--fin botones-->
-  <script type="text/javascript" src="../js/modal.js"></script>
-  <script>
-// Get the modal
-var modal = document.getElementById('myModal');
-
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks the button, open the modal 
-btn.onclick = function() {
-    modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-    modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-</script>
-
-    </body>
+</body>
 </html>

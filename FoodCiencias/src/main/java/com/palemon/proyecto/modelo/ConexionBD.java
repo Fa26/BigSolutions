@@ -100,7 +100,7 @@ public class ConexionBD {
 
         try {
             String query = "INSERT INTO Comentario(nIdComentario,fecha, texto, nIdPuesto, nIdUsuario)"
-                    + "VALUES(4,'2010-01-01',"+"'"+texto+"'"+",1,1);";  
+                    + "VALUES(5,'2010-01-01',"+"'"+texto+"'"+",1,1);";  
             stmt = con.createStatement();
             stmt.execute(query);   
             b = 1;
