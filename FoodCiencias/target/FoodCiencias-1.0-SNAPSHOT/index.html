@@ -3,117 +3,12 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
     <title>Food Ciencias</title>
-    
-    <link rel="shortcut icon" href="http://vandelaydesign.com/favicon.ico">
-    <link rel="icon" href="http://vandelaydesign.com/favicon.ico">
-    <link rel="stylesheet" type="text/css" media="all" href="css/ventanaEmergente.css">
-    <link rel="stylesheet" type="text/css" media="all" href="css/informacion.css">
-
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/modals.js"></script>
-
   </head>
-
-  <body>
-    <!--Inicia informacion puesto-->
-    <div id="Informacion" class="container center">
-        <span>
-          <span class="row">
-            <span class="col-4">
-              <img src="imagenes/foodCiencias.jpg" width="350" height="80">
-            </span>
-          </span>
-        </span>
-        <span>
-          <img src="imagenes/puesto.jpeg" align="right">
-        </span>
-          <h3>Informacion!</h3>
-          <p>Menu 1</p>
-          <p>Menu 2</p>
-          <p>Menu 3</p>
-          <p>Menu 4</p>           
-        <br>
-      
-    </div><!--fin información puesto-->
-<br>
-<br>
-<div id="Comentar"> <!--Inicia Caja Comentar-->
-  <!--botones-->
-  <center>
-    <a href="#EmergenteCalificar" data-toggle="modal" class="btn btn-large">Calificar</a>
-    <a href="#EmergenteComentar" data-toggle="modal" class="btn btn-large">Comentar</a> 
-  </center>
-  <!--fin botones-->
-
-  <br><br>
-  <!--Pila de comentarios-->
-    <h3>Comentarios!</h3>
-    <ul id="comments" class="comments">
-      <li class="comment">
-	<div class="clearfix">
-	  <h4 class="pull-left">John</h4>
-	  <p class="pull-right">9:41 PM on August 24, 2013</p>
-	</div>
-	<p>
-	  <em>I don't believe in astrology but still your writing style is really great!</em>
-	</p>
-      </li>
-
-      <li class="comment clearfix">
-	<div class="clearfix">
-	  <h4 class="pull-left">John</h4>
-	  <p class="pull-right">9:41 PM on August 24, 2013</p>
-	</div>
-	<p>
-	  <em>I don't believe in astrology but still your writing style is really great!</em>
-	</p>
-      </li>
-    </ul>
-
-    <!--finde pila comentarios-->
-    <hr>
-</div><!--termina Caja Comentar-->
-
-<!-- Ventana emergente de Calificar puesto-->
-<div id="EmergenteCalificar" class="modal hide fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <footer class="modal-footer">
-    <input type="button" name="calificar" Value = "Calificar" class="btn btn-primary" id="okwin01">    
-  </footer>
-</div> <!--fin ventana modal calificar -->
-
-<!--Ventana modal Comentar -->
-<div id="EmergenteComentar" class="modal hide fade dark" role="dialog" aria-labelledby="bgModalUpdate" aria-hidden="true">
-  <header class="modal-header">
-    <input type="button" Value = "x" class="close" data-dismiss="modal" onclick="javascript:borrarTexto();">     
-    <h3>Comentar puesto <small>escribe un comentario</small></h3>
-  </header>
-
-  <div class="modal-body">
-    <div class="alert alert-info">
-      <input type="button" Value = "x" class="close" data-dismiss="alert" onclick="javascript:borrarTexto();">      
-      Escribe un comentario en el campo de texto y da click en publicar o en otro caso cancelar.
-    </div>
-
-    <form action="movimientos/AgregaComentario.jsp" method="post"> 
-    <div class="form-group">
-      <label for="texto">
-      <textarea name = "texto" class="form-control" rows="5" id="comentario" placeholder="Escribe..."></textarea>
-      </label>   
-        <input type ="submit" value="Publicar" class="btn btn-primary"  name="publicar">
-    </div>
-    </form>
-  </div>
-<!---->
-
-    <footer class="modal-footer">
-      <!--<a href="#" class="btn" id="closewin02">Cancelar</a>-->
-      <input type="button" name="cancelar" Value = "Cancelar" class="btn" id="closewin02" onclick="javascript:borrarTexto();">
-      <input type="button" name="publicar" Value = "Publicar" class="btn btn-primary" id="okwin02" onclick="getwords();">
-     <!-- <a href="#" class="btn btn-primary" id="okwin02">publicar</a>-->
-    </footer>
-
-  </div> <!-- Termina ventana modal comentar -->
-
-</body>
+          <h3>Puestos!</h3>
+          <a href = "consultas/VentanaComentario.jsp">Puesto 1</a>
+          <p>puesto 2</p>
+          <p>Puesto 3</p>
+          <p>Puesto 4</p> 
+        
+  </body>
 </html>

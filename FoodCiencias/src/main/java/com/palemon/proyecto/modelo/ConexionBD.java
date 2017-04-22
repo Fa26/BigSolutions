@@ -69,14 +69,14 @@ public class ConexionBD {
      * @throws Exception en caso de que ocurra alguna anomalia
      * @version 1.0
      */
-    public  ArrayList obtenerComentarios(int nIdPuesto) throws Exception {
+    public  ArrayList obtenerComentarios(String nIdPuesto) throws Exception {
         ArrayList comentarios = new ArrayList();
 
         try {
-            stmt = con.prepareStatement("hol");
-            rs = stmt.executeQuery(
-                    "SELECT * FROM Comentario\n" +
-                    "WHERE nIdPuesto LIKE '%" + nIdPuesto + "%'\n");
+            String query1 = "SELECT * FROM Comentario\n"
+                    + "WHERE nIdPuesto LIKE '%1%';";
+            stmt = con.createStatement();
+            rs = stmt.executeQuery(query1);
             while (rs.next()) {
                 Comentario c = new Comentario();
                 c.setnIdComentario(rs.getInt(1));
@@ -100,7 +100,7 @@ public class ConexionBD {
 
         try {
             String query = "INSERT INTO Comentario(nIdComentario,fecha, texto, nIdPuesto, nIdUsuario)"
-                    + "VALUES(5,'2010-01-01',"+"'"+texto+"'"+",1,1);";  
+                    + "VALUES(8,'2010-01-01',"+"'"+texto+"'"+",1,1);";  
             stmt = con.createStatement();
             stmt.execute(query);   
             b = 1;

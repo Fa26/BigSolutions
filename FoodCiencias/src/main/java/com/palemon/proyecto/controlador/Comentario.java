@@ -93,7 +93,7 @@ public class Comentario extends Control {
      * @throws Exception en caso de ocurrir alguna anomalia. 
      * @version 1.0
      */
-    public  ArrayList buscarComentarios(int nIdPuesto) throws Exception{
+    public  ArrayList buscarComentarios(String nIdPuesto) throws Exception{
         ArrayList comentarios = new ArrayList();
         
         try{
