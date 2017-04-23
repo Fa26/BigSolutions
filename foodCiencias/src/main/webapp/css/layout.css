@@ -1,0 +1,152 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Mar 20, 2017, 8:29:00 PM
+    Author     : Andres
+*/
+
+body {
+    font-size: 11pt;
+    font-family: "Segoe UI Semibold";
+    color: #e2e2e2;
+    background-color: #383838; 
+    /**
+    #383838 - light gray
+    #181818 - dark gray
+    #585858 - lighter gray
+    #e2e2e2 - even lighter gray
+    #AB4642 - light red
+    */
+}
+
+h1 {
+    font-size: 18pt;
+    font-family: "Segoe UI Semibold";
+    color: white;
+    opacity: 0.9;
+}
+
+h2 {
+    font-size: 13pt;
+    font-family: "Segoe UI Semibold";
+    color: white;
+    opacity: 0.6;
+    text-align:center;
+}
+
+p {
+    color: white;
+    opacity: 0.8;
+}
+a:link {
+    font-size: 12pt;
+    color: #AB4642;
+}
+
+/* visited link */
+a:visited {
+    font-size: 12pt;
+    color: cornflowerblue;
+}
+
+/* mouse over link */
+a:hover {
+    font-size: 12pt;
+    color: appworkspace;
+}
+
+/* selected link */
+a:active {
+    font-size: 12pt;
+    color: blue;
+}
+
+table.gridtable {
+	font-family: "Segoe UI Semibold";
+        width: 100%;
+	font-size:12px;
+	color:#333333;
+	border-width: 1px;
+	border-color: #666666;
+        border-collapse: collapse;
+}
+table.gridtable th {
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #666666;
+	background-color: #dedede;
+}
+table.gridtable td {
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #666666;
+	background-color: #ffffff;
+}
+
+th, td {
+    text-align: center;
+    border: 1px solid white;
+}
+
+
+label {
+    font-family: "Segoe UI Semibold";
+    display:block;
+    margin-bottom: 25px;
+}
+label > span{
+    display: inline-block;
+    float: left;
+    width: 200px;
+}
+input[type=text],
+input[type=email] 
+{
+    color: #999999;
+    background: transparent;
+    border: none;
+    border-bottom: 1px dashed #AB4642;
+    width: 200px;
+    outline: none;
+    padding: 0px 0px 0px 0px;
+    font-style: italic;
+}
+textarea{
+    font-style: italic;
+    padding: 0px 0px 0px 0px;
+    background: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px dashed #AB4642;
+    width: 275px;
+    overflow: hidden;
+    resize:none;
+    height:20px;
+}
+
+textarea:focus, 
+input[type=text]:focus,
+input[type=email]:focus,
+input[type=email] :focus
+{
+    border-bottom: 1px dashed #ff3333;
+}
+
+input[type=submit],
+input[type=button]{
+    font-family: "Segoe UI Semibold";
+    background: #576E86;
+    border: none;
+    padding: 8px 10px 8px 10px;
+    border-radius: 5px;
+    color: #A8BACE;
+}
+input[type=submit]:hover,
+input[type=button]:hover{
+background: #394D61;
+}
