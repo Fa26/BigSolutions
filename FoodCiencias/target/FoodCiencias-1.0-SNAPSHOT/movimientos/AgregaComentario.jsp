@@ -16,43 +16,24 @@
     c.desconecta();
     
     %>
-    <a href="../index.html">Inicio</a>
+    <a href="../consultas/VentanaComentario.jsp">ver comentarios</a>
     <br>
-    <center>
+    
     <%
     
     if(b == 1){
         System.err.println("b1 : " + b);
         out.write("Comentario registrada");
-        int nIdComentario = c.getnIdComentario();
-        Date fecha = c.getFecha();
-        String texto = c.getTexto();
-        int nIdPuesto = c.getnIdPuesto();
-        int nIdUsuario = c.getnIdUsuario();
 
         %>
-    </center>
-        <br>
-        <table>
-            <tr>
-                <th>nIdComentario</th>
-                <th>fecha</th> 
-                <th>texto</th>
-                <th>nIdPuesto</th>
-                <th>nIdUsuario</th>
-            </tr>
-            
-            <tr>
-                    <td> <%=nIdComentario%></td>
-                    <td> <%=fecha%></td>
-                    <td><%=texto%> </td>
-                    <td><%=nIdPuesto%> </td>
-                    <td><%=nIdUsuario%> </td>
-            </tr>
-        
+
         <%
     }else{
         out.write("No se registró el comentario.");
     }
 %>
-        </table>
+ <!--  <SCRIPT LANGUAGE=javascript>
+       document.write("Redireccionando...");
+    setTimeout("window.history.go(-1)",5000); // 5000 milisegundos de retardo
+</SCRIPT>
+ -->
