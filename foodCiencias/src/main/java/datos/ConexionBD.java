@@ -134,10 +134,7 @@ public class ConexionBD {
         }
         return b;
     }
-<<<<<<< HEAD
-    
-    
-    
+
      /**
     * Metodo que resgitra un puesto nuevo en la base de datos
     * @param nombreP - nombre del puesto
@@ -166,7 +163,4 @@ public class ConexionBD {
         }catch(Exception e){}
         
     }//fin del  metodo regsitrarPuestos
-    
-=======
->>>>>>> 1357273e3c40bfaf3d8c1201e28e540d1f1a3056
 }

@@ -9,11 +9,7 @@ import java.util.ArrayList;
 
 /**
  * Clase para trabajar con puestos. 
- * @author Andres
-<<<<<<< HEAD
- * @author Fatima
-=======
->>>>>>> 1357273e3c40bfaf3d8c1201e28e540d1f1a3056
+ * @author Andres & Fatima
  */
 public class Puesto extends Control{
     private int id;
@@ -21,14 +17,10 @@ public class Puesto extends Control{
             duenioPuesto,
             tipoComida,
             horaApertura,
-<<<<<<< HEAD
             horaCierre,
             appDuenio,
             apmDuenio,
             foto;
-=======
-            horaCierre;
->>>>>>> 1357273e3c40bfaf3d8c1201e28e540d1f1a3056
     
     /**
      * Metodo encargado de obtener el id del Puesto.
@@ -135,9 +127,7 @@ public class Puesto extends Control{
     public void setHoraCierre(String horaCierre) {
         this.horaCierre = horaCierre;
     }
-    
-<<<<<<< HEAD
-     
+         
     /**
      * Metodo encargado de establecer el apellido paterno del duenio
      * @param appDuenio 
@@ -188,10 +178,7 @@ public class Puesto extends Control{
     public String getFoto(){
         return foto;
     }
-  
-    
-=======
->>>>>>> 1357273e3c40bfaf3d8c1201e28e540d1f1a3056
+
     /**
      * Metodo encargado de buscar puestos en la base de datos de 
      * acuerdo a una cadena que recibe como argumento. 
@@ -209,7 +196,6 @@ public class Puesto extends Control{
         }
         return puestos;
     }
-<<<<<<< HEAD
     
       /**
     * Metodo que resgitra un puesto nuevo 
@@ -236,8 +222,4 @@ public class Puesto extends Control{
             System.out.println("No se pudieron insertar los puestos " + ex.getMessage());
         }
     }
-    
-    
-=======
->>>>>>> 1357273e3c40bfaf3d8c1201e28e540d1f1a3056
 }

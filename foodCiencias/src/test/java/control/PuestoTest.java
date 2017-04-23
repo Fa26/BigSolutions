@@ -166,8 +166,7 @@ public class PuestoTest extends DatabaseTestCase{
                 "Duenio1", 
                 ((Puesto)puestos.get(0)).getDuenioPuesto());
     }
-<<<<<<< HEAD
-    
+   
      /**
      * Test of setId method, of class Puesto.
      */
@@ -299,12 +298,4 @@ public class PuestoTest extends DatabaseTestCase{
         instance.registrarPuestos(nombreP, hora_A, hora_C, tipoComida, nombreD, Apm, App, foto);
        
     }
-    
-
-    
-    
-}//fin de la clase 
-
-=======
 }
->>>>>>> 1357273e3c40bfaf3d8c1201e28e540d1f1a3056
