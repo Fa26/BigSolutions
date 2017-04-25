@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.palemon.proyecto.modelo;
+package datos;
 //import com.mysql.jdbc.*;
-import com.palemon.proyecto.controlador.Comentario;
+import control.Comentario;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -73,8 +73,8 @@ public class ConexionBD {
         ArrayList comentarios = new ArrayList();
 
         try {
-            String query1 = "SELECT * FROM Comentario\n"
-                    + "WHERE nIdPuesto LIKE '%1%';";
+            String query1 = "SELECT * FROM Comentario;\n";
+                    //+ "WHERE nIdPuesto LIKE '%NULL%';";
             stmt = con.createStatement();
             rs = stmt.executeQuery(query1);
             while (rs.next()) {
@@ -95,12 +95,12 @@ public class ConexionBD {
     }
     
         
-    public int setComentario(String texto) throws SQLException {
+    public int setComentario(String fecha,String texto) throws SQLException {
         int b = 0;
 
         try {
-            String query = "INSERT INTO Comentario(nIdComentario,fecha, texto, nIdPuesto, nIdUsuario)"
-                    + "VALUES(1,'2010-01-01',"+"'"+texto+"'"+",1,1);";  
+            String query = "INSERT INTO Comentario(fecha, texto)"
+                    + "VALUES('"+fecha+"','"+texto+"');";  
             stmt = con.createStatement();
             stmt.execute(query);   
             b = 1;

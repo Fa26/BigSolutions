@@ -5,7 +5,7 @@
 --%>
 <%@page import="java.sql.Date"%>
 <%@page import="java.util.ArrayList"%>
-<%@page import="com.palemon.proyecto.controlador.Comentario"%>
+<%@page import="control.Comentario"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="es-MX">

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.palemon.proyecto.controlador;
+package control;
 import java.sql.Date;
 import java.util.ArrayList;
 
@@ -105,10 +105,10 @@ public class Comentario extends Control {
         return comentarios;
     }
     
-    public int insertarComentario(String texto) throws Exception{
+    public int insertarComentario(String fecha, String texto) throws Exception{
         int b = 0;
         try{
-            b = conexionBD.setComentario(texto);
+            b = conexionBD.setComentario(fecha, texto);
         }catch(Exception ex){
             System.out.println("No se pudo registrar el comentario " + ex.getMessage());
         }

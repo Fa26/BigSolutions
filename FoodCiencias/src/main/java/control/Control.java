@@ -3,8 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.palemon.proyecto.controlador;
-import com.palemon.proyecto.modelo.ConexionBD;
+package control;
+import datos.ConexionBD;
 /**
  *
  * @author mint
