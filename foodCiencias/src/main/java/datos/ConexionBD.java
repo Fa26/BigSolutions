@@ -8,6 +8,7 @@ package datos;
 import control.Usuario;
 import control.Puesto;
 import control.Administrador;
+import control.Comentario;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -242,6 +243,56 @@ public class ConexionBD {
             System.err.println("Error " + e);
         }
         return null;
+        
+    }
+    
+     /**
+     * Metodo encargado de obtener los puestos registrados en la base de datos.
+     * @return ArrayList - Lista resultado de comentarios
+     * @throws Exception en caso de que ocurra alguna anomalia
+     * @version 1.0
+     */
+    public  ArrayList obtenerComentarios(String nIdPuesto) throws Exception {
+        ArrayList comentarios = new ArrayList();
+
+        try {
+            String query1 = "SELECT * FROM Comentario;\n";
+                    //+ "WHERE nIdPuesto LIKE '%NULL%';";
+            stmt = con.createStatement();
+            rs = stmt.executeQuery(query1);
+            while (rs.next()) {
+                Comentario c = new Comentario();
+                c.setnIdComentario(rs.getInt(1));
+                c.setFecha(rs.getDate(2));
+                c.setTexto(rs.getString(3));
+                c.setnIdPuesto(rs.getInt(4));
+                c.setnIdUsuario(rs.getInt(5));
+                comentarios.add(c);
+            }
+            rs.close();
+            stmt.close();
+        } catch (Exception ex) {
+            System.out.println("SQLException: " + ex.getMessage() + " getComentarios");
+        }
+        return comentarios;
+    }
+    
+        
+    public int setComentario(String fecha,String texto) throws SQLException {
+        int b = 0;
+
+        try {
+            String query = "INSERT INTO Comentario(fecha, texto)"
+                    + "VALUES('"+fecha+"','"+texto+"');";  
+            stmt = con.createStatement();
+            stmt.execute(query);   
+            b = 1;
+            stmt.close();
+            
+        } catch (Exception ex) {
+            System.out.println("SQLException: " + ex.getMessage() + " getComentarios");
+        }
+        return b;
         
     }
 }

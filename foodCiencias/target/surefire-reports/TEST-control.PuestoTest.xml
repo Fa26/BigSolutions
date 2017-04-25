@@ -1,51 +1,30 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<<<<<<< HEAD
-<testsuite failures="0" time="1.891" errors="17" skipped="0" tests="17" name="control.PuestoTest">
+<testsuite failures="0" time="1.25" errors="17" skipped="0" tests="17" name="control.PuestoTest">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/home/mint/jdk1.7.0_80/jre/lib/amd64"/>
     <property name="java.vm.version" value="24.80-b11"/>
-=======
-<testsuite tests="17" failures="0" name="control.PuestoTest" time="0.216" errors="17" skipped="0">
-  <properties>
-    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
-    <property name="sun.boot.library.path" value="/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64"/>
-    <property name="java.vm.version" value="25.121-b13"/>
->>>>>>> 4c02aa96ee2157e78b9c8b2dae4f65d68730c037
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="java.vendor.url" value="http://java.oracle.com/"/>
     <property name="path.separator" value=":"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
-<<<<<<< HEAD
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
-=======
-    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
->>>>>>> 4c02aa96ee2157e78b9c8b2dae4f65d68730c037
     <property name="file.encoding.pkg" value="sun.io"/>
     <property name="user.country" value="MX"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value="unknown"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-<<<<<<< HEAD
     <property name="user.dir" value="/home/mint/Escritorio/I.S/Proyecto/BigSolutions/foodCiencias"/>
     <property name="java.runtime.version" value="1.7.0_80-b15"/>
     <property name="netbeans.deploy" value="true"/>
     <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
     <property name="java.endorsed.dirs" value="/home/mint/jdk1.7.0_80/jre/lib/endorsed"/>
-=======
-    <property name="user.dir" value="/home/carloazul21/IngenieriaSoftware/foodCiencias"/>
-    <property name="java.runtime.version" value="1.8.0_121-8u121-b13-0ubuntu1.16.04.2-b13"/>
-    <property name="netbeans.deploy" value="true"/>
-    <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
-    <property name="java.endorsed.dirs" value="/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/endorsed"/>
->>>>>>> 4c02aa96ee2157e78b9c8b2dae4f65d68730c037
     <property name="os.arch" value="amd64"/>
     <property name="java.io.tmpdir" value="/tmp"/>
     <property name="line.separator" value="
 "/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="os.name" value="Linux"/>
-<<<<<<< HEAD
     <property name="maven.ext.class.path" value="/home/mint/netbeans-8.0.2/java/maven-nblib/netbeans-eventspy.jar"/>
     <property name="classworlds.conf" value="/home/mint/netbeans-8.0.2/java/maven/bin/m2.conf"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -64,64 +43,26 @@
     <property name="java.vm.specification.version" value="1.7"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="/home/mint/jdk1.7.0_80/jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dnetbeans.deploy=true -Dnetbeans.deploy.clientUrlPart=/index.html -Dmaven.ext.class.path=/home/mint/netbeans-8.0.2/java/maven-nblib/netbeans-eventspy.jar package"/>
-=======
-    <property name="maven.ext.class.path" value="/usr/local/netbeans-8.2/java/maven-nblib/netbeans-eventspy.jar"/>
-    <property name="classworlds.conf" value="/usr/local/netbeans-8.2/java/maven/bin/m2.conf"/>
-    <property name="sun.jnu.encoding" value="UTF-8"/>
-    <property name="java.library.path" value="/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/i386::/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib"/>
-    <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="java.class.version" value="52.0"/>
-    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
-    <property name="os.version" value="4.4.0-72-generic"/>
-    <property name="user.home" value="/home/carloazul21"/>
-    <property name="user.timezone" value="America/Mexico_City"/>
-    <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
-    <property name="java.specification.version" value="1.8"/>
-    <property name="file.encoding" value="UTF-8"/>
-    <property name="user.name" value="carloazul21"/>
-    <property name="java.class.path" value="/usr/local/netbeans-8.2/java/maven/boot/plexus-classworlds-2.4.jar"/>
-    <property name="java.vm.specification.version" value="1.8"/>
-    <property name="sun.arch.data.model" value="64"/>
-    <property name="java.home" value="/usr/lib/jvm/java-8-openjdk-amd64/jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dnetbeans.deploy=true -Dnetbeans.deploy.clientUrlPart=/faces/index.html -Dmaven.ext.class.path=/usr/local/netbeans-8.2/java/maven-nblib/netbeans-eventspy.jar package"/>
->>>>>>> 4c02aa96ee2157e78b9c8b2dae4f65d68730c037
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dnetbeans.deploy=true -Dnetbeans.deploy.clientUrlPart=/faces/consultas/Entrar.jsp -Dmaven.ext.class.path=/home/mint/netbeans-8.0.2/java/maven-nblib/netbeans-eventspy.jar package"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="es"/>
     <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
     <property name="java.vm.info" value="mixed mode"/>
-<<<<<<< HEAD
     <property name="java.version" value="1.7.0_80"/>
     <property name="java.ext.dirs" value="/home/mint/jdk1.7.0_80/jre/lib/ext:/usr/java/packages/lib/ext"/>
     <property name="securerandom.source" value="file:/dev/./urandom"/>
     <property name="sun.boot.class.path" value="/home/mint/jdk1.7.0_80/jre/lib/resources.jar:/home/mint/jdk1.7.0_80/jre/lib/rt.jar:/home/mint/jdk1.7.0_80/jre/lib/sunrsasign.jar:/home/mint/jdk1.7.0_80/jre/lib/jsse.jar:/home/mint/jdk1.7.0_80/jre/lib/jce.jar:/home/mint/jdk1.7.0_80/jre/lib/charsets.jar:/home/mint/jdk1.7.0_80/jre/lib/jfr.jar:/home/mint/jdk1.7.0_80/jre/classes"/>
     <property name="java.vendor" value="Oracle Corporation"/>
     <property name="maven.home" value="/home/mint/netbeans-8.0.2/java/maven"/>
-=======
-    <property name="java.version" value="1.8.0_121"/>
-    <property name="java.ext.dirs" value="/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext:/usr/java/packages/lib/ext"/>
-    <property name="securerandom.source" value="file:/dev/./urandom"/>
-    <property name="sun.boot.class.path" value="/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/resources.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jsse.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jce.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/charsets.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jfr.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/classes"/>
-    <property name="java.vendor" value="Oracle Corporation"/>
-    <property name="maven.home" value="/usr/local/netbeans-8.2/java/maven"/>
->>>>>>> 4c02aa96ee2157e78b9c8b2dae4f65d68730c037
     <property name="file.separator" value="/"/>
     <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
-<<<<<<< HEAD
-    <property name="netbeans.deploy.clientUrlPart" value="/index.html"/>
+    <property name="netbeans.deploy.clientUrlPart" value="/faces/consultas/Entrar.jsp"/>
     <property name="sun.desktop" value="gnome"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase time="1.259" classname="control.PuestoTest" name="testSetNombrePuesto">
-=======
-    <property name="netbeans.deploy.clientUrlPart" value="/faces/index.html"/>
-    <property name="sun.desktop" value="gnome"/>
-    <property name="sun.cpu.isalist" value=""/>
-  </properties>
-  <testcase classname="control.PuestoTest" name="testGetNombrePuesto" time="0.167">
->>>>>>> 4c02aa96ee2157e78b9c8b2dae4f65d68730c037
+  <testcase time="0.756" classname="control.PuestoTest" name="testGetId">
     <error message="Access denied for user &apos;root&apos;@&apos;localhost&apos; (using password: YES)" type="java.sql.SQLException">java.sql.SQLException: Access denied for user &apos;root&apos;@&apos;localhost&apos; (using password: YES)
 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1055)
 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:956)
@@ -134,7 +75,6 @@
 	at com.mysql.jdbc.ConnectionImpl.&lt;init&gt;(ConnectionImpl.java:718)
 	at com.mysql.jdbc.JDBC4Connection.&lt;init&gt;(JDBC4Connection.java:46)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-<<<<<<< HEAD
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
@@ -143,16 +83,6 @@
 	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:282)
 	at java.sql.DriverManager.getConnection(DriverManager.java:571)
 	at java.sql.DriverManager.getConnection(DriverManager.java:215)
-=======
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
-	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:302)
-	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:282)
-	at java.sql.DriverManager.getConnection(DriverManager.java:664)
-	at java.sql.DriverManager.getConnection(DriverManager.java:247)
->>>>>>> 4c02aa96ee2157e78b9c8b2dae4f65d68730c037
 	at control.PuestoTest.getConnection(PuestoTest.java:135)
 	at org.dbunit.DatabaseTestCase.newDatabaseTester(DatabaseTestCase.java:85)
 	at org.dbunit.DatabaseTestCase.getDatabaseTester(DatabaseTestCase.java:109)
@@ -165,28 +95,16 @@
 	at junit.framework.TestSuite.runTest(TestSuite.java:230)
 	at junit.framework.TestSuite.run(TestSuite.java:225)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-<<<<<<< HEAD
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:606)
-=======
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
->>>>>>> 4c02aa96ee2157e78b9c8b2dae4f65d68730c037
 	at org.apache.maven.surefire.junit.JUnitTestSet.execute(JUnitTestSet.java:96)
 	at org.apache.maven.surefire.junit.JUnit3Provider.executeTestSet(JUnit3Provider.java:117)
 	at org.apache.maven.surefire.junit.JUnit3Provider.invoke(JUnit3Provider.java:94)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-<<<<<<< HEAD
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:606)
-=======
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
->>>>>>> 4c02aa96ee2157e78b9c8b2dae4f65d68730c037
 	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
 	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
 	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
@@ -198,11 +116,7 @@ SLF4J: Defaulting to no-operation (NOP) logger implementation
 SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
 </system-err>
   </testcase>
-<<<<<<< HEAD
-  <testcase time="0.032" classname="control.PuestoTest" name="testSetDuenioPuesto">
-=======
-  <testcase classname="control.PuestoTest" name="testGetId" time="0">
->>>>>>> 4c02aa96ee2157e78b9c8b2dae4f65d68730c037
+  <testcase time="0.006" classname="control.PuestoTest" name="testGetDuenioPuesto">
     <error message="Access denied for user &apos;root&apos;@&apos;localhost&apos; (using password: YES)" type="java.sql.SQLException">java.sql.SQLException: Access denied for user &apos;root&apos;@&apos;localhost&apos; (using password: YES)
 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1055)
 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:956)
@@ -215,7 +129,6 @@ SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further detail
 	at com.mysql.jdbc.ConnectionImpl.&lt;init&gt;(ConnectionImpl.java:718)
 	at com.mysql.jdbc.JDBC4Connection.&lt;init&gt;(JDBC4Connection.java:46)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-<<<<<<< HEAD
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
@@ -224,16 +137,6 @@ SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further detail
 	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:282)
 	at java.sql.DriverManager.getConnection(DriverManager.java:571)
 	at java.sql.DriverManager.getConnection(DriverManager.java:215)
-=======
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
-	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:302)
-	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:282)
-	at java.sql.DriverManager.getConnection(DriverManager.java:664)
-	at java.sql.DriverManager.getConnection(DriverManager.java:247)
->>>>>>> 4c02aa96ee2157e78b9c8b2dae4f65d68730c037
 	at control.PuestoTest.getConnection(PuestoTest.java:135)
 	at org.dbunit.DatabaseTestCase.newDatabaseTester(DatabaseTestCase.java:85)
 	at org.dbunit.DatabaseTestCase.getDatabaseTester(DatabaseTestCase.java:109)
@@ -246,28 +149,16 @@ SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further detail
 	at junit.framework.TestSuite.runTest(TestSuite.java:230)
 	at junit.framework.TestSuite.run(TestSuite.java:225)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-<<<<<<< HEAD
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:606)
-=======
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
->>>>>>> 4c02aa96ee2157e78b9c8b2dae4f65d68730c037
 	at org.apache.maven.surefire.junit.JUnitTestSet.execute(JUnitTestSet.java:96)
 	at org.apache.maven.surefire.junit.JUnit3Provider.executeTestSet(JUnit3Provider.java:117)
 	at org.apache.maven.surefire.junit.JUnit3Provider.invoke(JUnit3Provider.java:94)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-<<<<<<< HEAD
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:606)
-=======
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
->>>>>>> 4c02aa96ee2157e78b9c8b2dae4f65d68730c037
 	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
 	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
 	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
@@ -275,781 +166,7 @@ SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further detail
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
 </error>
   </testcase>
-<<<<<<< HEAD
-  <testcase time="0.049" classname="control.PuestoTest" name="testSetTipoComida">
-=======
-  <testcase classname="control.PuestoTest" name="testObtenerPuestos" time="0.005">
->>>>>>> 4c02aa96ee2157e78b9c8b2dae4f65d68730c037
-    <error message="Access denied for user &apos;root&apos;@&apos;localhost&apos; (using password: YES)" type="java.sql.SQLException">java.sql.SQLException: Access denied for user &apos;root&apos;@&apos;localhost&apos; (using password: YES)
-	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1055)
-	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:956)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3491)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3423)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:910)
-	at com.mysql.jdbc.MysqlIO.secureAuth411(MysqlIO.java:3923)
-	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1273)
-	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2031)
-	at com.mysql.jdbc.ConnectionImpl.&lt;init&gt;(ConnectionImpl.java:718)
-	at com.mysql.jdbc.JDBC4Connection.&lt;init&gt;(JDBC4Connection.java:46)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-<<<<<<< HEAD
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
-	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
-	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:302)
-	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:282)
-	at java.sql.DriverManager.getConnection(DriverManager.java:571)
-	at java.sql.DriverManager.getConnection(DriverManager.java:215)
-=======
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
-	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:302)
-	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:282)
-	at java.sql.DriverManager.getConnection(DriverManager.java:664)
-	at java.sql.DriverManager.getConnection(DriverManager.java:247)
->>>>>>> 4c02aa96ee2157e78b9c8b2dae4f65d68730c037
-	at control.PuestoTest.getConnection(PuestoTest.java:135)
-	at org.dbunit.DatabaseTestCase.newDatabaseTester(DatabaseTestCase.java:85)
-	at org.dbunit.DatabaseTestCase.getDatabaseTester(DatabaseTestCase.java:109)
-	at org.dbunit.DatabaseTestCase.setUp(DatabaseTestCase.java:151)
-	at junit.framework.TestCase.runBare(TestCase.java:128)
-	at junit.framework.TestResult$1.protect(TestResult.java:106)
-	at junit.framework.TestResult.runProtected(TestResult.java:124)
-	at junit.framework.TestResult.run(TestResult.java:109)
-	at junit.framework.TestCase.run(TestCase.java:120)
-	at junit.framework.TestSuite.runTest(TestSuite.java:230)
-	at junit.framework.TestSuite.run(TestSuite.java:225)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-<<<<<<< HEAD
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-=======
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
->>>>>>> 4c02aa96ee2157e78b9c8b2dae4f65d68730c037
-	at org.apache.maven.surefire.junit.JUnitTestSet.execute(JUnitTestSet.java:96)
-	at org.apache.maven.surefire.junit.JUnit3Provider.executeTestSet(JUnit3Provider.java:117)
-	at org.apache.maven.surefire.junit.JUnit3Provider.invoke(JUnit3Provider.java:94)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-<<<<<<< HEAD
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-=======
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
->>>>>>> 4c02aa96ee2157e78b9c8b2dae4f65d68730c037
-	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
-	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
-	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
-	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
-</error>
-  </testcase>
-<<<<<<< HEAD
-  <testcase time="0.051" classname="control.PuestoTest" name="testSetHoraApertura">
-=======
-  <testcase classname="control.PuestoTest" name="testSetId" time="0">
->>>>>>> 4c02aa96ee2157e78b9c8b2dae4f65d68730c037
-    <error message="Access denied for user &apos;root&apos;@&apos;localhost&apos; (using password: YES)" type="java.sql.SQLException">java.sql.SQLException: Access denied for user &apos;root&apos;@&apos;localhost&apos; (using password: YES)
-	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1055)
-	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:956)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3491)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3423)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:910)
-	at com.mysql.jdbc.MysqlIO.secureAuth411(MysqlIO.java:3923)
-	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1273)
-	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2031)
-	at com.mysql.jdbc.ConnectionImpl.&lt;init&gt;(ConnectionImpl.java:718)
-	at com.mysql.jdbc.JDBC4Connection.&lt;init&gt;(JDBC4Connection.java:46)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-<<<<<<< HEAD
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
-	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
-	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:302)
-	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:282)
-	at java.sql.DriverManager.getConnection(DriverManager.java:571)
-	at java.sql.DriverManager.getConnection(DriverManager.java:215)
-=======
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
-	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:302)
-	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:282)
-	at java.sql.DriverManager.getConnection(DriverManager.java:664)
-	at java.sql.DriverManager.getConnection(DriverManager.java:247)
->>>>>>> 4c02aa96ee2157e78b9c8b2dae4f65d68730c037
-	at control.PuestoTest.getConnection(PuestoTest.java:135)
-	at org.dbunit.DatabaseTestCase.newDatabaseTester(DatabaseTestCase.java:85)
-	at org.dbunit.DatabaseTestCase.getDatabaseTester(DatabaseTestCase.java:109)
-	at org.dbunit.DatabaseTestCase.setUp(DatabaseTestCase.java:151)
-	at junit.framework.TestCase.runBare(TestCase.java:128)
-	at junit.framework.TestResult$1.protect(TestResult.java:106)
-	at junit.framework.TestResult.runProtected(TestResult.java:124)
-	at junit.framework.TestResult.run(TestResult.java:109)
-	at junit.framework.TestCase.run(TestCase.java:120)
-	at junit.framework.TestSuite.runTest(TestSuite.java:230)
-	at junit.framework.TestSuite.run(TestSuite.java:225)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-<<<<<<< HEAD
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-=======
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
->>>>>>> 4c02aa96ee2157e78b9c8b2dae4f65d68730c037
-	at org.apache.maven.surefire.junit.JUnitTestSet.execute(JUnitTestSet.java:96)
-	at org.apache.maven.surefire.junit.JUnit3Provider.executeTestSet(JUnit3Provider.java:117)
-	at org.apache.maven.surefire.junit.JUnit3Provider.invoke(JUnit3Provider.java:94)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-<<<<<<< HEAD
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-=======
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
->>>>>>> 4c02aa96ee2157e78b9c8b2dae4f65d68730c037
-	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
-	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
-	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
-	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
-</error>
-  </testcase>
-<<<<<<< HEAD
-  <testcase time="0.036" classname="control.PuestoTest" name="testSetHoraCierre">
-=======
-  <testcase classname="control.PuestoTest" name="testSetNombrePuesto" time="0.005">
->>>>>>> 4c02aa96ee2157e78b9c8b2dae4f65d68730c037
-    <error message="Access denied for user &apos;root&apos;@&apos;localhost&apos; (using password: YES)" type="java.sql.SQLException">java.sql.SQLException: Access denied for user &apos;root&apos;@&apos;localhost&apos; (using password: YES)
-	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1055)
-	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:956)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3491)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3423)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:910)
-	at com.mysql.jdbc.MysqlIO.secureAuth411(MysqlIO.java:3923)
-	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1273)
-	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2031)
-	at com.mysql.jdbc.ConnectionImpl.&lt;init&gt;(ConnectionImpl.java:718)
-	at com.mysql.jdbc.JDBC4Connection.&lt;init&gt;(JDBC4Connection.java:46)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-<<<<<<< HEAD
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
-	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
-	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:302)
-	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:282)
-	at java.sql.DriverManager.getConnection(DriverManager.java:571)
-	at java.sql.DriverManager.getConnection(DriverManager.java:215)
-=======
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
-	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:302)
-	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:282)
-	at java.sql.DriverManager.getConnection(DriverManager.java:664)
-	at java.sql.DriverManager.getConnection(DriverManager.java:247)
->>>>>>> 4c02aa96ee2157e78b9c8b2dae4f65d68730c037
-	at control.PuestoTest.getConnection(PuestoTest.java:135)
-	at org.dbunit.DatabaseTestCase.newDatabaseTester(DatabaseTestCase.java:85)
-	at org.dbunit.DatabaseTestCase.getDatabaseTester(DatabaseTestCase.java:109)
-	at org.dbunit.DatabaseTestCase.setUp(DatabaseTestCase.java:151)
-	at junit.framework.TestCase.runBare(TestCase.java:128)
-	at junit.framework.TestResult$1.protect(TestResult.java:106)
-	at junit.framework.TestResult.runProtected(TestResult.java:124)
-	at junit.framework.TestResult.run(TestResult.java:109)
-	at junit.framework.TestCase.run(TestCase.java:120)
-	at junit.framework.TestSuite.runTest(TestSuite.java:230)
-	at junit.framework.TestSuite.run(TestSuite.java:225)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-<<<<<<< HEAD
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-=======
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
->>>>>>> 4c02aa96ee2157e78b9c8b2dae4f65d68730c037
-	at org.apache.maven.surefire.junit.JUnitTestSet.execute(JUnitTestSet.java:96)
-	at org.apache.maven.surefire.junit.JUnit3Provider.executeTestSet(JUnit3Provider.java:117)
-	at org.apache.maven.surefire.junit.JUnit3Provider.invoke(JUnit3Provider.java:94)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-<<<<<<< HEAD
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-=======
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
->>>>>>> 4c02aa96ee2157e78b9c8b2dae4f65d68730c037
-	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
-	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
-	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
-	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
-</error>
-  </testcase>
-<<<<<<< HEAD
-  <testcase time="0.059" classname="control.PuestoTest" name="testSetAppDuenio">
-=======
-  <testcase classname="control.PuestoTest" name="testSetDuenioPuesto" time="0">
->>>>>>> 4c02aa96ee2157e78b9c8b2dae4f65d68730c037
-    <error message="Access denied for user &apos;root&apos;@&apos;localhost&apos; (using password: YES)" type="java.sql.SQLException">java.sql.SQLException: Access denied for user &apos;root&apos;@&apos;localhost&apos; (using password: YES)
-	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1055)
-	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:956)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3491)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3423)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:910)
-	at com.mysql.jdbc.MysqlIO.secureAuth411(MysqlIO.java:3923)
-	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1273)
-	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2031)
-	at com.mysql.jdbc.ConnectionImpl.&lt;init&gt;(ConnectionImpl.java:718)
-	at com.mysql.jdbc.JDBC4Connection.&lt;init&gt;(JDBC4Connection.java:46)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-<<<<<<< HEAD
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
-	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
-	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:302)
-	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:282)
-	at java.sql.DriverManager.getConnection(DriverManager.java:571)
-	at java.sql.DriverManager.getConnection(DriverManager.java:215)
-=======
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
-	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:302)
-	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:282)
-	at java.sql.DriverManager.getConnection(DriverManager.java:664)
-	at java.sql.DriverManager.getConnection(DriverManager.java:247)
->>>>>>> 4c02aa96ee2157e78b9c8b2dae4f65d68730c037
-	at control.PuestoTest.getConnection(PuestoTest.java:135)
-	at org.dbunit.DatabaseTestCase.newDatabaseTester(DatabaseTestCase.java:85)
-	at org.dbunit.DatabaseTestCase.getDatabaseTester(DatabaseTestCase.java:109)
-	at org.dbunit.DatabaseTestCase.setUp(DatabaseTestCase.java:151)
-	at junit.framework.TestCase.runBare(TestCase.java:128)
-	at junit.framework.TestResult$1.protect(TestResult.java:106)
-	at junit.framework.TestResult.runProtected(TestResult.java:124)
-	at junit.framework.TestResult.run(TestResult.java:109)
-	at junit.framework.TestCase.run(TestCase.java:120)
-	at junit.framework.TestSuite.runTest(TestSuite.java:230)
-	at junit.framework.TestSuite.run(TestSuite.java:225)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-<<<<<<< HEAD
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-=======
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
->>>>>>> 4c02aa96ee2157e78b9c8b2dae4f65d68730c037
-	at org.apache.maven.surefire.junit.JUnitTestSet.execute(JUnitTestSet.java:96)
-	at org.apache.maven.surefire.junit.JUnit3Provider.executeTestSet(JUnit3Provider.java:117)
-	at org.apache.maven.surefire.junit.JUnit3Provider.invoke(JUnit3Provider.java:94)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-<<<<<<< HEAD
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-=======
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
->>>>>>> 4c02aa96ee2157e78b9c8b2dae4f65d68730c037
-	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
-	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
-	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
-	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
-</error>
-  </testcase>
-<<<<<<< HEAD
-  <testcase time="0.03" classname="control.PuestoTest" name="testSetApmDuenio">
-=======
-  <testcase classname="control.PuestoTest" name="testSetTipoComida" time="0">
->>>>>>> 4c02aa96ee2157e78b9c8b2dae4f65d68730c037
-    <error message="Access denied for user &apos;root&apos;@&apos;localhost&apos; (using password: YES)" type="java.sql.SQLException">java.sql.SQLException: Access denied for user &apos;root&apos;@&apos;localhost&apos; (using password: YES)
-	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1055)
-	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:956)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3491)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3423)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:910)
-	at com.mysql.jdbc.MysqlIO.secureAuth411(MysqlIO.java:3923)
-	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1273)
-	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2031)
-	at com.mysql.jdbc.ConnectionImpl.&lt;init&gt;(ConnectionImpl.java:718)
-	at com.mysql.jdbc.JDBC4Connection.&lt;init&gt;(JDBC4Connection.java:46)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-<<<<<<< HEAD
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
-	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
-	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:302)
-	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:282)
-	at java.sql.DriverManager.getConnection(DriverManager.java:571)
-	at java.sql.DriverManager.getConnection(DriverManager.java:215)
-=======
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
-	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:302)
-	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:282)
-	at java.sql.DriverManager.getConnection(DriverManager.java:664)
-	at java.sql.DriverManager.getConnection(DriverManager.java:247)
->>>>>>> 4c02aa96ee2157e78b9c8b2dae4f65d68730c037
-	at control.PuestoTest.getConnection(PuestoTest.java:135)
-	at org.dbunit.DatabaseTestCase.newDatabaseTester(DatabaseTestCase.java:85)
-	at org.dbunit.DatabaseTestCase.getDatabaseTester(DatabaseTestCase.java:109)
-	at org.dbunit.DatabaseTestCase.setUp(DatabaseTestCase.java:151)
-	at junit.framework.TestCase.runBare(TestCase.java:128)
-	at junit.framework.TestResult$1.protect(TestResult.java:106)
-	at junit.framework.TestResult.runProtected(TestResult.java:124)
-	at junit.framework.TestResult.run(TestResult.java:109)
-	at junit.framework.TestCase.run(TestCase.java:120)
-	at junit.framework.TestSuite.runTest(TestSuite.java:230)
-	at junit.framework.TestSuite.run(TestSuite.java:225)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-<<<<<<< HEAD
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-=======
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
->>>>>>> 4c02aa96ee2157e78b9c8b2dae4f65d68730c037
-	at org.apache.maven.surefire.junit.JUnitTestSet.execute(JUnitTestSet.java:96)
-	at org.apache.maven.surefire.junit.JUnit3Provider.executeTestSet(JUnit3Provider.java:117)
-	at org.apache.maven.surefire.junit.JUnit3Provider.invoke(JUnit3Provider.java:94)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-<<<<<<< HEAD
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-=======
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
->>>>>>> 4c02aa96ee2157e78b9c8b2dae4f65d68730c037
-	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
-	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
-	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
-	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
-</error>
-  </testcase>
-<<<<<<< HEAD
-  <testcase time="0.035" classname="control.PuestoTest" name="testSetFoto">
-=======
-  <testcase classname="control.PuestoTest" name="testSetHoraApertura" time="0.002">
->>>>>>> 4c02aa96ee2157e78b9c8b2dae4f65d68730c037
-    <error message="Access denied for user &apos;root&apos;@&apos;localhost&apos; (using password: YES)" type="java.sql.SQLException">java.sql.SQLException: Access denied for user &apos;root&apos;@&apos;localhost&apos; (using password: YES)
-	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1055)
-	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:956)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3491)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3423)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:910)
-	at com.mysql.jdbc.MysqlIO.secureAuth411(MysqlIO.java:3923)
-	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1273)
-	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2031)
-	at com.mysql.jdbc.ConnectionImpl.&lt;init&gt;(ConnectionImpl.java:718)
-	at com.mysql.jdbc.JDBC4Connection.&lt;init&gt;(JDBC4Connection.java:46)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-<<<<<<< HEAD
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
-	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
-	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:302)
-	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:282)
-	at java.sql.DriverManager.getConnection(DriverManager.java:571)
-	at java.sql.DriverManager.getConnection(DriverManager.java:215)
-=======
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
-	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:302)
-	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:282)
-	at java.sql.DriverManager.getConnection(DriverManager.java:664)
-	at java.sql.DriverManager.getConnection(DriverManager.java:247)
->>>>>>> 4c02aa96ee2157e78b9c8b2dae4f65d68730c037
-	at control.PuestoTest.getConnection(PuestoTest.java:135)
-	at org.dbunit.DatabaseTestCase.newDatabaseTester(DatabaseTestCase.java:85)
-	at org.dbunit.DatabaseTestCase.getDatabaseTester(DatabaseTestCase.java:109)
-	at org.dbunit.DatabaseTestCase.setUp(DatabaseTestCase.java:151)
-	at junit.framework.TestCase.runBare(TestCase.java:128)
-	at junit.framework.TestResult$1.protect(TestResult.java:106)
-	at junit.framework.TestResult.runProtected(TestResult.java:124)
-	at junit.framework.TestResult.run(TestResult.java:109)
-	at junit.framework.TestCase.run(TestCase.java:120)
-	at junit.framework.TestSuite.runTest(TestSuite.java:230)
-	at junit.framework.TestSuite.run(TestSuite.java:225)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-<<<<<<< HEAD
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-=======
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
->>>>>>> 4c02aa96ee2157e78b9c8b2dae4f65d68730c037
-	at org.apache.maven.surefire.junit.JUnitTestSet.execute(JUnitTestSet.java:96)
-	at org.apache.maven.surefire.junit.JUnit3Provider.executeTestSet(JUnit3Provider.java:117)
-	at org.apache.maven.surefire.junit.JUnit3Provider.invoke(JUnit3Provider.java:94)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-<<<<<<< HEAD
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-=======
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
->>>>>>> 4c02aa96ee2157e78b9c8b2dae4f65d68730c037
-	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
-	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
-	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
-	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
-</error>
-  </testcase>
-<<<<<<< HEAD
-  <testcase time="0.017" classname="control.PuestoTest" name="testRegistrarPuestos">
-=======
-  <testcase classname="control.PuestoTest" name="testSetHoraCierre" time="0.002">
->>>>>>> 4c02aa96ee2157e78b9c8b2dae4f65d68730c037
-    <error message="Access denied for user &apos;root&apos;@&apos;localhost&apos; (using password: YES)" type="java.sql.SQLException">java.sql.SQLException: Access denied for user &apos;root&apos;@&apos;localhost&apos; (using password: YES)
-	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1055)
-	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:956)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3491)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3423)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:910)
-	at com.mysql.jdbc.MysqlIO.secureAuth411(MysqlIO.java:3923)
-	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1273)
-	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2031)
-	at com.mysql.jdbc.ConnectionImpl.&lt;init&gt;(ConnectionImpl.java:718)
-	at com.mysql.jdbc.JDBC4Connection.&lt;init&gt;(JDBC4Connection.java:46)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-<<<<<<< HEAD
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
-	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
-	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:302)
-	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:282)
-	at java.sql.DriverManager.getConnection(DriverManager.java:571)
-	at java.sql.DriverManager.getConnection(DriverManager.java:215)
-=======
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
-	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:302)
-	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:282)
-	at java.sql.DriverManager.getConnection(DriverManager.java:664)
-	at java.sql.DriverManager.getConnection(DriverManager.java:247)
->>>>>>> 4c02aa96ee2157e78b9c8b2dae4f65d68730c037
-	at control.PuestoTest.getConnection(PuestoTest.java:135)
-	at org.dbunit.DatabaseTestCase.newDatabaseTester(DatabaseTestCase.java:85)
-	at org.dbunit.DatabaseTestCase.getDatabaseTester(DatabaseTestCase.java:109)
-	at org.dbunit.DatabaseTestCase.setUp(DatabaseTestCase.java:151)
-	at junit.framework.TestCase.runBare(TestCase.java:128)
-	at junit.framework.TestResult$1.protect(TestResult.java:106)
-	at junit.framework.TestResult.runProtected(TestResult.java:124)
-	at junit.framework.TestResult.run(TestResult.java:109)
-	at junit.framework.TestCase.run(TestCase.java:120)
-	at junit.framework.TestSuite.runTest(TestSuite.java:230)
-	at junit.framework.TestSuite.run(TestSuite.java:225)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-<<<<<<< HEAD
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-=======
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
->>>>>>> 4c02aa96ee2157e78b9c8b2dae4f65d68730c037
-	at org.apache.maven.surefire.junit.JUnitTestSet.execute(JUnitTestSet.java:96)
-	at org.apache.maven.surefire.junit.JUnit3Provider.executeTestSet(JUnit3Provider.java:117)
-	at org.apache.maven.surefire.junit.JUnit3Provider.invoke(JUnit3Provider.java:94)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-<<<<<<< HEAD
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-=======
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
->>>>>>> 4c02aa96ee2157e78b9c8b2dae4f65d68730c037
-	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
-	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
-	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
-	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
-</error>
-  </testcase>
-<<<<<<< HEAD
-  <testcase time="0.026" classname="control.PuestoTest" name="testGetId">
-=======
-  <testcase classname="control.PuestoTest" name="testSetAppDuenio" time="0.002">
->>>>>>> 4c02aa96ee2157e78b9c8b2dae4f65d68730c037
-    <error message="Access denied for user &apos;root&apos;@&apos;localhost&apos; (using password: YES)" type="java.sql.SQLException">java.sql.SQLException: Access denied for user &apos;root&apos;@&apos;localhost&apos; (using password: YES)
-	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1055)
-	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:956)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3491)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3423)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:910)
-	at com.mysql.jdbc.MysqlIO.secureAuth411(MysqlIO.java:3923)
-	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1273)
-	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2031)
-	at com.mysql.jdbc.ConnectionImpl.&lt;init&gt;(ConnectionImpl.java:718)
-	at com.mysql.jdbc.JDBC4Connection.&lt;init&gt;(JDBC4Connection.java:46)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-<<<<<<< HEAD
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
-	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
-	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:302)
-	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:282)
-	at java.sql.DriverManager.getConnection(DriverManager.java:571)
-	at java.sql.DriverManager.getConnection(DriverManager.java:215)
-=======
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
-	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:302)
-	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:282)
-	at java.sql.DriverManager.getConnection(DriverManager.java:664)
-	at java.sql.DriverManager.getConnection(DriverManager.java:247)
->>>>>>> 4c02aa96ee2157e78b9c8b2dae4f65d68730c037
-	at control.PuestoTest.getConnection(PuestoTest.java:135)
-	at org.dbunit.DatabaseTestCase.newDatabaseTester(DatabaseTestCase.java:85)
-	at org.dbunit.DatabaseTestCase.getDatabaseTester(DatabaseTestCase.java:109)
-	at org.dbunit.DatabaseTestCase.setUp(DatabaseTestCase.java:151)
-	at junit.framework.TestCase.runBare(TestCase.java:128)
-	at junit.framework.TestResult$1.protect(TestResult.java:106)
-	at junit.framework.TestResult.runProtected(TestResult.java:124)
-	at junit.framework.TestResult.run(TestResult.java:109)
-	at junit.framework.TestCase.run(TestCase.java:120)
-	at junit.framework.TestSuite.runTest(TestSuite.java:230)
-	at junit.framework.TestSuite.run(TestSuite.java:225)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-<<<<<<< HEAD
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-=======
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
->>>>>>> 4c02aa96ee2157e78b9c8b2dae4f65d68730c037
-	at org.apache.maven.surefire.junit.JUnitTestSet.execute(JUnitTestSet.java:96)
-	at org.apache.maven.surefire.junit.JUnit3Provider.executeTestSet(JUnit3Provider.java:117)
-	at org.apache.maven.surefire.junit.JUnit3Provider.invoke(JUnit3Provider.java:94)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-<<<<<<< HEAD
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-=======
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
->>>>>>> 4c02aa96ee2157e78b9c8b2dae4f65d68730c037
-	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
-	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
-	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
-	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
-</error>
-  </testcase>
-<<<<<<< HEAD
-  <testcase time="0.023" classname="control.PuestoTest" name="testGetNombrePuesto">
-=======
-  <testcase classname="control.PuestoTest" name="testSetApmDuenio" time="0.002">
->>>>>>> 4c02aa96ee2157e78b9c8b2dae4f65d68730c037
-    <error message="Access denied for user &apos;root&apos;@&apos;localhost&apos; (using password: YES)" type="java.sql.SQLException">java.sql.SQLException: Access denied for user &apos;root&apos;@&apos;localhost&apos; (using password: YES)
-	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1055)
-	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:956)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3491)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3423)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:910)
-	at com.mysql.jdbc.MysqlIO.secureAuth411(MysqlIO.java:3923)
-	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1273)
-	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2031)
-	at com.mysql.jdbc.ConnectionImpl.&lt;init&gt;(ConnectionImpl.java:718)
-	at com.mysql.jdbc.JDBC4Connection.&lt;init&gt;(JDBC4Connection.java:46)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-<<<<<<< HEAD
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
-	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
-	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:302)
-	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:282)
-	at java.sql.DriverManager.getConnection(DriverManager.java:571)
-	at java.sql.DriverManager.getConnection(DriverManager.java:215)
-=======
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
-	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:302)
-	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:282)
-	at java.sql.DriverManager.getConnection(DriverManager.java:664)
-	at java.sql.DriverManager.getConnection(DriverManager.java:247)
->>>>>>> 4c02aa96ee2157e78b9c8b2dae4f65d68730c037
-	at control.PuestoTest.getConnection(PuestoTest.java:135)
-	at org.dbunit.DatabaseTestCase.newDatabaseTester(DatabaseTestCase.java:85)
-	at org.dbunit.DatabaseTestCase.getDatabaseTester(DatabaseTestCase.java:109)
-	at org.dbunit.DatabaseTestCase.setUp(DatabaseTestCase.java:151)
-	at junit.framework.TestCase.runBare(TestCase.java:128)
-	at junit.framework.TestResult$1.protect(TestResult.java:106)
-	at junit.framework.TestResult.runProtected(TestResult.java:124)
-	at junit.framework.TestResult.run(TestResult.java:109)
-	at junit.framework.TestCase.run(TestCase.java:120)
-	at junit.framework.TestSuite.runTest(TestSuite.java:230)
-	at junit.framework.TestSuite.run(TestSuite.java:225)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-<<<<<<< HEAD
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-=======
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
->>>>>>> 4c02aa96ee2157e78b9c8b2dae4f65d68730c037
-	at org.apache.maven.surefire.junit.JUnitTestSet.execute(JUnitTestSet.java:96)
-	at org.apache.maven.surefire.junit.JUnit3Provider.executeTestSet(JUnit3Provider.java:117)
-	at org.apache.maven.surefire.junit.JUnit3Provider.invoke(JUnit3Provider.java:94)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-<<<<<<< HEAD
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-=======
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
->>>>>>> 4c02aa96ee2157e78b9c8b2dae4f65d68730c037
-	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
-	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
-	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
-	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
-</error>
-  </testcase>
-<<<<<<< HEAD
-  <testcase time="0.019" classname="control.PuestoTest" name="testGetDuenioPuesto">
-=======
-  <testcase classname="control.PuestoTest" name="testSetFoto" time="0.002">
->>>>>>> 4c02aa96ee2157e78b9c8b2dae4f65d68730c037
-    <error message="Access denied for user &apos;root&apos;@&apos;localhost&apos; (using password: YES)" type="java.sql.SQLException">java.sql.SQLException: Access denied for user &apos;root&apos;@&apos;localhost&apos; (using password: YES)
-	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1055)
-	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:956)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3491)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3423)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:910)
-	at com.mysql.jdbc.MysqlIO.secureAuth411(MysqlIO.java:3923)
-	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1273)
-	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2031)
-	at com.mysql.jdbc.ConnectionImpl.&lt;init&gt;(ConnectionImpl.java:718)
-	at com.mysql.jdbc.JDBC4Connection.&lt;init&gt;(JDBC4Connection.java:46)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-<<<<<<< HEAD
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
-	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
-	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:302)
-	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:282)
-	at java.sql.DriverManager.getConnection(DriverManager.java:571)
-	at java.sql.DriverManager.getConnection(DriverManager.java:215)
-=======
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
-	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:302)
-	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:282)
-	at java.sql.DriverManager.getConnection(DriverManager.java:664)
-	at java.sql.DriverManager.getConnection(DriverManager.java:247)
->>>>>>> 4c02aa96ee2157e78b9c8b2dae4f65d68730c037
-	at control.PuestoTest.getConnection(PuestoTest.java:135)
-	at org.dbunit.DatabaseTestCase.newDatabaseTester(DatabaseTestCase.java:85)
-	at org.dbunit.DatabaseTestCase.getDatabaseTester(DatabaseTestCase.java:109)
-	at org.dbunit.DatabaseTestCase.setUp(DatabaseTestCase.java:151)
-	at junit.framework.TestCase.runBare(TestCase.java:128)
-	at junit.framework.TestResult$1.protect(TestResult.java:106)
-	at junit.framework.TestResult.runProtected(TestResult.java:124)
-	at junit.framework.TestResult.run(TestResult.java:109)
-	at junit.framework.TestCase.run(TestCase.java:120)
-	at junit.framework.TestSuite.runTest(TestSuite.java:230)
-	at junit.framework.TestSuite.run(TestSuite.java:225)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-<<<<<<< HEAD
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-=======
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
->>>>>>> 4c02aa96ee2157e78b9c8b2dae4f65d68730c037
-	at org.apache.maven.surefire.junit.JUnitTestSet.execute(JUnitTestSet.java:96)
-	at org.apache.maven.surefire.junit.JUnit3Provider.executeTestSet(JUnit3Provider.java:117)
-	at org.apache.maven.surefire.junit.JUnit3Provider.invoke(JUnit3Provider.java:94)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-<<<<<<< HEAD
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-=======
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
->>>>>>> 4c02aa96ee2157e78b9c8b2dae4f65d68730c037
-	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
-	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
-	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
-	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
-</error>
-  </testcase>
-<<<<<<< HEAD
   <testcase time="0.017" classname="control.PuestoTest" name="testGetTipoComida">
-=======
-  <testcase classname="control.PuestoTest" name="testRegistrarPuestos" time="0.002">
->>>>>>> 4c02aa96ee2157e78b9c8b2dae4f65d68730c037
     <error message="Access denied for user &apos;root&apos;@&apos;localhost&apos; (using password: YES)" type="java.sql.SQLException">java.sql.SQLException: Access denied for user &apos;root&apos;@&apos;localhost&apos; (using password: YES)
 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1055)
 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:956)
@@ -1062,7 +179,6 @@ SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further detail
 	at com.mysql.jdbc.ConnectionImpl.&lt;init&gt;(ConnectionImpl.java:718)
 	at com.mysql.jdbc.JDBC4Connection.&lt;init&gt;(JDBC4Connection.java:46)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-<<<<<<< HEAD
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
@@ -1071,16 +187,6 @@ SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further detail
 	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:282)
 	at java.sql.DriverManager.getConnection(DriverManager.java:571)
 	at java.sql.DriverManager.getConnection(DriverManager.java:215)
-=======
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
-	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:302)
-	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:282)
-	at java.sql.DriverManager.getConnection(DriverManager.java:664)
-	at java.sql.DriverManager.getConnection(DriverManager.java:247)
->>>>>>> 4c02aa96ee2157e78b9c8b2dae4f65d68730c037
 	at control.PuestoTest.getConnection(PuestoTest.java:135)
 	at org.dbunit.DatabaseTestCase.newDatabaseTester(DatabaseTestCase.java:85)
 	at org.dbunit.DatabaseTestCase.getDatabaseTester(DatabaseTestCase.java:109)
@@ -1093,28 +199,16 @@ SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further detail
 	at junit.framework.TestSuite.runTest(TestSuite.java:230)
 	at junit.framework.TestSuite.run(TestSuite.java:225)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-<<<<<<< HEAD
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:606)
-=======
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
->>>>>>> 4c02aa96ee2157e78b9c8b2dae4f65d68730c037
 	at org.apache.maven.surefire.junit.JUnitTestSet.execute(JUnitTestSet.java:96)
 	at org.apache.maven.surefire.junit.JUnit3Provider.executeTestSet(JUnit3Provider.java:117)
 	at org.apache.maven.surefire.junit.JUnit3Provider.invoke(JUnit3Provider.java:94)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-<<<<<<< HEAD
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:606)
-=======
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
->>>>>>> 4c02aa96ee2157e78b9c8b2dae4f65d68730c037
 	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
 	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
 	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
@@ -1122,11 +216,7 @@ SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further detail
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
 </error>
   </testcase>
-<<<<<<< HEAD
-  <testcase time="0.019" classname="control.PuestoTest" name="testGetHoraApertura">
-=======
-  <testcase classname="control.PuestoTest" name="testGetDuenioPuesto" time="0.002">
->>>>>>> 4c02aa96ee2157e78b9c8b2dae4f65d68730c037
+  <testcase time="0.016" classname="control.PuestoTest" name="testGetHoraApertura">
     <error message="Access denied for user &apos;root&apos;@&apos;localhost&apos; (using password: YES)" type="java.sql.SQLException">java.sql.SQLException: Access denied for user &apos;root&apos;@&apos;localhost&apos; (using password: YES)
 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1055)
 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:956)
@@ -1139,7 +229,6 @@ SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further detail
 	at com.mysql.jdbc.ConnectionImpl.&lt;init&gt;(ConnectionImpl.java:718)
 	at com.mysql.jdbc.JDBC4Connection.&lt;init&gt;(JDBC4Connection.java:46)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-<<<<<<< HEAD
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
@@ -1148,16 +237,6 @@ SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further detail
 	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:282)
 	at java.sql.DriverManager.getConnection(DriverManager.java:571)
 	at java.sql.DriverManager.getConnection(DriverManager.java:215)
-=======
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
-	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:302)
-	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:282)
-	at java.sql.DriverManager.getConnection(DriverManager.java:664)
-	at java.sql.DriverManager.getConnection(DriverManager.java:247)
->>>>>>> 4c02aa96ee2157e78b9c8b2dae4f65d68730c037
 	at control.PuestoTest.getConnection(PuestoTest.java:135)
 	at org.dbunit.DatabaseTestCase.newDatabaseTester(DatabaseTestCase.java:85)
 	at org.dbunit.DatabaseTestCase.getDatabaseTester(DatabaseTestCase.java:109)
@@ -1170,28 +249,16 @@ SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further detail
 	at junit.framework.TestSuite.runTest(TestSuite.java:230)
 	at junit.framework.TestSuite.run(TestSuite.java:225)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-<<<<<<< HEAD
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:606)
-=======
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
->>>>>>> 4c02aa96ee2157e78b9c8b2dae4f65d68730c037
 	at org.apache.maven.surefire.junit.JUnitTestSet.execute(JUnitTestSet.java:96)
 	at org.apache.maven.surefire.junit.JUnit3Provider.executeTestSet(JUnit3Provider.java:117)
 	at org.apache.maven.surefire.junit.JUnit3Provider.invoke(JUnit3Provider.java:94)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-<<<<<<< HEAD
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:606)
-=======
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
->>>>>>> 4c02aa96ee2157e78b9c8b2dae4f65d68730c037
 	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
 	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
 	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
@@ -1199,11 +266,7 @@ SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further detail
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
 </error>
   </testcase>
-<<<<<<< HEAD
-  <testcase time="0.031" classname="control.PuestoTest" name="testGetHoraCierre">
-=======
-  <testcase classname="control.PuestoTest" name="testGetTipoComida" time="0.001">
->>>>>>> 4c02aa96ee2157e78b9c8b2dae4f65d68730c037
+  <testcase time="0.014" classname="control.PuestoTest" name="testGetHoraCierre">
     <error message="Access denied for user &apos;root&apos;@&apos;localhost&apos; (using password: YES)" type="java.sql.SQLException">java.sql.SQLException: Access denied for user &apos;root&apos;@&apos;localhost&apos; (using password: YES)
 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1055)
 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:956)
@@ -1216,7 +279,6 @@ SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further detail
 	at com.mysql.jdbc.ConnectionImpl.&lt;init&gt;(ConnectionImpl.java:718)
 	at com.mysql.jdbc.JDBC4Connection.&lt;init&gt;(JDBC4Connection.java:46)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-<<<<<<< HEAD
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
@@ -1225,16 +287,6 @@ SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further detail
 	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:282)
 	at java.sql.DriverManager.getConnection(DriverManager.java:571)
 	at java.sql.DriverManager.getConnection(DriverManager.java:215)
-=======
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
-	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:302)
-	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:282)
-	at java.sql.DriverManager.getConnection(DriverManager.java:664)
-	at java.sql.DriverManager.getConnection(DriverManager.java:247)
->>>>>>> 4c02aa96ee2157e78b9c8b2dae4f65d68730c037
 	at control.PuestoTest.getConnection(PuestoTest.java:135)
 	at org.dbunit.DatabaseTestCase.newDatabaseTester(DatabaseTestCase.java:85)
 	at org.dbunit.DatabaseTestCase.getDatabaseTester(DatabaseTestCase.java:109)
@@ -1247,28 +299,16 @@ SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further detail
 	at junit.framework.TestSuite.runTest(TestSuite.java:230)
 	at junit.framework.TestSuite.run(TestSuite.java:225)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-<<<<<<< HEAD
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:606)
-=======
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
->>>>>>> 4c02aa96ee2157e78b9c8b2dae4f65d68730c037
 	at org.apache.maven.surefire.junit.JUnitTestSet.execute(JUnitTestSet.java:96)
 	at org.apache.maven.surefire.junit.JUnit3Provider.executeTestSet(JUnit3Provider.java:117)
 	at org.apache.maven.surefire.junit.JUnit3Provider.invoke(JUnit3Provider.java:94)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-<<<<<<< HEAD
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:606)
-=======
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
->>>>>>> 4c02aa96ee2157e78b9c8b2dae4f65d68730c037
 	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
 	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
 	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
@@ -1276,11 +316,7 @@ SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further detail
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
 </error>
   </testcase>
-<<<<<<< HEAD
-  <testcase time="0.047" classname="control.PuestoTest" name="testObtenerPuestos">
-=======
-  <testcase classname="control.PuestoTest" name="testGetHoraApertura" time="0.003">
->>>>>>> 4c02aa96ee2157e78b9c8b2dae4f65d68730c037
+  <testcase time="0.013" classname="control.PuestoTest" name="testObtenerPuestos">
     <error message="Access denied for user &apos;root&apos;@&apos;localhost&apos; (using password: YES)" type="java.sql.SQLException">java.sql.SQLException: Access denied for user &apos;root&apos;@&apos;localhost&apos; (using password: YES)
 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1055)
 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:956)
@@ -1293,7 +329,6 @@ SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further detail
 	at com.mysql.jdbc.ConnectionImpl.&lt;init&gt;(ConnectionImpl.java:718)
 	at com.mysql.jdbc.JDBC4Connection.&lt;init&gt;(JDBC4Connection.java:46)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-<<<<<<< HEAD
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
@@ -1302,16 +337,6 @@ SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further detail
 	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:282)
 	at java.sql.DriverManager.getConnection(DriverManager.java:571)
 	at java.sql.DriverManager.getConnection(DriverManager.java:215)
-=======
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
-	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:302)
-	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:282)
-	at java.sql.DriverManager.getConnection(DriverManager.java:664)
-	at java.sql.DriverManager.getConnection(DriverManager.java:247)
->>>>>>> 4c02aa96ee2157e78b9c8b2dae4f65d68730c037
 	at control.PuestoTest.getConnection(PuestoTest.java:135)
 	at org.dbunit.DatabaseTestCase.newDatabaseTester(DatabaseTestCase.java:85)
 	at org.dbunit.DatabaseTestCase.getDatabaseTester(DatabaseTestCase.java:109)
@@ -1324,28 +349,16 @@ SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further detail
 	at junit.framework.TestSuite.runTest(TestSuite.java:230)
 	at junit.framework.TestSuite.run(TestSuite.java:225)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-<<<<<<< HEAD
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:606)
-=======
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
->>>>>>> 4c02aa96ee2157e78b9c8b2dae4f65d68730c037
 	at org.apache.maven.surefire.junit.JUnitTestSet.execute(JUnitTestSet.java:96)
 	at org.apache.maven.surefire.junit.JUnit3Provider.executeTestSet(JUnit3Provider.java:117)
 	at org.apache.maven.surefire.junit.JUnit3Provider.invoke(JUnit3Provider.java:94)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-<<<<<<< HEAD
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:606)
-=======
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
->>>>>>> 4c02aa96ee2157e78b9c8b2dae4f65d68730c037
 	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
 	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
 	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
@@ -1353,11 +366,507 @@ SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further detail
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
 </error>
   </testcase>
-<<<<<<< HEAD
-  <testcase time="0.015" classname="control.PuestoTest" name="testSetId">
-=======
-  <testcase classname="control.PuestoTest" name="testGetHoraCierre" time="0.002">
->>>>>>> 4c02aa96ee2157e78b9c8b2dae4f65d68730c037
+  <testcase time="0.014" classname="control.PuestoTest" name="testSetId">
+    <error message="Access denied for user &apos;root&apos;@&apos;localhost&apos; (using password: YES)" type="java.sql.SQLException">java.sql.SQLException: Access denied for user &apos;root&apos;@&apos;localhost&apos; (using password: YES)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1055)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:956)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3491)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3423)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:910)
+	at com.mysql.jdbc.MysqlIO.secureAuth411(MysqlIO.java:3923)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1273)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2031)
+	at com.mysql.jdbc.ConnectionImpl.&lt;init&gt;(ConnectionImpl.java:718)
+	at com.mysql.jdbc.JDBC4Connection.&lt;init&gt;(JDBC4Connection.java:46)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:302)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:282)
+	at java.sql.DriverManager.getConnection(DriverManager.java:571)
+	at java.sql.DriverManager.getConnection(DriverManager.java:215)
+	at control.PuestoTest.getConnection(PuestoTest.java:135)
+	at org.dbunit.DatabaseTestCase.newDatabaseTester(DatabaseTestCase.java:85)
+	at org.dbunit.DatabaseTestCase.getDatabaseTester(DatabaseTestCase.java:109)
+	at org.dbunit.DatabaseTestCase.setUp(DatabaseTestCase.java:151)
+	at junit.framework.TestCase.runBare(TestCase.java:128)
+	at junit.framework.TestResult$1.protect(TestResult.java:106)
+	at junit.framework.TestResult.runProtected(TestResult.java:124)
+	at junit.framework.TestResult.run(TestResult.java:109)
+	at junit.framework.TestCase.run(TestCase.java:120)
+	at junit.framework.TestSuite.runTest(TestSuite.java:230)
+	at junit.framework.TestSuite.run(TestSuite.java:225)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.maven.surefire.junit.JUnitTestSet.execute(JUnitTestSet.java:96)
+	at org.apache.maven.surefire.junit.JUnit3Provider.executeTestSet(JUnit3Provider.java:117)
+	at org.apache.maven.surefire.junit.JUnit3Provider.invoke(JUnit3Provider.java:94)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
+</error>
+  </testcase>
+  <testcase time="0.016" classname="control.PuestoTest" name="testSetNombrePuesto">
+    <error message="Access denied for user &apos;root&apos;@&apos;localhost&apos; (using password: YES)" type="java.sql.SQLException">java.sql.SQLException: Access denied for user &apos;root&apos;@&apos;localhost&apos; (using password: YES)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1055)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:956)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3491)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3423)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:910)
+	at com.mysql.jdbc.MysqlIO.secureAuth411(MysqlIO.java:3923)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1273)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2031)
+	at com.mysql.jdbc.ConnectionImpl.&lt;init&gt;(ConnectionImpl.java:718)
+	at com.mysql.jdbc.JDBC4Connection.&lt;init&gt;(JDBC4Connection.java:46)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:302)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:282)
+	at java.sql.DriverManager.getConnection(DriverManager.java:571)
+	at java.sql.DriverManager.getConnection(DriverManager.java:215)
+	at control.PuestoTest.getConnection(PuestoTest.java:135)
+	at org.dbunit.DatabaseTestCase.newDatabaseTester(DatabaseTestCase.java:85)
+	at org.dbunit.DatabaseTestCase.getDatabaseTester(DatabaseTestCase.java:109)
+	at org.dbunit.DatabaseTestCase.setUp(DatabaseTestCase.java:151)
+	at junit.framework.TestCase.runBare(TestCase.java:128)
+	at junit.framework.TestResult$1.protect(TestResult.java:106)
+	at junit.framework.TestResult.runProtected(TestResult.java:124)
+	at junit.framework.TestResult.run(TestResult.java:109)
+	at junit.framework.TestCase.run(TestCase.java:120)
+	at junit.framework.TestSuite.runTest(TestSuite.java:230)
+	at junit.framework.TestSuite.run(TestSuite.java:225)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.maven.surefire.junit.JUnitTestSet.execute(JUnitTestSet.java:96)
+	at org.apache.maven.surefire.junit.JUnit3Provider.executeTestSet(JUnit3Provider.java:117)
+	at org.apache.maven.surefire.junit.JUnit3Provider.invoke(JUnit3Provider.java:94)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
+</error>
+  </testcase>
+  <testcase time="0.013" classname="control.PuestoTest" name="testSetDuenioPuesto">
+    <error message="Access denied for user &apos;root&apos;@&apos;localhost&apos; (using password: YES)" type="java.sql.SQLException">java.sql.SQLException: Access denied for user &apos;root&apos;@&apos;localhost&apos; (using password: YES)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1055)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:956)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3491)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3423)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:910)
+	at com.mysql.jdbc.MysqlIO.secureAuth411(MysqlIO.java:3923)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1273)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2031)
+	at com.mysql.jdbc.ConnectionImpl.&lt;init&gt;(ConnectionImpl.java:718)
+	at com.mysql.jdbc.JDBC4Connection.&lt;init&gt;(JDBC4Connection.java:46)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:302)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:282)
+	at java.sql.DriverManager.getConnection(DriverManager.java:571)
+	at java.sql.DriverManager.getConnection(DriverManager.java:215)
+	at control.PuestoTest.getConnection(PuestoTest.java:135)
+	at org.dbunit.DatabaseTestCase.newDatabaseTester(DatabaseTestCase.java:85)
+	at org.dbunit.DatabaseTestCase.getDatabaseTester(DatabaseTestCase.java:109)
+	at org.dbunit.DatabaseTestCase.setUp(DatabaseTestCase.java:151)
+	at junit.framework.TestCase.runBare(TestCase.java:128)
+	at junit.framework.TestResult$1.protect(TestResult.java:106)
+	at junit.framework.TestResult.runProtected(TestResult.java:124)
+	at junit.framework.TestResult.run(TestResult.java:109)
+	at junit.framework.TestCase.run(TestCase.java:120)
+	at junit.framework.TestSuite.runTest(TestSuite.java:230)
+	at junit.framework.TestSuite.run(TestSuite.java:225)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.maven.surefire.junit.JUnitTestSet.execute(JUnitTestSet.java:96)
+	at org.apache.maven.surefire.junit.JUnit3Provider.executeTestSet(JUnit3Provider.java:117)
+	at org.apache.maven.surefire.junit.JUnit3Provider.invoke(JUnit3Provider.java:94)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
+</error>
+  </testcase>
+  <testcase time="0.037" classname="control.PuestoTest" name="testSetTipoComida">
+    <error message="Access denied for user &apos;root&apos;@&apos;localhost&apos; (using password: YES)" type="java.sql.SQLException">java.sql.SQLException: Access denied for user &apos;root&apos;@&apos;localhost&apos; (using password: YES)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1055)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:956)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3491)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3423)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:910)
+	at com.mysql.jdbc.MysqlIO.secureAuth411(MysqlIO.java:3923)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1273)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2031)
+	at com.mysql.jdbc.ConnectionImpl.&lt;init&gt;(ConnectionImpl.java:718)
+	at com.mysql.jdbc.JDBC4Connection.&lt;init&gt;(JDBC4Connection.java:46)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:302)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:282)
+	at java.sql.DriverManager.getConnection(DriverManager.java:571)
+	at java.sql.DriverManager.getConnection(DriverManager.java:215)
+	at control.PuestoTest.getConnection(PuestoTest.java:135)
+	at org.dbunit.DatabaseTestCase.newDatabaseTester(DatabaseTestCase.java:85)
+	at org.dbunit.DatabaseTestCase.getDatabaseTester(DatabaseTestCase.java:109)
+	at org.dbunit.DatabaseTestCase.setUp(DatabaseTestCase.java:151)
+	at junit.framework.TestCase.runBare(TestCase.java:128)
+	at junit.framework.TestResult$1.protect(TestResult.java:106)
+	at junit.framework.TestResult.runProtected(TestResult.java:124)
+	at junit.framework.TestResult.run(TestResult.java:109)
+	at junit.framework.TestCase.run(TestCase.java:120)
+	at junit.framework.TestSuite.runTest(TestSuite.java:230)
+	at junit.framework.TestSuite.run(TestSuite.java:225)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.maven.surefire.junit.JUnitTestSet.execute(JUnitTestSet.java:96)
+	at org.apache.maven.surefire.junit.JUnit3Provider.executeTestSet(JUnit3Provider.java:117)
+	at org.apache.maven.surefire.junit.JUnit3Provider.invoke(JUnit3Provider.java:94)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
+</error>
+  </testcase>
+  <testcase time="0.024" classname="control.PuestoTest" name="testSetHoraApertura">
+    <error message="Access denied for user &apos;root&apos;@&apos;localhost&apos; (using password: YES)" type="java.sql.SQLException">java.sql.SQLException: Access denied for user &apos;root&apos;@&apos;localhost&apos; (using password: YES)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1055)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:956)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3491)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3423)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:910)
+	at com.mysql.jdbc.MysqlIO.secureAuth411(MysqlIO.java:3923)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1273)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2031)
+	at com.mysql.jdbc.ConnectionImpl.&lt;init&gt;(ConnectionImpl.java:718)
+	at com.mysql.jdbc.JDBC4Connection.&lt;init&gt;(JDBC4Connection.java:46)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:302)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:282)
+	at java.sql.DriverManager.getConnection(DriverManager.java:571)
+	at java.sql.DriverManager.getConnection(DriverManager.java:215)
+	at control.PuestoTest.getConnection(PuestoTest.java:135)
+	at org.dbunit.DatabaseTestCase.newDatabaseTester(DatabaseTestCase.java:85)
+	at org.dbunit.DatabaseTestCase.getDatabaseTester(DatabaseTestCase.java:109)
+	at org.dbunit.DatabaseTestCase.setUp(DatabaseTestCase.java:151)
+	at junit.framework.TestCase.runBare(TestCase.java:128)
+	at junit.framework.TestResult$1.protect(TestResult.java:106)
+	at junit.framework.TestResult.runProtected(TestResult.java:124)
+	at junit.framework.TestResult.run(TestResult.java:109)
+	at junit.framework.TestCase.run(TestCase.java:120)
+	at junit.framework.TestSuite.runTest(TestSuite.java:230)
+	at junit.framework.TestSuite.run(TestSuite.java:225)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.maven.surefire.junit.JUnitTestSet.execute(JUnitTestSet.java:96)
+	at org.apache.maven.surefire.junit.JUnit3Provider.executeTestSet(JUnit3Provider.java:117)
+	at org.apache.maven.surefire.junit.JUnit3Provider.invoke(JUnit3Provider.java:94)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
+</error>
+  </testcase>
+  <testcase time="0.012" classname="control.PuestoTest" name="testSetHoraCierre">
+    <error message="Access denied for user &apos;root&apos;@&apos;localhost&apos; (using password: YES)" type="java.sql.SQLException">java.sql.SQLException: Access denied for user &apos;root&apos;@&apos;localhost&apos; (using password: YES)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1055)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:956)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3491)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3423)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:910)
+	at com.mysql.jdbc.MysqlIO.secureAuth411(MysqlIO.java:3923)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1273)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2031)
+	at com.mysql.jdbc.ConnectionImpl.&lt;init&gt;(ConnectionImpl.java:718)
+	at com.mysql.jdbc.JDBC4Connection.&lt;init&gt;(JDBC4Connection.java:46)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:302)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:282)
+	at java.sql.DriverManager.getConnection(DriverManager.java:571)
+	at java.sql.DriverManager.getConnection(DriverManager.java:215)
+	at control.PuestoTest.getConnection(PuestoTest.java:135)
+	at org.dbunit.DatabaseTestCase.newDatabaseTester(DatabaseTestCase.java:85)
+	at org.dbunit.DatabaseTestCase.getDatabaseTester(DatabaseTestCase.java:109)
+	at org.dbunit.DatabaseTestCase.setUp(DatabaseTestCase.java:151)
+	at junit.framework.TestCase.runBare(TestCase.java:128)
+	at junit.framework.TestResult$1.protect(TestResult.java:106)
+	at junit.framework.TestResult.runProtected(TestResult.java:124)
+	at junit.framework.TestResult.run(TestResult.java:109)
+	at junit.framework.TestCase.run(TestCase.java:120)
+	at junit.framework.TestSuite.runTest(TestSuite.java:230)
+	at junit.framework.TestSuite.run(TestSuite.java:225)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.maven.surefire.junit.JUnitTestSet.execute(JUnitTestSet.java:96)
+	at org.apache.maven.surefire.junit.JUnit3Provider.executeTestSet(JUnit3Provider.java:117)
+	at org.apache.maven.surefire.junit.JUnit3Provider.invoke(JUnit3Provider.java:94)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
+</error>
+  </testcase>
+  <testcase time="0.018" classname="control.PuestoTest" name="testSetAppDuenio">
+    <error message="Access denied for user &apos;root&apos;@&apos;localhost&apos; (using password: YES)" type="java.sql.SQLException">java.sql.SQLException: Access denied for user &apos;root&apos;@&apos;localhost&apos; (using password: YES)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1055)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:956)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3491)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3423)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:910)
+	at com.mysql.jdbc.MysqlIO.secureAuth411(MysqlIO.java:3923)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1273)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2031)
+	at com.mysql.jdbc.ConnectionImpl.&lt;init&gt;(ConnectionImpl.java:718)
+	at com.mysql.jdbc.JDBC4Connection.&lt;init&gt;(JDBC4Connection.java:46)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:302)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:282)
+	at java.sql.DriverManager.getConnection(DriverManager.java:571)
+	at java.sql.DriverManager.getConnection(DriverManager.java:215)
+	at control.PuestoTest.getConnection(PuestoTest.java:135)
+	at org.dbunit.DatabaseTestCase.newDatabaseTester(DatabaseTestCase.java:85)
+	at org.dbunit.DatabaseTestCase.getDatabaseTester(DatabaseTestCase.java:109)
+	at org.dbunit.DatabaseTestCase.setUp(DatabaseTestCase.java:151)
+	at junit.framework.TestCase.runBare(TestCase.java:128)
+	at junit.framework.TestResult$1.protect(TestResult.java:106)
+	at junit.framework.TestResult.runProtected(TestResult.java:124)
+	at junit.framework.TestResult.run(TestResult.java:109)
+	at junit.framework.TestCase.run(TestCase.java:120)
+	at junit.framework.TestSuite.runTest(TestSuite.java:230)
+	at junit.framework.TestSuite.run(TestSuite.java:225)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.maven.surefire.junit.JUnitTestSet.execute(JUnitTestSet.java:96)
+	at org.apache.maven.surefire.junit.JUnit3Provider.executeTestSet(JUnit3Provider.java:117)
+	at org.apache.maven.surefire.junit.JUnit3Provider.invoke(JUnit3Provider.java:94)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
+</error>
+  </testcase>
+  <testcase time="0.005" classname="control.PuestoTest" name="testSetApmDuenio">
+    <error message="Access denied for user &apos;root&apos;@&apos;localhost&apos; (using password: YES)" type="java.sql.SQLException">java.sql.SQLException: Access denied for user &apos;root&apos;@&apos;localhost&apos; (using password: YES)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1055)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:956)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3491)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3423)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:910)
+	at com.mysql.jdbc.MysqlIO.secureAuth411(MysqlIO.java:3923)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1273)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2031)
+	at com.mysql.jdbc.ConnectionImpl.&lt;init&gt;(ConnectionImpl.java:718)
+	at com.mysql.jdbc.JDBC4Connection.&lt;init&gt;(JDBC4Connection.java:46)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:302)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:282)
+	at java.sql.DriverManager.getConnection(DriverManager.java:571)
+	at java.sql.DriverManager.getConnection(DriverManager.java:215)
+	at control.PuestoTest.getConnection(PuestoTest.java:135)
+	at org.dbunit.DatabaseTestCase.newDatabaseTester(DatabaseTestCase.java:85)
+	at org.dbunit.DatabaseTestCase.getDatabaseTester(DatabaseTestCase.java:109)
+	at org.dbunit.DatabaseTestCase.setUp(DatabaseTestCase.java:151)
+	at junit.framework.TestCase.runBare(TestCase.java:128)
+	at junit.framework.TestResult$1.protect(TestResult.java:106)
+	at junit.framework.TestResult.runProtected(TestResult.java:124)
+	at junit.framework.TestResult.run(TestResult.java:109)
+	at junit.framework.TestCase.run(TestCase.java:120)
+	at junit.framework.TestSuite.runTest(TestSuite.java:230)
+	at junit.framework.TestSuite.run(TestSuite.java:225)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.maven.surefire.junit.JUnitTestSet.execute(JUnitTestSet.java:96)
+	at org.apache.maven.surefire.junit.JUnit3Provider.executeTestSet(JUnit3Provider.java:117)
+	at org.apache.maven.surefire.junit.JUnit3Provider.invoke(JUnit3Provider.java:94)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
+</error>
+  </testcase>
+  <testcase time="0.01" classname="control.PuestoTest" name="testSetFoto">
+    <error message="Access denied for user &apos;root&apos;@&apos;localhost&apos; (using password: YES)" type="java.sql.SQLException">java.sql.SQLException: Access denied for user &apos;root&apos;@&apos;localhost&apos; (using password: YES)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1055)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:956)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3491)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3423)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:910)
+	at com.mysql.jdbc.MysqlIO.secureAuth411(MysqlIO.java:3923)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1273)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2031)
+	at com.mysql.jdbc.ConnectionImpl.&lt;init&gt;(ConnectionImpl.java:718)
+	at com.mysql.jdbc.JDBC4Connection.&lt;init&gt;(JDBC4Connection.java:46)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:302)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:282)
+	at java.sql.DriverManager.getConnection(DriverManager.java:571)
+	at java.sql.DriverManager.getConnection(DriverManager.java:215)
+	at control.PuestoTest.getConnection(PuestoTest.java:135)
+	at org.dbunit.DatabaseTestCase.newDatabaseTester(DatabaseTestCase.java:85)
+	at org.dbunit.DatabaseTestCase.getDatabaseTester(DatabaseTestCase.java:109)
+	at org.dbunit.DatabaseTestCase.setUp(DatabaseTestCase.java:151)
+	at junit.framework.TestCase.runBare(TestCase.java:128)
+	at junit.framework.TestResult$1.protect(TestResult.java:106)
+	at junit.framework.TestResult.runProtected(TestResult.java:124)
+	at junit.framework.TestResult.run(TestResult.java:109)
+	at junit.framework.TestCase.run(TestCase.java:120)
+	at junit.framework.TestSuite.runTest(TestSuite.java:230)
+	at junit.framework.TestSuite.run(TestSuite.java:225)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.maven.surefire.junit.JUnitTestSet.execute(JUnitTestSet.java:96)
+	at org.apache.maven.surefire.junit.JUnit3Provider.executeTestSet(JUnit3Provider.java:117)
+	at org.apache.maven.surefire.junit.JUnit3Provider.invoke(JUnit3Provider.java:94)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
+</error>
+  </testcase>
+  <testcase time="0.025" classname="control.PuestoTest" name="testRegistrarPuestos">
+    <error message="Access denied for user &apos;root&apos;@&apos;localhost&apos; (using password: YES)" type="java.sql.SQLException">java.sql.SQLException: Access denied for user &apos;root&apos;@&apos;localhost&apos; (using password: YES)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1055)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:956)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3491)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3423)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:910)
+	at com.mysql.jdbc.MysqlIO.secureAuth411(MysqlIO.java:3923)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1273)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2031)
+	at com.mysql.jdbc.ConnectionImpl.&lt;init&gt;(ConnectionImpl.java:718)
+	at com.mysql.jdbc.JDBC4Connection.&lt;init&gt;(JDBC4Connection.java:46)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:302)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:282)
+	at java.sql.DriverManager.getConnection(DriverManager.java:571)
+	at java.sql.DriverManager.getConnection(DriverManager.java:215)
+	at control.PuestoTest.getConnection(PuestoTest.java:135)
+	at org.dbunit.DatabaseTestCase.newDatabaseTester(DatabaseTestCase.java:85)
+	at org.dbunit.DatabaseTestCase.getDatabaseTester(DatabaseTestCase.java:109)
+	at org.dbunit.DatabaseTestCase.setUp(DatabaseTestCase.java:151)
+	at junit.framework.TestCase.runBare(TestCase.java:128)
+	at junit.framework.TestResult$1.protect(TestResult.java:106)
+	at junit.framework.TestResult.runProtected(TestResult.java:124)
+	at junit.framework.TestResult.run(TestResult.java:109)
+	at junit.framework.TestCase.run(TestCase.java:120)
+	at junit.framework.TestSuite.runTest(TestSuite.java:230)
+	at junit.framework.TestSuite.run(TestSuite.java:225)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.maven.surefire.junit.JUnitTestSet.execute(JUnitTestSet.java:96)
+	at org.apache.maven.surefire.junit.JUnit3Provider.executeTestSet(JUnit3Provider.java:117)
+	at org.apache.maven.surefire.junit.JUnit3Provider.invoke(JUnit3Provider.java:94)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
+</error>
+  </testcase>
+  <testcase time="0.029" classname="control.PuestoTest" name="testGetNombrePuesto">
     <error message="Access denied for user &apos;root&apos;@&apos;localhost&apos; (using password: YES)" type="java.sql.SQLException">java.sql.SQLException: Access denied for user &apos;root&apos;@&apos;localhost&apos; (using password: YES)
 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1055)
 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:956)
@@ -1371,21 +880,12 @@ SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further detail
 	at com.mysql.jdbc.JDBC4Connection.&lt;init&gt;(JDBC4Connection.java:46)
 	at sun.reflect.GeneratedConstructorAccessor3.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-<<<<<<< HEAD
 	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
 	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
 	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:302)
 	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:282)
 	at java.sql.DriverManager.getConnection(DriverManager.java:571)
 	at java.sql.DriverManager.getConnection(DriverManager.java:215)
-=======
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
-	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:302)
-	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:282)
-	at java.sql.DriverManager.getConnection(DriverManager.java:664)
-	at java.sql.DriverManager.getConnection(DriverManager.java:247)
->>>>>>> 4c02aa96ee2157e78b9c8b2dae4f65d68730c037
 	at control.PuestoTest.getConnection(PuestoTest.java:135)
 	at org.dbunit.DatabaseTestCase.newDatabaseTester(DatabaseTestCase.java:85)
 	at org.dbunit.DatabaseTestCase.getDatabaseTester(DatabaseTestCase.java:109)
@@ -1398,28 +898,16 @@ SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further detail
 	at junit.framework.TestSuite.runTest(TestSuite.java:230)
 	at junit.framework.TestSuite.run(TestSuite.java:225)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-<<<<<<< HEAD
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:606)
-=======
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
->>>>>>> 4c02aa96ee2157e78b9c8b2dae4f65d68730c037
 	at org.apache.maven.surefire.junit.JUnitTestSet.execute(JUnitTestSet.java:96)
 	at org.apache.maven.surefire.junit.JUnit3Provider.executeTestSet(JUnit3Provider.java:117)
 	at org.apache.maven.surefire.junit.JUnit3Provider.invoke(JUnit3Provider.java:94)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-<<<<<<< HEAD
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:606)
-=======
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
->>>>>>> 4c02aa96ee2157e78b9c8b2dae4f65d68730c037
 	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
 	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
 	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
