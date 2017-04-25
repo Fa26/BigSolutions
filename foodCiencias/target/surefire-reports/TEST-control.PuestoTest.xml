@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="0" time="1.25" errors="17" skipped="0" tests="17" name="control.PuestoTest">
+<testsuite failures="0" time="1.216" errors="17" skipped="0" tests="17" name="control.PuestoTest">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/home/mint/jdk1.7.0_80/jre/lib/amd64"/>
@@ -16,7 +16,6 @@
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="user.dir" value="/home/mint/Escritorio/I.S/Proyecto/BigSolutions/foodCiencias"/>
     <property name="java.runtime.version" value="1.7.0_80-b15"/>
-    <property name="netbeans.deploy" value="true"/>
     <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
     <property name="java.endorsed.dirs" value="/home/mint/jdk1.7.0_80/jre/lib/endorsed"/>
     <property name="os.arch" value="amd64"/>
@@ -36,14 +35,14 @@
     <property name="user.home" value="/home/mint"/>
     <property name="user.timezone" value="America/Mexico_City"/>
     <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
-    <property name="java.specification.version" value="1.7"/>
     <property name="file.encoding" value="UTF-8"/>
+    <property name="java.specification.version" value="1.7"/>
     <property name="user.name" value="mint"/>
     <property name="java.class.path" value="/home/mint/netbeans-8.0.2/java/maven/boot/plexus-classworlds-2.4.jar"/>
     <property name="java.vm.specification.version" value="1.7"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="/home/mint/jdk1.7.0_80/jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dnetbeans.deploy=true -Dnetbeans.deploy.clientUrlPart=/faces/consultas/Entrar.jsp -Dmaven.ext.class.path=/home/mint/netbeans-8.0.2/java/maven-nblib/netbeans-eventspy.jar package"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dmaven.ext.class.path=/home/mint/netbeans-8.0.2/java/maven-nblib/netbeans-eventspy.jar clean install"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="es"/>
     <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
@@ -58,11 +57,10 @@
     <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
-    <property name="netbeans.deploy.clientUrlPart" value="/faces/consultas/Entrar.jsp"/>
     <property name="sun.desktop" value="gnome"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase time="0.756" classname="control.PuestoTest" name="testGetId">
+  <testcase time="0.741" classname="control.PuestoTest" name="testGetNombrePuesto">
     <error message="Access denied for user &apos;root&apos;@&apos;localhost&apos; (using password: YES)" type="java.sql.SQLException">java.sql.SQLException: Access denied for user &apos;root&apos;@&apos;localhost&apos; (using password: YES)
 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1055)
 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:956)
@@ -116,7 +114,7 @@ SLF4J: Defaulting to no-operation (NOP) logger implementation
 SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
 </system-err>
   </testcase>
-  <testcase time="0.006" classname="control.PuestoTest" name="testGetDuenioPuesto">
+  <testcase time="0.022" classname="control.PuestoTest" name="testGetId">
     <error message="Access denied for user &apos;root&apos;@&apos;localhost&apos; (using password: YES)" type="java.sql.SQLException">java.sql.SQLException: Access denied for user &apos;root&apos;@&apos;localhost&apos; (using password: YES)
 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1055)
 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:956)
@@ -166,7 +164,7 @@ SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further detail
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
 </error>
   </testcase>
-  <testcase time="0.017" classname="control.PuestoTest" name="testGetTipoComida">
+  <testcase time="0.046" classname="control.PuestoTest" name="testGetDuenioPuesto">
     <error message="Access denied for user &apos;root&apos;@&apos;localhost&apos; (using password: YES)" type="java.sql.SQLException">java.sql.SQLException: Access denied for user &apos;root&apos;@&apos;localhost&apos; (using password: YES)
 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1055)
 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:956)
@@ -216,7 +214,57 @@ SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further detail
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
 </error>
   </testcase>
-  <testcase time="0.016" classname="control.PuestoTest" name="testGetHoraApertura">
+  <testcase time="0.019" classname="control.PuestoTest" name="testGetTipoComida">
+    <error message="Access denied for user &apos;root&apos;@&apos;localhost&apos; (using password: YES)" type="java.sql.SQLException">java.sql.SQLException: Access denied for user &apos;root&apos;@&apos;localhost&apos; (using password: YES)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1055)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:956)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3491)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3423)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:910)
+	at com.mysql.jdbc.MysqlIO.secureAuth411(MysqlIO.java:3923)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1273)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2031)
+	at com.mysql.jdbc.ConnectionImpl.&lt;init&gt;(ConnectionImpl.java:718)
+	at com.mysql.jdbc.JDBC4Connection.&lt;init&gt;(JDBC4Connection.java:46)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:302)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:282)
+	at java.sql.DriverManager.getConnection(DriverManager.java:571)
+	at java.sql.DriverManager.getConnection(DriverManager.java:215)
+	at control.PuestoTest.getConnection(PuestoTest.java:135)
+	at org.dbunit.DatabaseTestCase.newDatabaseTester(DatabaseTestCase.java:85)
+	at org.dbunit.DatabaseTestCase.getDatabaseTester(DatabaseTestCase.java:109)
+	at org.dbunit.DatabaseTestCase.setUp(DatabaseTestCase.java:151)
+	at junit.framework.TestCase.runBare(TestCase.java:128)
+	at junit.framework.TestResult$1.protect(TestResult.java:106)
+	at junit.framework.TestResult.runProtected(TestResult.java:124)
+	at junit.framework.TestResult.run(TestResult.java:109)
+	at junit.framework.TestCase.run(TestCase.java:120)
+	at junit.framework.TestSuite.runTest(TestSuite.java:230)
+	at junit.framework.TestSuite.run(TestSuite.java:225)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.maven.surefire.junit.JUnitTestSet.execute(JUnitTestSet.java:96)
+	at org.apache.maven.surefire.junit.JUnit3Provider.executeTestSet(JUnit3Provider.java:117)
+	at org.apache.maven.surefire.junit.JUnit3Provider.invoke(JUnit3Provider.java:94)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
+</error>
+  </testcase>
+  <testcase time="0.018" classname="control.PuestoTest" name="testGetHoraApertura">
     <error message="Access denied for user &apos;root&apos;@&apos;localhost&apos; (using password: YES)" type="java.sql.SQLException">java.sql.SQLException: Access denied for user &apos;root&apos;@&apos;localhost&apos; (using password: YES)
 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1055)
 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:956)
@@ -366,7 +414,7 @@ SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further detail
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
 </error>
   </testcase>
-  <testcase time="0.014" classname="control.PuestoTest" name="testSetId">
+  <testcase time="0.015" classname="control.PuestoTest" name="testSetId">
     <error message="Access denied for user &apos;root&apos;@&apos;localhost&apos; (using password: YES)" type="java.sql.SQLException">java.sql.SQLException: Access denied for user &apos;root&apos;@&apos;localhost&apos; (using password: YES)
 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1055)
 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:956)
@@ -416,7 +464,7 @@ SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further detail
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
 </error>
   </testcase>
-  <testcase time="0.016" classname="control.PuestoTest" name="testSetNombrePuesto">
+  <testcase time="0.012" classname="control.PuestoTest" name="testSetNombrePuesto">
     <error message="Access denied for user &apos;root&apos;@&apos;localhost&apos; (using password: YES)" type="java.sql.SQLException">java.sql.SQLException: Access denied for user &apos;root&apos;@&apos;localhost&apos; (using password: YES)
 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1055)
 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:956)
@@ -466,7 +514,7 @@ SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further detail
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
 </error>
   </testcase>
-  <testcase time="0.013" classname="control.PuestoTest" name="testSetDuenioPuesto">
+  <testcase time="0.017" classname="control.PuestoTest" name="testSetDuenioPuesto">
     <error message="Access denied for user &apos;root&apos;@&apos;localhost&apos; (using password: YES)" type="java.sql.SQLException">java.sql.SQLException: Access denied for user &apos;root&apos;@&apos;localhost&apos; (using password: YES)
 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1055)
 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:956)
@@ -516,7 +564,7 @@ SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further detail
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
 </error>
   </testcase>
-  <testcase time="0.037" classname="control.PuestoTest" name="testSetTipoComida">
+  <testcase time="0.014" classname="control.PuestoTest" name="testSetTipoComida">
     <error message="Access denied for user &apos;root&apos;@&apos;localhost&apos; (using password: YES)" type="java.sql.SQLException">java.sql.SQLException: Access denied for user &apos;root&apos;@&apos;localhost&apos; (using password: YES)
 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1055)
 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:956)
@@ -566,7 +614,7 @@ SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further detail
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
 </error>
   </testcase>
-  <testcase time="0.024" classname="control.PuestoTest" name="testSetHoraApertura">
+  <testcase time="0.029" classname="control.PuestoTest" name="testSetHoraApertura">
     <error message="Access denied for user &apos;root&apos;@&apos;localhost&apos; (using password: YES)" type="java.sql.SQLException">java.sql.SQLException: Access denied for user &apos;root&apos;@&apos;localhost&apos; (using password: YES)
 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1055)
 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:956)
@@ -616,7 +664,7 @@ SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further detail
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
 </error>
   </testcase>
-  <testcase time="0.012" classname="control.PuestoTest" name="testSetHoraCierre">
+  <testcase time="0.016" classname="control.PuestoTest" name="testSetHoraCierre">
     <error message="Access denied for user &apos;root&apos;@&apos;localhost&apos; (using password: YES)" type="java.sql.SQLException">java.sql.SQLException: Access denied for user &apos;root&apos;@&apos;localhost&apos; (using password: YES)
 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1055)
 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:956)
@@ -716,7 +764,7 @@ SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further detail
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
 </error>
   </testcase>
-  <testcase time="0.005" classname="control.PuestoTest" name="testSetApmDuenio">
+  <testcase time="0.011" classname="control.PuestoTest" name="testSetApmDuenio">
     <error message="Access denied for user &apos;root&apos;@&apos;localhost&apos; (using password: YES)" type="java.sql.SQLException">java.sql.SQLException: Access denied for user &apos;root&apos;@&apos;localhost&apos; (using password: YES)
 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1055)
 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:956)
@@ -766,7 +814,7 @@ SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further detail
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
 </error>
   </testcase>
-  <testcase time="0.01" classname="control.PuestoTest" name="testSetFoto">
+  <testcase time="0.023" classname="control.PuestoTest" name="testSetFoto">
     <error message="Access denied for user &apos;root&apos;@&apos;localhost&apos; (using password: YES)" type="java.sql.SQLException">java.sql.SQLException: Access denied for user &apos;root&apos;@&apos;localhost&apos; (using password: YES)
 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1055)
 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:956)
@@ -816,57 +864,7 @@ SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further detail
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
 </error>
   </testcase>
-  <testcase time="0.025" classname="control.PuestoTest" name="testRegistrarPuestos">
-    <error message="Access denied for user &apos;root&apos;@&apos;localhost&apos; (using password: YES)" type="java.sql.SQLException">java.sql.SQLException: Access denied for user &apos;root&apos;@&apos;localhost&apos; (using password: YES)
-	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1055)
-	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:956)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3491)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3423)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:910)
-	at com.mysql.jdbc.MysqlIO.secureAuth411(MysqlIO.java:3923)
-	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1273)
-	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2031)
-	at com.mysql.jdbc.ConnectionImpl.&lt;init&gt;(ConnectionImpl.java:718)
-	at com.mysql.jdbc.JDBC4Connection.&lt;init&gt;(JDBC4Connection.java:46)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
-	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
-	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:302)
-	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:282)
-	at java.sql.DriverManager.getConnection(DriverManager.java:571)
-	at java.sql.DriverManager.getConnection(DriverManager.java:215)
-	at control.PuestoTest.getConnection(PuestoTest.java:135)
-	at org.dbunit.DatabaseTestCase.newDatabaseTester(DatabaseTestCase.java:85)
-	at org.dbunit.DatabaseTestCase.getDatabaseTester(DatabaseTestCase.java:109)
-	at org.dbunit.DatabaseTestCase.setUp(DatabaseTestCase.java:151)
-	at junit.framework.TestCase.runBare(TestCase.java:128)
-	at junit.framework.TestResult$1.protect(TestResult.java:106)
-	at junit.framework.TestResult.runProtected(TestResult.java:124)
-	at junit.framework.TestResult.run(TestResult.java:109)
-	at junit.framework.TestCase.run(TestCase.java:120)
-	at junit.framework.TestSuite.runTest(TestSuite.java:230)
-	at junit.framework.TestSuite.run(TestSuite.java:225)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.apache.maven.surefire.junit.JUnitTestSet.execute(JUnitTestSet.java:96)
-	at org.apache.maven.surefire.junit.JUnit3Provider.executeTestSet(JUnit3Provider.java:117)
-	at org.apache.maven.surefire.junit.JUnit3Provider.invoke(JUnit3Provider.java:94)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
-	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
-	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
-	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
-</error>
-  </testcase>
-  <testcase time="0.029" classname="control.PuestoTest" name="testGetNombrePuesto">
+  <testcase time="0.011" classname="control.PuestoTest" name="testRegistrarPuestos">
     <error message="Access denied for user &apos;root&apos;@&apos;localhost&apos; (using password: YES)" type="java.sql.SQLException">java.sql.SQLException: Access denied for user &apos;root&apos;@&apos;localhost&apos; (using password: YES)
 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1055)
 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:956)

@@ -45,12 +45,12 @@ public class ConexionBD {
      */
     public void conectar()
             throws Exception {
-        
         try {
             Class.forName("com.mysql.jdbc.Driver");
             String connectionUrl = "jdbc:mysql://localhost:3306/FoodCiencias";  
-            con = DriverManager.getConnection(connectionUrl, "root", "password");
-        } catch (ClassNotFoundException | SQLException e) {
+            con = DriverManager.getConnection(connectionUrl, "root", "root");
+            
+        } catch (SQLException e) {
             System.out.println("SQLException: " + e.getMessage() + " conectar :(");
         }
     }
