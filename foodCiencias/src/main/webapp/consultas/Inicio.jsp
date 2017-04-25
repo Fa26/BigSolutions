@@ -125,7 +125,12 @@
         </div>
         <div class="col-sm-9">
           <div class="well">
-            <p>La mejor comida de todo CU.</p>
+              <h3>Puestos!</h3>
+                <a href = "VentanaComentario.jsp">Puesto 1</a>
+                <p>puesto 2</p>
+                <p>Puesto 3</p>
+                <p>Puesto 4</p> 
+
           </div>
         </div>
       </div>

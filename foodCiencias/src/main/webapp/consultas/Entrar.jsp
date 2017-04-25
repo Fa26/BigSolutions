@@ -29,11 +29,6 @@
         </form>
     </div>
   </div>
-           <h3>Puestos!</h3>
-          <a href = "consultas/VentanaComentario.jsp">Puesto 1</a>
-          <p>puesto 2</p>
-          <p>Puesto 3</p>
-          <p>Puesto 4</p> 
 </div>
     
   <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
