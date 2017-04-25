@@ -5,7 +5,9 @@
  */
 package datos;
 
+import control.Usuario;
 import control.Puesto;
+import control.Administrador;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -163,4 +165,83 @@ public class ConexionBD {
         }catch(Exception e){}
         
     }//fin del  metodo regsitrarPuestos
+     
+     public boolean validarUsuario(String correo, String contraseña){
+        try{
+            stmt = con.createStatement();
+            String consulta = "SELECT * FROM Usuario WHERE correo = " + correo + " AND contrasenia = " + contraseña;
+            rs = stmt.executeQuery(consulta); 
+            if(rs.absolute(1)){
+                return true;
+            }
+            stmt.close();
+            rs.close();
+            
+        }catch(Exception e){
+            System.err.println("Error" + e);
+        }
+            
+        return false;
+    }
+     
+     public Usuario regresarUsuario(String correo, String contraseña){
+        try{
+            stmt = con.createStatement();
+            String consulta = "SELECT * FROM Usuario WHERE correo = " + correo + " AND contrasenia = " + contraseña;
+            rs = stmt.executeQuery(consulta);
+            if(rs.next()){
+                Usuario usr = new Usuario();
+                usr.setUsuario((String)rs.getObject(2));
+                usr.setCorreo((String)rs.getObject(3));
+                usr.setContrasenia((String)rs.getObject(4));
+                usr.setNombre((String)rs.getObject(5));
+                usr.setApp((String)rs.getObject(6));
+                usr.setApm((String)rs.getObject(7));
+                return usr;                                
+            }
+            
+        }catch(Exception e){
+            System.err.println("Error " + e);
+        }
+        return null;
+        
+    }
+     
+     public boolean validarAdministrador(String correo, String contraseña){
+        try{
+            stmt = con.createStatement();
+            String consulta = "SELECT * FROM Administrador WHERE correo = " + correo + " AND contrasenia = " + contraseña;
+            rs = stmt.executeQuery(consulta); 
+            if(rs.absolute(1)){
+                return true;
+            }
+            stmt.close();
+            rs.close();
+            
+        }catch(Exception e){
+            System.err.println("Error" + e);
+        }
+            
+        return false;
+    }
+     
+    public Administrador regresarAdministrador(String correo, String contraseña){
+        try{
+            stmt = con.createStatement();
+            String consulta = "SELECT * FROM Administrador WHERE correo = " + correo + " AND contrasenia = " + contraseña;
+            rs = stmt.executeQuery(consulta);
+            if(rs.next()){
+                Administrador adm = new Administrador();
+                adm.setUsuario((String)rs.getObject(2));
+                adm.setCorreo((String)rs.getObject(3));
+                adm.setContrasenia((String)rs.getObject(4));
+                return adm;                                
+            }
+            
+        }catch(Exception e){
+            System.err.println("Error " + e);
+        }
+        return null;
+        
+    }
 }
