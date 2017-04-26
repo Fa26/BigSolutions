@@ -30,7 +30,10 @@
         <span>
           <span class="row">
             <span class="col-4">
-              <img src="../imagenes/foodCiencias.jpg" width="350" height="80">
+                <a href= "../Inicio.jsp" >
+                <img src="../imagenes/foodCiencias.jpg" width="350" height="80" />
+                </a>
+              
             </span>
           </span>
         </span>
