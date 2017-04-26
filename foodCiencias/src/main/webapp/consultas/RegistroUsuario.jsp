@@ -1,3 +1,4 @@
+
 <%@page import="java.util.ArrayList"%>
 <%@page import="control.Usuario"%>
 <%@page import="control.Puesto"%>
@@ -38,12 +39,30 @@
     String  es = "Usuario registrado correctamente <br> nombre: " + nombre + " " + app + " " + apm + "<br> Correo: " +correo
                     +"<br> contraseña: " + contra ;
     
-    Usuario us = new Usuario();
-    us.conecta();
     
-    us.setUsuario(nombre,app,apm,correo,contra);
-    us.desconecta();
-    out.write(es);
+    if(nombre != "" && app != "" && apm != "" && correo !="" && contra != "" ){
+           
+            String cor ="@ciencias.unam.mx";
+           int resultado = correo.indexOf("@ciencias.unam.mx");
+           
+            if(resultado != -1){
+                
+                Usuario us = new Usuario();
+                us.conecta();
+                us.setUsuario(nombre,app,apm,correo,contra);
+                us.desconecta();
+                out.write(es);
+            }else{
+                out.println("Regístrate con un correo de ciencias");    
+                out.write("Tu correo No es de ciencias.");
+                    
+            }
+    }else{
+        out.println("No se puede registrar\n\n");
+        out.write("Un campo esta vacio\n");
+        
+        
+    }
 %>
 
         <script src="../js/jquery-3.1.1.min.js"></script>        

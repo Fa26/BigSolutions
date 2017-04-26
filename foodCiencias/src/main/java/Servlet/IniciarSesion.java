@@ -39,6 +39,10 @@ public class IniciarSesion extends HttpServlet {
         int num;
         String corr = request.getParameter("correo");
         String cont = request.getParameter("cont");
+        if(corr == null || corr.equals("") || cont == null || cont.equals("")){
+            response.sendRedirect("EntrarE.jsp");
+        }
+        
         ConexionBD ver = new ConexionBD();
         ConexionBD ver1 = new ConexionBD();
         ConexionBD ver2 = new ConexionBD();

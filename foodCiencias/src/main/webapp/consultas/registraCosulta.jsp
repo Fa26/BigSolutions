@@ -34,7 +34,7 @@
             
           
             <script type="text/javascript">
-            window.location="../PuestoIH.html";
+            window.location="../AdministradorV/PuestoIH.html";
             </script>
     </body>
 </html>
