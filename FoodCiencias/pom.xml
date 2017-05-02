@@ -49,6 +49,7 @@
           <artifactId>primefaces</artifactId>
           <version>6.0</version>
         </dependency>         
+            
     </dependencies>
 
     <build>

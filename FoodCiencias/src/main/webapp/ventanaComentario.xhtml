@@ -7,31 +7,44 @@
         <title>Facelet Title</title>
     </h:head>
     <h:body>
+    <p:layout style="min-width:500px;min-height:200px;">
+        <p:layoutUnit position="center">
+         <h:outputLink title="inicio">
+             <p:graphicImage name="/imagenes/foodCiencias.jpg" />
+        </h:outputLink>
+        Informacion puesto
+        </p:layoutUnit>
+ 
+        <p:layoutUnit  position="east" resizable="true" size="700" minSize="40" maxSize="200">
+        Imagen puesto
+        </p:layoutUnit>
+    </p:layout>
         <p:panel id="Comentario" header="Comentar un puesto."
                  style="width: auto">
     <h:form id="myForm">
-        <h:panelGrid id="tblComentario">
-            <p:outputLabel id="lblIngresaComentario" value="Ingresa un Comentario"/>
+        <h:panelGrid columns="1" cellpadding="5">
+            <td><p:commandButton value="Comentar" type="button" onclick="PF('dlg1').show();"/></td>
+            <td><p:commandButton value="Calificar" type="button" onclick="PF('dlg2').show();"/></td>            
+        </h:panelGrid>
+        <p:dialog header="Ingresar un comentario" widgetVar="dlg1" modal="true" height="500">
+        <p:outputLabel id="lblIngresaComentario"/>
             <p:inputTextarea id="txtComentario"
                         value ="#{comentarioBean.textoComentario.texto}"
                         style="height: 100px; width: 500px" />
-          <td align="center">
-            <p:commandButton action="#{comentarioBean.addComentario()}" value="Comentar"/>
-            <p:commandButton value="Calificar"/>            
-            <!--<p:commandButton value="Reset" update="myForm" process="@this"  >
-              <p:resetInput target="myForm"/>
-            </p:commandButton>    -->
-             <!-- <p:outputLabel id="lblResultadoComentario" value="#{comentarioBean.generarComentario()}"/> -->
-            </td>
-        </h:panelGrid>
+            <br />
 
-      <table>
-        <tr>
-          <td><p:messages id="messages" autoUpdate="true" closable="true" /></td>
-        </tr>
-      </table>
-    </h:form>            
-            
+            <table>
+            <tr>
+                <td><p:messages id="messages" autoUpdate="true" closable="true" /></td>
+            </tr>
+            </table>            
+            <td><p:commandButton action="#{comentarioBean.addComentario()}" value="Enviar"/></td>
+            <td><p:commandButton value="Cerrar" onclick="PF('dlg1').hide();"/></td>
+
+        </p:dialog>                     
+
+
+    </h:form>           
         </p:panel>
 
     </h:body>
