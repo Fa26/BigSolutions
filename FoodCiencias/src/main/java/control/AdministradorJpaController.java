@@ -14,6 +14,7 @@ import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 import entidad.Puesto;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -34,27 +35,27 @@ public class AdministradorJpaController implements Serializable {
     }
 
     public void create(Administrador administrador) {
-        if (administrador.getPuestoList() == null) {
-            administrador.setPuestoList(new ArrayList<Puesto>());
+        if (administrador.getPuestoCollection() == null) {
+            administrador.setPuestoCollection(new ArrayList<Puesto>());
         }
         EntityManager em = null;
         try {
             em = getEntityManager();
             em.getTransaction().begin();
-            List<Puesto> attachedPuestoList = new ArrayList<Puesto>();
-            for (Puesto puestoListPuestoToAttach : administrador.getPuestoList()) {
-                puestoListPuestoToAttach = em.getReference(puestoListPuestoToAttach.getClass(), puestoListPuestoToAttach.getNIdPuesto());
-                attachedPuestoList.add(puestoListPuestoToAttach);
+            Collection<Puesto> attachedPuestoCollection = new ArrayList<Puesto>();
+            for (Puesto puestoCollectionPuestoToAttach : administrador.getPuestoCollection()) {
+                puestoCollectionPuestoToAttach = em.getReference(puestoCollectionPuestoToAttach.getClass(), puestoCollectionPuestoToAttach.getNIdPuesto());
+                attachedPuestoCollection.add(puestoCollectionPuestoToAttach);
             }
-            administrador.setPuestoList(attachedPuestoList);
+            administrador.setPuestoCollection(attachedPuestoCollection);
             em.persist(administrador);
-            for (Puesto puestoListPuesto : administrador.getPuestoList()) {
-                Administrador oldNIdAdministradorOfPuestoListPuesto = puestoListPuesto.getNIdAdministrador();
-                puestoListPuesto.setNIdAdministrador(administrador);
-                puestoListPuesto = em.merge(puestoListPuesto);
-                if (oldNIdAdministradorOfPuestoListPuesto != null) {
-                    oldNIdAdministradorOfPuestoListPuesto.getPuestoList().remove(puestoListPuesto);
-                    oldNIdAdministradorOfPuestoListPuesto = em.merge(oldNIdAdministradorOfPuestoListPuesto);
+            for (Puesto puestoCollectionPuesto : administrador.getPuestoCollection()) {
+                Administrador oldNIdAdministradorOfPuestoCollectionPuesto = puestoCollectionPuesto.getNIdAdministrador();
+                puestoCollectionPuesto.setNIdAdministrador(administrador);
+                puestoCollectionPuesto = em.merge(puestoCollectionPuesto);
+                if (oldNIdAdministradorOfPuestoCollectionPuesto != null) {
+                    oldNIdAdministradorOfPuestoCollectionPuesto.getPuestoCollection().remove(puestoCollectionPuesto);
+                    oldNIdAdministradorOfPuestoCollectionPuesto = em.merge(oldNIdAdministradorOfPuestoCollectionPuesto);
                 }
             }
             em.getTransaction().commit();
@@ -71,30 +72,30 @@ public class AdministradorJpaController implements Serializable {
             em = getEntityManager();
             em.getTransaction().begin();
             Administrador persistentAdministrador = em.find(Administrador.class, administrador.getNIdAdministrador());
-            List<Puesto> puestoListOld = persistentAdministrador.getPuestoList();
-            List<Puesto> puestoListNew = administrador.getPuestoList();
-            List<Puesto> attachedPuestoListNew = new ArrayList<Puesto>();
-            for (Puesto puestoListNewPuestoToAttach : puestoListNew) {
-                puestoListNewPuestoToAttach = em.getReference(puestoListNewPuestoToAttach.getClass(), puestoListNewPuestoToAttach.getNIdPuesto());
-                attachedPuestoListNew.add(puestoListNewPuestoToAttach);
+            Collection<Puesto> puestoCollectionOld = persistentAdministrador.getPuestoCollection();
+            Collection<Puesto> puestoCollectionNew = administrador.getPuestoCollection();
+            Collection<Puesto> attachedPuestoCollectionNew = new ArrayList<Puesto>();
+            for (Puesto puestoCollectionNewPuestoToAttach : puestoCollectionNew) {
+                puestoCollectionNewPuestoToAttach = em.getReference(puestoCollectionNewPuestoToAttach.getClass(), puestoCollectionNewPuestoToAttach.getNIdPuesto());
+                attachedPuestoCollectionNew.add(puestoCollectionNewPuestoToAttach);
             }
-            puestoListNew = attachedPuestoListNew;
-            administrador.setPuestoList(puestoListNew);
+            puestoCollectionNew = attachedPuestoCollectionNew;
+            administrador.setPuestoCollection(puestoCollectionNew);
             administrador = em.merge(administrador);
-            for (Puesto puestoListOldPuesto : puestoListOld) {
-                if (!puestoListNew.contains(puestoListOldPuesto)) {
-                    puestoListOldPuesto.setNIdAdministrador(null);
-                    puestoListOldPuesto = em.merge(puestoListOldPuesto);
+            for (Puesto puestoCollectionOldPuesto : puestoCollectionOld) {
+                if (!puestoCollectionNew.contains(puestoCollectionOldPuesto)) {
+                    puestoCollectionOldPuesto.setNIdAdministrador(null);
+                    puestoCollectionOldPuesto = em.merge(puestoCollectionOldPuesto);
                 }
             }
-            for (Puesto puestoListNewPuesto : puestoListNew) {
-                if (!puestoListOld.contains(puestoListNewPuesto)) {
-                    Administrador oldNIdAdministradorOfPuestoListNewPuesto = puestoListNewPuesto.getNIdAdministrador();
-                    puestoListNewPuesto.setNIdAdministrador(administrador);
-                    puestoListNewPuesto = em.merge(puestoListNewPuesto);
-                    if (oldNIdAdministradorOfPuestoListNewPuesto != null && !oldNIdAdministradorOfPuestoListNewPuesto.equals(administrador)) {
-                        oldNIdAdministradorOfPuestoListNewPuesto.getPuestoList().remove(puestoListNewPuesto);
-                        oldNIdAdministradorOfPuestoListNewPuesto = em.merge(oldNIdAdministradorOfPuestoListNewPuesto);
+            for (Puesto puestoCollectionNewPuesto : puestoCollectionNew) {
+                if (!puestoCollectionOld.contains(puestoCollectionNewPuesto)) {
+                    Administrador oldNIdAdministradorOfPuestoCollectionNewPuesto = puestoCollectionNewPuesto.getNIdAdministrador();
+                    puestoCollectionNewPuesto.setNIdAdministrador(administrador);
+                    puestoCollectionNewPuesto = em.merge(puestoCollectionNewPuesto);
+                    if (oldNIdAdministradorOfPuestoCollectionNewPuesto != null && !oldNIdAdministradorOfPuestoCollectionNewPuesto.equals(administrador)) {
+                        oldNIdAdministradorOfPuestoCollectionNewPuesto.getPuestoCollection().remove(puestoCollectionNewPuesto);
+                        oldNIdAdministradorOfPuestoCollectionNewPuesto = em.merge(oldNIdAdministradorOfPuestoCollectionNewPuesto);
                     }
                 }
             }
@@ -127,10 +128,10 @@ public class AdministradorJpaController implements Serializable {
             } catch (EntityNotFoundException enfe) {
                 throw new NonexistentEntityException("The administrador with id " + id + " no longer exists.", enfe);
             }
-            List<Puesto> puestoList = administrador.getPuestoList();
-            for (Puesto puestoListPuesto : puestoList) {
-                puestoListPuesto.setNIdAdministrador(null);
-                puestoListPuesto = em.merge(puestoListPuesto);
+            Collection<Puesto> puestoCollection = administrador.getPuestoCollection();
+            for (Puesto puestoCollectionPuesto : puestoCollection) {
+                puestoCollectionPuesto.setNIdAdministrador(null);
+                puestoCollectionPuesto = em.merge(puestoCollectionPuesto);
             }
             em.remove(administrador);
             em.getTransaction().commit();

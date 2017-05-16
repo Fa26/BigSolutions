@@ -50,11 +50,11 @@ public class ComentarioJpaController implements Serializable {
             }
             em.persist(comentario);
             if (NIdUsuario != null) {
-                NIdUsuario.getComentarioList().add(comentario);
+                NIdUsuario.getComentarioCollection().add(comentario);
                 NIdUsuario = em.merge(NIdUsuario);
             }
             if (NIdPuesto != null) {
-                NIdPuesto.getComentarioList().add(comentario);
+                NIdPuesto.getComentarioCollection().add(comentario);
                 NIdPuesto = em.merge(NIdPuesto);
             }
             em.getTransaction().commit();
@@ -85,19 +85,19 @@ public class ComentarioJpaController implements Serializable {
             }
             comentario = em.merge(comentario);
             if (NIdUsuarioOld != null && !NIdUsuarioOld.equals(NIdUsuarioNew)) {
-                NIdUsuarioOld.getComentarioList().remove(comentario);
+                NIdUsuarioOld.getComentarioCollection().remove(comentario);
                 NIdUsuarioOld = em.merge(NIdUsuarioOld);
             }
             if (NIdUsuarioNew != null && !NIdUsuarioNew.equals(NIdUsuarioOld)) {
-                NIdUsuarioNew.getComentarioList().add(comentario);
+                NIdUsuarioNew.getComentarioCollection().add(comentario);
                 NIdUsuarioNew = em.merge(NIdUsuarioNew);
             }
             if (NIdPuestoOld != null && !NIdPuestoOld.equals(NIdPuestoNew)) {
-                NIdPuestoOld.getComentarioList().remove(comentario);
+                NIdPuestoOld.getComentarioCollection().remove(comentario);
                 NIdPuestoOld = em.merge(NIdPuestoOld);
             }
             if (NIdPuestoNew != null && !NIdPuestoNew.equals(NIdPuestoOld)) {
-                NIdPuestoNew.getComentarioList().add(comentario);
+                NIdPuestoNew.getComentarioCollection().add(comentario);
                 NIdPuestoNew = em.merge(NIdPuestoNew);
             }
             em.getTransaction().commit();
@@ -131,12 +131,12 @@ public class ComentarioJpaController implements Serializable {
             }
             Usuario NIdUsuario = comentario.getNIdUsuario();
             if (NIdUsuario != null) {
-                NIdUsuario.getComentarioList().remove(comentario);
+                NIdUsuario.getComentarioCollection().remove(comentario);
                 NIdUsuario = em.merge(NIdUsuario);
             }
             Puesto NIdPuesto = comentario.getNIdPuesto();
             if (NIdPuesto != null) {
-                NIdPuesto.getComentarioList().remove(comentario);
+                NIdPuesto.getComentarioCollection().remove(comentario);
                 NIdPuesto = em.merge(NIdPuesto);
             }
             em.remove(comentario);

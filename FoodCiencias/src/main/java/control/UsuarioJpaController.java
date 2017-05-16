@@ -5,15 +5,18 @@
  */
 package control;
 
+import control.exceptions.IllegalOrphanException;
 import control.exceptions.NonexistentEntityException;
 import java.io.Serializable;
 import javax.persistence.Query;
 import javax.persistence.EntityNotFoundException;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
+import entidad.Calificacion;
+import java.util.ArrayList;
+import java.util.Collection;
 import entidad.Comentario;
 import entidad.Usuario;
-import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -34,27 +37,45 @@ public class UsuarioJpaController implements Serializable {
     }
 
     public void create(Usuario usuario) {
-        if (usuario.getComentarioList() == null) {
-            usuario.setComentarioList(new ArrayList<Comentario>());
+        if (usuario.getCalificacionCollection() == null) {
+            usuario.setCalificacionCollection(new ArrayList<Calificacion>());
+        }
+        if (usuario.getComentarioCollection() == null) {
+            usuario.setComentarioCollection(new ArrayList<Comentario>());
         }
         EntityManager em = null;
         try {
             em = getEntityManager();
             em.getTransaction().begin();
-            List<Comentario> attachedComentarioList = new ArrayList<Comentario>();
-            for (Comentario comentarioListComentarioToAttach : usuario.getComentarioList()) {
-                comentarioListComentarioToAttach = em.getReference(comentarioListComentarioToAttach.getClass(), comentarioListComentarioToAttach.getNIdComentario());
-                attachedComentarioList.add(comentarioListComentarioToAttach);
+            Collection<Calificacion> attachedCalificacionCollection = new ArrayList<Calificacion>();
+            for (Calificacion calificacionCollectionCalificacionToAttach : usuario.getCalificacionCollection()) {
+                calificacionCollectionCalificacionToAttach = em.getReference(calificacionCollectionCalificacionToAttach.getClass(), calificacionCollectionCalificacionToAttach.getCalificacionPK());
+                attachedCalificacionCollection.add(calificacionCollectionCalificacionToAttach);
             }
-            usuario.setComentarioList(attachedComentarioList);
+            usuario.setCalificacionCollection(attachedCalificacionCollection);
+            Collection<Comentario> attachedComentarioCollection = new ArrayList<Comentario>();
+            for (Comentario comentarioCollectionComentarioToAttach : usuario.getComentarioCollection()) {
+                comentarioCollectionComentarioToAttach = em.getReference(comentarioCollectionComentarioToAttach.getClass(), comentarioCollectionComentarioToAttach.getNIdComentario());
+                attachedComentarioCollection.add(comentarioCollectionComentarioToAttach);
+            }
+            usuario.setComentarioCollection(attachedComentarioCollection);
             em.persist(usuario);
-            for (Comentario comentarioListComentario : usuario.getComentarioList()) {
-                Usuario oldNIdUsuarioOfComentarioListComentario = comentarioListComentario.getNIdUsuario();
-                comentarioListComentario.setNIdUsuario(usuario);
-                comentarioListComentario = em.merge(comentarioListComentario);
-                if (oldNIdUsuarioOfComentarioListComentario != null) {
-                    oldNIdUsuarioOfComentarioListComentario.getComentarioList().remove(comentarioListComentario);
-                    oldNIdUsuarioOfComentarioListComentario = em.merge(oldNIdUsuarioOfComentarioListComentario);
+            for (Calificacion calificacionCollectionCalificacion : usuario.getCalificacionCollection()) {
+                Usuario oldUsuarioOfCalificacionCollectionCalificacion = calificacionCollectionCalificacion.getUsuario();
+                calificacionCollectionCalificacion.setUsuario(usuario);
+                calificacionCollectionCalificacion = em.merge(calificacionCollectionCalificacion);
+                if (oldUsuarioOfCalificacionCollectionCalificacion != null) {
+                    oldUsuarioOfCalificacionCollectionCalificacion.getCalificacionCollection().remove(calificacionCollectionCalificacion);
+                    oldUsuarioOfCalificacionCollectionCalificacion = em.merge(oldUsuarioOfCalificacionCollectionCalificacion);
+                }
+            }
+            for (Comentario comentarioCollectionComentario : usuario.getComentarioCollection()) {
+                Usuario oldNIdUsuarioOfComentarioCollectionComentario = comentarioCollectionComentario.getNIdUsuario();
+                comentarioCollectionComentario.setNIdUsuario(usuario);
+                comentarioCollectionComentario = em.merge(comentarioCollectionComentario);
+                if (oldNIdUsuarioOfComentarioCollectionComentario != null) {
+                    oldNIdUsuarioOfComentarioCollectionComentario.getComentarioCollection().remove(comentarioCollectionComentario);
+                    oldNIdUsuarioOfComentarioCollectionComentario = em.merge(oldNIdUsuarioOfComentarioCollectionComentario);
                 }
             }
             em.getTransaction().commit();
@@ -65,36 +86,68 @@ public class UsuarioJpaController implements Serializable {
         }
     }
 
-    public void edit(Usuario usuario) throws NonexistentEntityException, Exception {
+    public void edit(Usuario usuario) throws IllegalOrphanException, NonexistentEntityException, Exception {
         EntityManager em = null;
         try {
             em = getEntityManager();
             em.getTransaction().begin();
             Usuario persistentUsuario = em.find(Usuario.class, usuario.getNIdUsuario());
-            List<Comentario> comentarioListOld = persistentUsuario.getComentarioList();
-            List<Comentario> comentarioListNew = usuario.getComentarioList();
-            List<Comentario> attachedComentarioListNew = new ArrayList<Comentario>();
-            for (Comentario comentarioListNewComentarioToAttach : comentarioListNew) {
-                comentarioListNewComentarioToAttach = em.getReference(comentarioListNewComentarioToAttach.getClass(), comentarioListNewComentarioToAttach.getNIdComentario());
-                attachedComentarioListNew.add(comentarioListNewComentarioToAttach);
-            }
-            comentarioListNew = attachedComentarioListNew;
-            usuario.setComentarioList(comentarioListNew);
-            usuario = em.merge(usuario);
-            for (Comentario comentarioListOldComentario : comentarioListOld) {
-                if (!comentarioListNew.contains(comentarioListOldComentario)) {
-                    comentarioListOldComentario.setNIdUsuario(null);
-                    comentarioListOldComentario = em.merge(comentarioListOldComentario);
+            Collection<Calificacion> calificacionCollectionOld = persistentUsuario.getCalificacionCollection();
+            Collection<Calificacion> calificacionCollectionNew = usuario.getCalificacionCollection();
+            Collection<Comentario> comentarioCollectionOld = persistentUsuario.getComentarioCollection();
+            Collection<Comentario> comentarioCollectionNew = usuario.getComentarioCollection();
+            List<String> illegalOrphanMessages = null;
+            for (Calificacion calificacionCollectionOldCalificacion : calificacionCollectionOld) {
+                if (!calificacionCollectionNew.contains(calificacionCollectionOldCalificacion)) {
+                    if (illegalOrphanMessages == null) {
+                        illegalOrphanMessages = new ArrayList<String>();
+                    }
+                    illegalOrphanMessages.add("You must retain Calificacion " + calificacionCollectionOldCalificacion + " since its usuario field is not nullable.");
                 }
             }
-            for (Comentario comentarioListNewComentario : comentarioListNew) {
-                if (!comentarioListOld.contains(comentarioListNewComentario)) {
-                    Usuario oldNIdUsuarioOfComentarioListNewComentario = comentarioListNewComentario.getNIdUsuario();
-                    comentarioListNewComentario.setNIdUsuario(usuario);
-                    comentarioListNewComentario = em.merge(comentarioListNewComentario);
-                    if (oldNIdUsuarioOfComentarioListNewComentario != null && !oldNIdUsuarioOfComentarioListNewComentario.equals(usuario)) {
-                        oldNIdUsuarioOfComentarioListNewComentario.getComentarioList().remove(comentarioListNewComentario);
-                        oldNIdUsuarioOfComentarioListNewComentario = em.merge(oldNIdUsuarioOfComentarioListNewComentario);
+            if (illegalOrphanMessages != null) {
+                throw new IllegalOrphanException(illegalOrphanMessages);
+            }
+            Collection<Calificacion> attachedCalificacionCollectionNew = new ArrayList<Calificacion>();
+            for (Calificacion calificacionCollectionNewCalificacionToAttach : calificacionCollectionNew) {
+                calificacionCollectionNewCalificacionToAttach = em.getReference(calificacionCollectionNewCalificacionToAttach.getClass(), calificacionCollectionNewCalificacionToAttach.getCalificacionPK());
+                attachedCalificacionCollectionNew.add(calificacionCollectionNewCalificacionToAttach);
+            }
+            calificacionCollectionNew = attachedCalificacionCollectionNew;
+            usuario.setCalificacionCollection(calificacionCollectionNew);
+            Collection<Comentario> attachedComentarioCollectionNew = new ArrayList<Comentario>();
+            for (Comentario comentarioCollectionNewComentarioToAttach : comentarioCollectionNew) {
+                comentarioCollectionNewComentarioToAttach = em.getReference(comentarioCollectionNewComentarioToAttach.getClass(), comentarioCollectionNewComentarioToAttach.getNIdComentario());
+                attachedComentarioCollectionNew.add(comentarioCollectionNewComentarioToAttach);
+            }
+            comentarioCollectionNew = attachedComentarioCollectionNew;
+            usuario.setComentarioCollection(comentarioCollectionNew);
+            usuario = em.merge(usuario);
+            for (Calificacion calificacionCollectionNewCalificacion : calificacionCollectionNew) {
+                if (!calificacionCollectionOld.contains(calificacionCollectionNewCalificacion)) {
+                    Usuario oldUsuarioOfCalificacionCollectionNewCalificacion = calificacionCollectionNewCalificacion.getUsuario();
+                    calificacionCollectionNewCalificacion.setUsuario(usuario);
+                    calificacionCollectionNewCalificacion = em.merge(calificacionCollectionNewCalificacion);
+                    if (oldUsuarioOfCalificacionCollectionNewCalificacion != null && !oldUsuarioOfCalificacionCollectionNewCalificacion.equals(usuario)) {
+                        oldUsuarioOfCalificacionCollectionNewCalificacion.getCalificacionCollection().remove(calificacionCollectionNewCalificacion);
+                        oldUsuarioOfCalificacionCollectionNewCalificacion = em.merge(oldUsuarioOfCalificacionCollectionNewCalificacion);
+                    }
+                }
+            }
+            for (Comentario comentarioCollectionOldComentario : comentarioCollectionOld) {
+                if (!comentarioCollectionNew.contains(comentarioCollectionOldComentario)) {
+                    comentarioCollectionOldComentario.setNIdUsuario(null);
+                    comentarioCollectionOldComentario = em.merge(comentarioCollectionOldComentario);
+                }
+            }
+            for (Comentario comentarioCollectionNewComentario : comentarioCollectionNew) {
+                if (!comentarioCollectionOld.contains(comentarioCollectionNewComentario)) {
+                    Usuario oldNIdUsuarioOfComentarioCollectionNewComentario = comentarioCollectionNewComentario.getNIdUsuario();
+                    comentarioCollectionNewComentario.setNIdUsuario(usuario);
+                    comentarioCollectionNewComentario = em.merge(comentarioCollectionNewComentario);
+                    if (oldNIdUsuarioOfComentarioCollectionNewComentario != null && !oldNIdUsuarioOfComentarioCollectionNewComentario.equals(usuario)) {
+                        oldNIdUsuarioOfComentarioCollectionNewComentario.getComentarioCollection().remove(comentarioCollectionNewComentario);
+                        oldNIdUsuarioOfComentarioCollectionNewComentario = em.merge(oldNIdUsuarioOfComentarioCollectionNewComentario);
                     }
                 }
             }
@@ -115,7 +168,7 @@ public class UsuarioJpaController implements Serializable {
         }
     }
 
-    public void destroy(Integer id) throws NonexistentEntityException {
+    public void destroy(Integer id) throws IllegalOrphanException, NonexistentEntityException {
         EntityManager em = null;
         try {
             em = getEntityManager();
@@ -127,10 +180,21 @@ public class UsuarioJpaController implements Serializable {
             } catch (EntityNotFoundException enfe) {
                 throw new NonexistentEntityException("The usuario with id " + id + " no longer exists.", enfe);
             }
-            List<Comentario> comentarioList = usuario.getComentarioList();
-            for (Comentario comentarioListComentario : comentarioList) {
-                comentarioListComentario.setNIdUsuario(null);
-                comentarioListComentario = em.merge(comentarioListComentario);
+            List<String> illegalOrphanMessages = null;
+            Collection<Calificacion> calificacionCollectionOrphanCheck = usuario.getCalificacionCollection();
+            for (Calificacion calificacionCollectionOrphanCheckCalificacion : calificacionCollectionOrphanCheck) {
+                if (illegalOrphanMessages == null) {
+                    illegalOrphanMessages = new ArrayList<String>();
+                }
+                illegalOrphanMessages.add("This Usuario (" + usuario + ") cannot be destroyed since the Calificacion " + calificacionCollectionOrphanCheckCalificacion + " in its calificacionCollection field has a non-nullable usuario field.");
+            }
+            if (illegalOrphanMessages != null) {
+                throw new IllegalOrphanException(illegalOrphanMessages);
+            }
+            Collection<Comentario> comentarioCollection = usuario.getComentarioCollection();
+            for (Comentario comentarioCollectionComentario : comentarioCollection) {
+                comentarioCollectionComentario.setNIdUsuario(null);
+                comentarioCollectionComentario = em.merge(comentarioCollectionComentario);
             }
             em.remove(usuario);
             em.getTransaction().commit();

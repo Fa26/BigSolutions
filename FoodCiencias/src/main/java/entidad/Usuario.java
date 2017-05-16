@@ -6,8 +6,9 @@
 package entidad;
 
 import java.io.Serializable;
-import java.util.List;
+import java.util.Collection;
 import javax.persistence.Basic;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -66,8 +67,10 @@ public class Usuario implements Serializable {
     @Lob
     @Column(name = "foto")
     private byte[] foto;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "usuario")
+    private Collection<Calificacion> calificacionCollection;
     @OneToMany(mappedBy = "nIdUsuario")
-    private List<Comentario> comentarioList;
+    private Collection<Comentario> comentarioCollection;
 
     public Usuario() {
     }
@@ -141,12 +144,21 @@ public class Usuario implements Serializable {
     }
 
     @XmlTransient
-    public List<Comentario> getComentarioList() {
-        return comentarioList;
+    public Collection<Calificacion> getCalificacionCollection() {
+        return calificacionCollection;
     }
 
-    public void setComentarioList(List<Comentario> comentarioList) {
-        this.comentarioList = comentarioList;
+    public void setCalificacionCollection(Collection<Calificacion> calificacionCollection) {
+        this.calificacionCollection = calificacionCollection;
+    }
+
+    @XmlTransient
+    public Collection<Comentario> getComentarioCollection() {
+        return comentarioCollection;
+    }
+
+    public void setComentarioCollection(Collection<Comentario> comentarioCollection) {
+        this.comentarioCollection = comentarioCollection;
     }
 
     @Override

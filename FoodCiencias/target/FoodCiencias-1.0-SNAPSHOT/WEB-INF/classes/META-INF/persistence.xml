@@ -7,6 +7,7 @@
     <class>entidad.Administrador</class>
     <class>entidad.Comentario</class>
     <class>entidad.Usuario</class>
+    <class>entidad.Calificacion</class>
     <exclude-unlisted-classes>false</exclude-unlisted-classes>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/FoodCiencias?zeroDateTimeBehavior=convertToNull"/>

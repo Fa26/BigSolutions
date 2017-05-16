@@ -6,7 +6,7 @@
 package entidad;
 
 import java.io.Serializable;
-import java.util.List;
+import java.util.Collection;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -51,7 +51,7 @@ public class Administrador implements Serializable {
     @Column(name = "contrasenia")
     private String contrasenia;
     @OneToMany(mappedBy = "nIdAdministrador")
-    private List<Puesto> puestoList;
+    private Collection<Puesto> puestoCollection;
 
     public Administrador() {
     }
@@ -93,12 +93,12 @@ public class Administrador implements Serializable {
     }
 
     @XmlTransient
-    public List<Puesto> getPuestoList() {
-        return puestoList;
+    public Collection<Puesto> getPuestoCollection() {
+        return puestoCollection;
     }
 
-    public void setPuestoList(List<Puesto> puestoList) {
-        this.puestoList = puestoList;
+    public void setPuestoCollection(Collection<Puesto> puestoCollection) {
+        this.puestoCollection = puestoCollection;
     }
 
     @Override
