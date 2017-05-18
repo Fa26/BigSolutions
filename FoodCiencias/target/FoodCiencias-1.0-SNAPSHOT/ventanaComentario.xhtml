@@ -28,7 +28,7 @@
             <p:rating value="#{calificacionBean.valor}" />
         </h:panelGrid>
 
-            <p:commandButton value="Calificar" action="#{calificacionBean.imprime()}" update="display" oncomplete="PF('dlg').show()" style="margin:5px" />
+            <p:commandButton value="Calificar" action="#{calificacionBean.addCalificacion()}" update="display" oncomplete="PF('dlg').show()" style="margin:5px" />
 
         <p:dialog header="Tu calificación" widgetVar="dlg" showEffect="fade" hideEffect="fade">
             <h:panelGrid id="display" columns="2" cellpadding="5">
