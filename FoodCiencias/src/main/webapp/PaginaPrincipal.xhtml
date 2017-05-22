@@ -10,11 +10,92 @@
     </h:head>
     <h:body>
         
+        <b:form>  
+        <div>
+            <nav class="navbar navbar-inverse navbar-fixed-top">
+                <div class="row">
+                    <div class="3">
+                        <a class="navbar-brand" href="#">
+                            <img class="food" src="imagenes/foodCiencias.jpg" width="288" height="33"/>
+                        </a>
+                    </div>
+                    <div class="busc">
+                        <b:form class="navbar-form navbar-left" role="search">
+                            <div class="form-group">
+                                <input  type="text" class="form-control" placeholder="Buscar..."/>
+                            </div>
+                            <button  type="submit" class="btn btn-success">Entrar</button>
+                            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">Registrarse!!!</button>
+                         </b:form>    
+                    </div>
+                   
+                </div>
+            </nav>
+        </div>
+
+        <div>
+
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+                <div class="modal-dialog"  role="document">
+                    <div class="modal-content">
+                        <div class="encabezado" >
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h3 class="modal-title" id="exampleModalLabel"></h3>
+                            <img class="Ciencia" src="imagenes/foodCiencias.jpg"/>
+                        </div>
+                        <div class="modal-body">
+                            <form action="consultas/RegistroUsuario.jsp" method="post">
+                                <div class="form-group">
+                                    <label for="exampleInputName2">Nombre</label>
+                                    <input type="text" class="form-control" name="nombre" id="Nombre" placeholder="Nombre"/>
+                                    <label for="exampleInputName2">Ap Paterno</label>
+                                    <input type="text" class="form-control" name="app" id="Paterno" placeholder="Apellido Paterno"></input>
+                                </div>
+                                <br></br>
+                                <br></br>
+                                <div class="form-group">
+                                    <label for="exampleInputName2">Ap Materno</label>
+                                    <input type="text" class="form-control" name="apm" id="Materno" placeholder="Apellido Materno"/>
+
+                                    <label for="exampleInputEmail2">Correo</label>
+                                    <input type="email" class="form-control" name="correo" id="Correo" placeholder="Correo-Electronico"/>
+                                </div>
+                                    <br></br>
+                                    <br></br>
+                                    
+                                <div class="form-group">
+                                    <label for="exampleInputName2">Contraseña</label>
+                                    <input type="password" class="form-control" name="contra" id="contra" placeholder="Contraseña"/>
+                                </div>
+                               
+                                <div class="modal-footer">
+                                    <button class="button" onclick="alert('has sido dado de alta!')" type="submit">
+                                        Enviar!
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                       
+                    </div>
+                </div>				
+            </div>
+        </div>
+
+        </b:form>
+        
+        
+        
     <h:form>  
         
           <p:layoutUnit position="center">
          <h:outputLink title="inicio">
-             <p:graphicImage value ="/imagenes/foodCiencias.jpg" />
+            <!-- <p:graphicImage value ="/imagenes/foodCiencias.jpg" />-->
+             <img style="margin-left:200px;" class="food" src="imagenes/foodCiencias.jpg" width="288" height="50"/>
+             
+             
+             
+             
+              <p:commandButton  type="button" value="Entrar" onclick="href = 'Aquies para elromulario de registro'" />
         </h:outputLink>
        
         </p:layoutUnit>
@@ -23,14 +104,12 @@
         
     <p:menubar>
         
-        <p:menuitem value="Quit" url="http://www.primefaces.org" icon="ui-icon-close" />
+        <f:facet name="options"> 
             
-        
- 
-        <f:facet name="options">
-            
-            <p:graphicImage value ="/imagenes/foodCiencias.jpg" />
-            <p:inputText style="margin-right:10px" placeholder="Search"/>
+            <!--<p:graphicImage value ="/imagenes/foodCiencias.jpg" />-->
+
+            <img class="center-block" src="imagenes/foodCiencias.jpg" width="288" height="40"/>
+
             <p:commandButton type="button" value="Entrar" onclick="href = 'Aquies para elromulario de registro'" />
             <p:commandButton type="button" value="Registrarse" onclick="self.location.href = 'registro.xhtml'"  />
             <p:commandButton type="button" image="Ciencias-icon"/> 

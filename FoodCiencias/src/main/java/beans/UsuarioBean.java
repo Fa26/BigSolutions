@@ -112,12 +112,11 @@ public class UsuarioBean implements Serializable {
                     message = new FacesMessage(FacesMessage.SEVERITY_ERROR, "El correo ya esta registrado por otro usuario" + usuario.getUsuario(), null);
                     faceContext.addMessage(null, message);
                 }
-            }else{
-                       message = new FacesMessage(FacesMessage.SEVERITY_ERROR, "La contraseña es muy  corta", null);
-                    faceContext.addMessage(null, message);
+            } else {
+                message = new FacesMessage(FacesMessage.SEVERITY_ERROR, "La contraseña es muy  corta", null);
+                faceContext.addMessage(null, message);
             }
-            
-            
+
         } catch (Exception e) {
             e.printStackTrace();
             message = new FacesMessage(FacesMessage.SEVERITY_ERROR, "No se puede  rayos", null);
@@ -136,8 +135,7 @@ public class UsuarioBean implements Serializable {
         props.put("mail.smtp.host", "smtp.mail.com"); //el servidor  donde manda los correo // para mandarlo com prueb an fake es localhost
         props.put("mail.smtp.port", "587");//puerto donde se conecta // cualquier puerto  se tiene que poner en fake
 
-        Session session = Session.getInstance(props,
-                new javax.mail.Authenticator() {
+        Session session = Session.getInstance(props, new javax.mail.Authenticator() {
             protected PasswordAuthentication getPasswordAuthentication() {
                 return new PasswordAuthentication("FoodCiencias@mail.com", "bigsolution");//la primera cadena es usuario  y la segunda contraseña
             }
@@ -166,11 +164,5 @@ public class UsuarioBean implements Serializable {
         }
 
     }
-    
-    
-    
-    
-   
+
 }
-
-

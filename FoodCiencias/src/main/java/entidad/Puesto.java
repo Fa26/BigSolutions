@@ -38,7 +38,8 @@ import javax.xml.bind.annotation.XmlTransient;
 @NamedQueries({
     @NamedQuery(name = "Puesto.findAll", query = "SELECT p FROM Puesto p")
     , @NamedQuery(name = "Puesto.findByNIdPuesto", query = "SELECT p FROM Puesto p WHERE p.nIdPuesto = :nIdPuesto")
-    , @NamedQuery(name = "Puesto.findByHoraApertura", query = "SELECT p FROM Puesto p WHERE p.horaApertura = :horaApertura")
+    , @NamedQuery(name = "Puesto.findByHoraApertura", 
+            query = "SELECT p FROM Puesto p WHERE p.horaApertura = :horaApertura")
     , @NamedQuery(name = "Puesto.findByHoraCierre", query = "SELECT p FROM Puesto p WHERE p.horaCierre = :horaCierre")
     , @NamedQuery(name = "Puesto.findByTipoComida", query = "SELECT p FROM Puesto p WHERE p.tipoComida = :tipoComida")
     , @NamedQuery(name = "Puesto.findByNombre", query = "SELECT p FROM Puesto p WHERE p.nombre = :nombre")
@@ -190,12 +191,12 @@ public class Puesto implements Serializable {
         this.calificacionList = calificacionList;
     }
 
-    @Override
+    /*@Override
     public int hashCode() {
         int hash = 0;
         hash += (nIdPuesto != null ? nIdPuesto.hashCode() : 0);
         return hash;
-    }
+    }*/
 
     @Override
     public boolean equals(Object object) {
@@ -204,7 +205,8 @@ public class Puesto implements Serializable {
             return false;
         }
         Puesto other = (Puesto) object;
-        if ((this.nIdPuesto == null && other.nIdPuesto != null) || (this.nIdPuesto != null && !this.nIdPuesto.equals(other.nIdPuesto))) {
+        if ((this.nIdPuesto == null && other.nIdPuesto != null) || 
+                (this.nIdPuesto != null && !this.nIdPuesto.equals(other.nIdPuesto))) {
             return false;
         }
         return true;

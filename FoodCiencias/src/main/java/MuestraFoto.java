@@ -33,10 +33,11 @@ import javax.servlet.http.Part;
 public class MuestraFoto extends HttpServlet {
 
     EntityManagerFactory emf = Persistence.createEntityManagerFactory("FoodCienciasPU");
-    Usuario usuario ;
+    Usuario usuario;
     UsuarioBean userB;
     UsuarioJpaController u;
 //request es para recibir algo 
+
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -48,15 +49,14 @@ public class MuestraFoto extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-            //String  id = request.getParameter("id"); te da el paramero por arte de magia
-            //int nId = Integer.parseInt(id);// es para pasarel el id  del usuario. de la sesion acual
-            u = new UsuarioJpaController(emf);
-            //usuario = u.findUsuario(nId);//busca  el usuario pr el id
-            usuario = u.findUsuario(22);
-            OutputStream foto  = response.getOutputStream();
-            foto.write(usuario.getFoto());
-        
-       
+        //String  id = request.getParameter("id"); te da el paramero por arte de magia
+        //int nId = Integer.parseInt(id);// es para pasarel el id  del usuario. de la sesion acual
+        u = new UsuarioJpaController(emf);
+        //usuario = u.findUsuario(nId);//busca  el usuario pr el id
+        usuario = u.findUsuario(22);
+        OutputStream foto = response.getOutputStream();
+        foto.write(usuario.getFoto());
+
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -71,12 +71,12 @@ public class MuestraFoto extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-       // String  id =request.getParameter("id");
+        // String  id =request.getParameter("id");
         //int id;
         //id = Integer.parseInt(id);
         //usuario = u.findUsuario(22);
         processRequest(request, response);
-        
+
     }
 
     /**

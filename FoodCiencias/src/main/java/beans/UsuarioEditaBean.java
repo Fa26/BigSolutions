@@ -5,9 +5,6 @@
  */
 package beans;
 
- 
-
-import control.ComentarioJpaController;
 import java.util.Locale;
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
@@ -35,27 +32,22 @@ import org.primefaces.model.UploadedFile;
  * @author leo
  */
 public class UsuarioEditaBean {
-    
-    
-    private UploadedFile  foto;
+
+    private UploadedFile foto;
     EntityManagerFactory emf = Persistence.createEntityManagerFactory("FoodCienciasPU");
-    
-   
-    
-    
-    private  UsuarioJpaController usuarioController;    
+
+    private UsuarioJpaController usuarioController;
     private final FacesContext faceContext; // Obtiene información de la aplicación
     private FacesMessage message;
     private Usuario usuario;
- 
-    
+
     public UsuarioEditaBean() {
-        
+
         faceContext = FacesContext.getCurrentInstance();
         emf = Persistence.createEntityManagerFactory("FoodCienciasPU");
         usuarioController = new UsuarioJpaController(emf);
-        usuario =usuarioController.findUsuario(16);
-        
+        usuario = usuarioController.findUsuario(16);
+
     }
 
     public Usuario getUsuario() {
@@ -74,34 +66,29 @@ public class UsuarioEditaBean {
         this.foto = foto;
     }
 
-    
-    
-    public void editarUsuario(){
-        
-         UsuarioBean usr = new UsuarioBean();
+    public void editarUsuario() {
+
+        UsuarioBean usr = new UsuarioBean();
 
         //Usuario u = usr.buscaCorreo(usuario.getCorreo());
-        
         int id = 16;
 
         try {
-                
-                
-                System.out.println(1);
-              //if(usuarioController.findUsuario(19) != null){
-              System.out.println(2);
-               
-                if (foto != null) {
+
+            System.out.println(1);
+            //if(usuarioController.findUsuario(19) != null){
+            System.out.println(2);
+
+            if (foto != null) {
                 usuario.setFoto(foto.getContents());
                 System.out.println(3);
-                }
-                
-                System.out.println(4);
-                
-                usuarioController.edit(usuario);
-                System.out.println(5);
-                
-             
+            }
+
+            System.out.println(4);
+
+            usuarioController.edit(usuario);
+            System.out.println(5);
+
             message = new FacesMessage(FacesMessage.SEVERITY_ERROR, "El correo ya esta registrado por otro usuario" + usuario.getCorreo(), null);
             faceContext.addMessage(null, message);
 
@@ -109,11 +96,7 @@ public class UsuarioEditaBean {
             e.printStackTrace();
             message = new FacesMessage(FacesMessage.SEVERITY_ERROR, "No se puede  rayos", null);
         }
-        
-        
-    }
-    
 
-    
-    
+    }
+
 }

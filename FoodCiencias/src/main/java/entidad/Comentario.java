@@ -33,7 +33,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 @NamedQueries({
     @NamedQuery(name = "Comentario.findAll", query = "SELECT c FROM Comentario c")
-    , @NamedQuery(name = "Comentario.findByNIdComentario", query = "SELECT c FROM Comentario c WHERE c.nIdComentario = :nIdComentario")
+    , @NamedQuery(name = "Comentario.findByNIdComentario",
+            query = "SELECT c FROM Comentario c WHERE c.nIdComentario = :nIdComentario")
     , @NamedQuery(name = "Comentario.findByFecha", query = "SELECT c FROM Comentario c WHERE c.fecha = :fecha")})
 public class Comentario implements Serializable {
 
@@ -104,12 +105,12 @@ public class Comentario implements Serializable {
         this.nIdUsuario = nIdUsuario;
     }
 
-    @Override
+    /*@Override
     public int hashCode() {
         int hash = 0;
         hash += (nIdComentario != null ? nIdComentario.hashCode() : 0);
         return hash;
-    }
+    }*/
 
     @Override
     public boolean equals(Object object) {
@@ -118,7 +119,8 @@ public class Comentario implements Serializable {
             return false;
         }
         Comentario other = (Comentario) object;
-        if ((this.nIdComentario == null && other.nIdComentario != null) || (this.nIdComentario != null && !this.nIdComentario.equals(other.nIdComentario))) {
+        if ((this.nIdComentario == null && other.nIdComentario != null) ||
+                (this.nIdComentario != null && !this.nIdComentario.equals(other.nIdComentario))) {
             return false;
         }
         return true;

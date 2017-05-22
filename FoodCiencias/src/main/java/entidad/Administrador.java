@@ -30,10 +30,14 @@ import javax.xml.bind.annotation.XmlTransient;
 @XmlRootElement
 @NamedQueries({
     @NamedQuery(name = "Administrador.findAll", query = "SELECT a FROM Administrador a")
-    , @NamedQuery(name = "Administrador.findByNIdAdministrador", query = "SELECT a FROM Administrador a WHERE a.nIdAdministrador = :nIdAdministrador")
-    , @NamedQuery(name = "Administrador.findByUsuario", query = "SELECT a FROM Administrador a WHERE a.usuario = :usuario")
-    , @NamedQuery(name = "Administrador.findByCorreo", query = "SELECT a FROM Administrador a WHERE a.correo = :correo")
-    , @NamedQuery(name = "Administrador.findByContrasenia", query = "SELECT a FROM Administrador a WHERE a.contrasenia = :contrasenia")})
+    , @NamedQuery(name = "Administrador.findByNIdAdministrador",
+            query = "SELECT a FROM Administrador a WHERE a.nIdAdministrador = :nIdAdministrador")
+    , @NamedQuery(name = "Administrador.findByUsuario", 
+            query = "SELECT a FROM Administrador a WHERE a.usuario = :usuario")
+    , @NamedQuery(name = "Administrador.findByCorreo", 
+            query = "SELECT a FROM Administrador a WHERE a.correo = :correo")
+    , @NamedQuery(name = "Administrador.findByContrasenia",
+            query = "SELECT a FROM Administrador a WHERE a.contrasenia = :contrasenia")})
 public class Administrador implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -109,18 +113,19 @@ public class Administrador implements Serializable {
         return hash;
     }
 
-    @Override
+    /*@Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
         if (!(object instanceof Administrador)) {
             return false;
         }
         Administrador other = (Administrador) object;
-        if ((this.nIdAdministrador == null && other.nIdAdministrador != null) || (this.nIdAdministrador != null && !this.nIdAdministrador.equals(other.nIdAdministrador))) {
+        if ((this.nIdAdministrador == null && other.nIdAdministrador != null) ||
+    (this.nIdAdministrador != null && !this.nIdAdministrador.equals(other.nIdAdministrador))) {
             return false;
         }
         return true;
-    }
+    }*/
 
     @Override
     public String toString() {
