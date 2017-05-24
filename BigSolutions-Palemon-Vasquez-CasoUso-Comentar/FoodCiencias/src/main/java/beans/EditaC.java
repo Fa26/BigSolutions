@@ -71,22 +71,26 @@ public class EditaC {
                         "Verifica la Hora",""));
                    }else{
         Puesto pedit = new Puesto();
-    
+        
         
         pedit.setNIdPuesto(puesto.getNIdPuesto());
-        pedit.setHoraApertura(puesto.getHoraApertura());
-        pedit.setHoraCierre(puesto.getHoraCierre());
+        int idn = pedit.getNIdPuesto();
+        Puesto edit = pues.findPuesto(idn);
+                
+        pues.edit(edit);
+        //pedit.setHoraApertura(puesto.getHoraApertura());
+        //pedit.setHoraCierre(puesto.getHoraCierre());
         
-        pedit.setNombre(puesto.getNombre());
-        pedit.setTipoComida(puesto.getTipoComida());
-        pedit.setNomDuenio(puesto.getNomDuenio());
-        pedit.setAppDuenio(puesto.getAppDuenio());
-        pedit.setApmDuenio(puesto.getApmDuenio());
+       // pedit.setNombre(puesto.getNombre());
+        //pedit.setTipoComida(puesto.getTipoComida());
+        //pedit.setNomDuenio(puesto.getNomDuenio());
+        //pedit.setAppDuenio(puesto.getAppDuenio());
+        //pedit.setApmDuenio(puesto.getApmDuenio());
    
      
-        pues.edit(pedit);
+       // pues.edit(pedit);
                  FacesContext.getCurrentInstance().addMessage(null,
-                       new FacesMessage(FacesMessage.SEVERITY_INFO, "Felicidades, el registro se ha realizado correctamente", ""));
+                      new FacesMessage(FacesMessage.SEVERITY_INFO, "Felicidades, el registro se ha realizado correctamente", ""));
        
                    }
         }catch(Exception ex){

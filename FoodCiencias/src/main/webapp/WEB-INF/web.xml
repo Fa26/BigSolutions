@@ -11,7 +11,7 @@
     </servlet>
     <servlet>
         <servlet-name>MuestraFoto</servlet-name>
-        <servlet-class>MuestraFoto</servlet-class>
+        <servlet-class>Servlet.MuestraFoto</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>Faces Servlet</servlet-name>
