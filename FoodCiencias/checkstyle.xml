@@ -53,9 +53,7 @@
         
         <module name="MultipleVariableDeclarations"/>
         
-        <module name="NestedIfDepth">
-            <property name="max" value="3"/>
-        </module>
+        <module name="NestedIfDepth"/>
         
         <module name="NestedForDepth"/> 
        
@@ -68,7 +66,7 @@
         <module name="OverloadMethodsDeclarationOrder"/>
         
         <module name="NestedTryDepth"/>
-          
+        
         <module name="PackageDeclaration"/>
         
         <module name="ReturnCount">

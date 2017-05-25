@@ -46,7 +46,7 @@ public class UsuarioEditaBean {
         faceContext = FacesContext.getCurrentInstance();
         emf = Persistence.createEntityManagerFactory("FoodCienciasPU");
         usuarioController = new UsuarioJpaController(emf);
-        usuario = usuarioController.findUsuario(5);
+        usuario = usuarioController.findUsuario(16);
 
     }
 
@@ -85,8 +85,7 @@ public class UsuarioEditaBean {
             }
 
             System.out.println(4);
-            
-            
+
             usuarioController.edit(usuario);
             System.out.println(5);
 
