@@ -6,7 +6,6 @@
 package entidad;
 
 import java.io.Serializable;
-import java.util.Date;
 import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
@@ -22,8 +21,6 @@ import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
@@ -33,13 +30,12 @@ import javax.xml.bind.annotation.XmlTransient;
  * @author leo
  */
 @Entity
-@Table(name = "Puesto", catalog = "FoodCiencias", schema = "")
+@Table(name = "Puesto")
 @XmlRootElement
 @NamedQueries({
     @NamedQuery(name = "Puesto.findAll", query = "SELECT p FROM Puesto p")
     , @NamedQuery(name = "Puesto.findByNIdPuesto", query = "SELECT p FROM Puesto p WHERE p.nIdPuesto = :nIdPuesto")
-    , @NamedQuery(name = "Puesto.findByHoraApertura", 
-            query = "SELECT p FROM Puesto p WHERE p.horaApertura = :horaApertura")
+    , @NamedQuery(name = "Puesto.findByHoraApertura", query = "SELECT p FROM Puesto p WHERE p.horaApertura = :horaApertura")
     , @NamedQuery(name = "Puesto.findByHoraCierre", query = "SELECT p FROM Puesto p WHERE p.horaCierre = :horaCierre")
     , @NamedQuery(name = "Puesto.findByTipoComida", query = "SELECT p FROM Puesto p WHERE p.tipoComida = :tipoComida")
     , @NamedQuery(name = "Puesto.findByNombre", query = "SELECT p FROM Puesto p WHERE p.nombre = :nombre")
@@ -52,28 +48,28 @@ public class Puesto implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
-    @Column(name = "nIdPuesto", nullable = false)
+    @Column(name = "nIdPuesto")
     private Integer nIdPuesto;
+    @Size(max = 10)
     @Column(name = "hora_apertura")
-    @Temporal(TemporalType.TIME)
-    private Date horaApertura;
+    private String horaApertura;
+    @Size(max = 10)
     @Column(name = "hora_cierre")
-    @Temporal(TemporalType.TIME)
-    private Date horaCierre;
+    private String horaCierre;
     @Size(max = 32)
-    @Column(name = "tipo_comida", length = 32)
+    @Column(name = "tipo_comida")
     private String tipoComida;
     @Size(max = 32)
-    @Column(name = "nombre", length = 32)
+    @Column(name = "nombre")
     private String nombre;
     @Size(max = 64)
-    @Column(name = "nom_duenio", length = 64)
+    @Column(name = "nom_duenio")
     private String nomDuenio;
     @Size(max = 32)
-    @Column(name = "app_duenio", length = 32)
+    @Column(name = "app_duenio")
     private String appDuenio;
     @Size(max = 32)
-    @Column(name = "apm_duenio", length = 32)
+    @Column(name = "apm_duenio")
     private String apmDuenio;
     @Lob
     @Column(name = "foto")
@@ -101,19 +97,19 @@ public class Puesto implements Serializable {
         this.nIdPuesto = nIdPuesto;
     }
 
-    public Date getHoraApertura() {
+    public String getHoraApertura() {
         return horaApertura;
     }
 
-    public void setHoraApertura(Date horaApertura) {
+    public void setHoraApertura(String horaApertura) {
         this.horaApertura = horaApertura;
     }
 
-    public Date getHoraCierre() {
+    public String getHoraCierre() {
         return horaCierre;
     }
 
-    public void setHoraCierre(Date horaCierre) {
+    public void setHoraCierre(String horaCierre) {
         this.horaCierre = horaCierre;
     }
 
@@ -191,12 +187,12 @@ public class Puesto implements Serializable {
         this.calificacionList = calificacionList;
     }
 
-    /*@Override
+    @Override
     public int hashCode() {
         int hash = 0;
         hash += (nIdPuesto != null ? nIdPuesto.hashCode() : 0);
         return hash;
-    }*/
+    }
 
     @Override
     public boolean equals(Object object) {
@@ -205,8 +201,7 @@ public class Puesto implements Serializable {
             return false;
         }
         Puesto other = (Puesto) object;
-        if ((this.nIdPuesto == null && other.nIdPuesto != null) || 
-                (this.nIdPuesto != null && !this.nIdPuesto.equals(other.nIdPuesto))) {
+        if ((this.nIdPuesto == null && other.nIdPuesto != null) || (this.nIdPuesto != null && !this.nIdPuesto.equals(other.nIdPuesto))) {
             return false;
         }
         return true;

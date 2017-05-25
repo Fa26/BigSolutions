@@ -20,11 +20,11 @@ public class CalificacionPK implements Serializable {
 
     @Basic(optional = false)
     @NotNull
-    @Column(name = "nIdUsuario", nullable = false)
+    @Column(name = "nIdUsuario")
     private int nIdUsuario;
     @Basic(optional = false)
     @NotNull
-    @Column(name = "nIdPuesto", nullable = false)
+    @Column(name = "nIdPuesto")
     private int nIdPuesto;
 
     public CalificacionPK() {

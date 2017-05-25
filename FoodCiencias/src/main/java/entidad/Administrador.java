@@ -26,34 +26,30 @@ import javax.xml.bind.annotation.XmlTransient;
  * @author leo
  */
 @Entity
-@Table(name = "Administrador", catalog = "FoodCiencias", schema = "")
+@Table(name = "Administrador")
 @XmlRootElement
 @NamedQueries({
     @NamedQuery(name = "Administrador.findAll", query = "SELECT a FROM Administrador a")
-    , @NamedQuery(name = "Administrador.findByNIdAdministrador",
-            query = "SELECT a FROM Administrador a WHERE a.nIdAdministrador = :nIdAdministrador")
-    , @NamedQuery(name = "Administrador.findByUsuario", 
-            query = "SELECT a FROM Administrador a WHERE a.usuario = :usuario")
-    , @NamedQuery(name = "Administrador.findByCorreo", 
-            query = "SELECT a FROM Administrador a WHERE a.correo = :correo")
-    , @NamedQuery(name = "Administrador.findByContrasenia",
-            query = "SELECT a FROM Administrador a WHERE a.contrasenia = :contrasenia")})
+    , @NamedQuery(name = "Administrador.findByNIdAdministrador", query = "SELECT a FROM Administrador a WHERE a.nIdAdministrador = :nIdAdministrador")
+    , @NamedQuery(name = "Administrador.findByUsuario", query = "SELECT a FROM Administrador a WHERE a.usuario = :usuario")
+    , @NamedQuery(name = "Administrador.findByCorreo", query = "SELECT a FROM Administrador a WHERE a.correo = :correo")
+    , @NamedQuery(name = "Administrador.findByContrasenia", query = "SELECT a FROM Administrador a WHERE a.contrasenia = :contrasenia")})
 public class Administrador implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
-    @Column(name = "nIdAdministrador", nullable = false)
+    @Column(name = "nIdAdministrador")
     private Integer nIdAdministrador;
     @Size(max = 64)
-    @Column(name = "usuario", length = 64)
+    @Column(name = "usuario")
     private String usuario;
     @Size(max = 128)
-    @Column(name = "correo", length = 128)
+    @Column(name = "correo")
     private String correo;
     @Size(max = 128)
-    @Column(name = "contrasenia", length = 128)
+    @Column(name = "contrasenia")
     private String contrasenia;
     @OneToMany(mappedBy = "nIdAdministrador")
     private List<Puesto> puestoList;
@@ -113,19 +109,18 @@ public class Administrador implements Serializable {
         return hash;
     }
 
-    /*@Override
+    @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
         if (!(object instanceof Administrador)) {
             return false;
         }
         Administrador other = (Administrador) object;
-        if ((this.nIdAdministrador == null && other.nIdAdministrador != null) ||
-    (this.nIdAdministrador != null && !this.nIdAdministrador.equals(other.nIdAdministrador))) {
+        if ((this.nIdAdministrador == null && other.nIdAdministrador != null) || (this.nIdAdministrador != null && !this.nIdAdministrador.equals(other.nIdAdministrador))) {
             return false;
         }
         return true;
-    }*/
+    }
 
     @Override
     public String toString() {

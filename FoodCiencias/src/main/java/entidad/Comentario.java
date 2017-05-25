@@ -29,12 +29,11 @@ import javax.xml.bind.annotation.XmlRootElement;
  * @author leo
  */
 @Entity
-@Table(name = "Comentario", catalog = "FoodCiencias", schema = "")
+@Table(name = "Comentario")
 @XmlRootElement
 @NamedQueries({
     @NamedQuery(name = "Comentario.findAll", query = "SELECT c FROM Comentario c")
-    , @NamedQuery(name = "Comentario.findByNIdComentario",
-            query = "SELECT c FROM Comentario c WHERE c.nIdComentario = :nIdComentario")
+    , @NamedQuery(name = "Comentario.findByNIdComentario", query = "SELECT c FROM Comentario c WHERE c.nIdComentario = :nIdComentario")
     , @NamedQuery(name = "Comentario.findByFecha", query = "SELECT c FROM Comentario c WHERE c.fecha = :fecha")})
 public class Comentario implements Serializable {
 
@@ -42,14 +41,14 @@ public class Comentario implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
-    @Column(name = "nIdComentario", nullable = false)
+    @Column(name = "nIdComentario")
     private Integer nIdComentario;
     @Column(name = "fecha")
     @Temporal(TemporalType.DATE)
     private Date fecha;
     @Lob
     @Size(max = 65535)
-    @Column(name = "texto", length = 65535)
+    @Column(name = "texto")
     private String texto;
     @JoinColumn(name = "nIdPuesto", referencedColumnName = "nIdPuesto")
     @ManyToOne
@@ -105,12 +104,12 @@ public class Comentario implements Serializable {
         this.nIdUsuario = nIdUsuario;
     }
 
-    /*@Override
+    @Override
     public int hashCode() {
         int hash = 0;
         hash += (nIdComentario != null ? nIdComentario.hashCode() : 0);
         return hash;
-    }*/
+    }
 
     @Override
     public boolean equals(Object object) {
@@ -119,8 +118,7 @@ public class Comentario implements Serializable {
             return false;
         }
         Comentario other = (Comentario) object;
-        if ((this.nIdComentario == null && other.nIdComentario != null) ||
-                (this.nIdComentario != null && !this.nIdComentario.equals(other.nIdComentario))) {
+        if ((this.nIdComentario == null && other.nIdComentario != null) || (this.nIdComentario != null && !this.nIdComentario.equals(other.nIdComentario))) {
             return false;
         }
         return true;

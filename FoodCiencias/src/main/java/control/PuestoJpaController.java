@@ -209,8 +209,7 @@ public class PuestoJpaController implements Serializable {
                 if (illegalOrphanMessages == null) {
                     illegalOrphanMessages = new ArrayList<String>();
                 }
-                illegalOrphanMessages.add("This Puesto (" + puesto + ") cannot be destroyed since the Calificacion "
-                        + calificacionListOrphanCheckCalificacion + " in its calificacionList field has a non-nullable puesto field.");
+                illegalOrphanMessages.add("This Puesto (" + puesto + ") cannot be destroyed since the Calificacion " + calificacionListOrphanCheckCalificacion + " in its calificacionList field has a non-nullable puesto field.");
             }
             if (illegalOrphanMessages != null) {
                 throw new IllegalOrphanException(illegalOrphanMessages);

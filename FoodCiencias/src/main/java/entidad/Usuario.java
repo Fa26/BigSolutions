@@ -28,15 +28,14 @@ import javax.xml.bind.annotation.XmlTransient;
  * @author leo
  */
 @Entity
-@Table(name = "Usuario", catalog = "FoodCiencias", schema = "")
+@Table(name = "Usuario")
 @XmlRootElement
 @NamedQueries({
     @NamedQuery(name = "Usuario.findAll", query = "SELECT u FROM Usuario u")
     , @NamedQuery(name = "Usuario.findByNIdUsuario", query = "SELECT u FROM Usuario u WHERE u.nIdUsuario = :nIdUsuario")
     , @NamedQuery(name = "Usuario.findByUsuario", query = "SELECT u FROM Usuario u WHERE u.usuario = :usuario")
     , @NamedQuery(name = "Usuario.findByCorreo", query = "SELECT u FROM Usuario u WHERE u.correo = :correo")
-    , @NamedQuery(name = "Usuario.findByContrasenia", 
-            query = "SELECT u FROM Usuario u WHERE u.contrasenia = :contrasenia")
+    , @NamedQuery(name = "Usuario.findByContrasenia", query = "SELECT u FROM Usuario u WHERE u.contrasenia = :contrasenia")
     , @NamedQuery(name = "Usuario.findByNombre", query = "SELECT u FROM Usuario u WHERE u.nombre = :nombre")
     , @NamedQuery(name = "Usuario.findByApp", query = "SELECT u FROM Usuario u WHERE u.app = :app")
     , @NamedQuery(name = "Usuario.findByApm", query = "SELECT u FROM Usuario u WHERE u.apm = :apm")})
@@ -46,25 +45,25 @@ public class Usuario implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
-    @Column(name = "nIdUsuario", nullable = false)
+    @Column(name = "nIdUsuario")
     private Integer nIdUsuario;
     @Size(max = 64)
-    @Column(name = "usuario", length = 64)
+    @Column(name = "usuario")
     private String usuario;
     @Size(max = 128)
-    @Column(name = "correo", length = 128)
+    @Column(name = "correo")
     private String correo;
     @Size(max = 128)
-    @Column(name = "contrasenia", length = 128)
+    @Column(name = "contrasenia")
     private String contrasenia;
     @Size(max = 64)
-    @Column(name = "nombre", length = 64)
+    @Column(name = "nombre")
     private String nombre;
     @Size(max = 32)
-    @Column(name = "app", length = 32)
+    @Column(name = "app")
     private String app;
     @Size(max = 32)
-    @Column(name = "apm", length = 32)
+    @Column(name = "apm")
     private String apm;
     @Lob
     @Column(name = "foto")
@@ -163,12 +162,12 @@ public class Usuario implements Serializable {
         this.calificacionList = calificacionList;
     }
 
-    /*@Override
+    @Override
     public int hashCode() {
         int hash = 0;
         hash += (nIdUsuario != null ? nIdUsuario.hashCode() : 0);
         return hash;
-    }*/
+    }
 
     @Override
     public boolean equals(Object object) {
@@ -177,8 +176,7 @@ public class Usuario implements Serializable {
             return false;
         }
         Usuario other = (Usuario) object;
-        if ((this.nIdUsuario == null && other.nIdUsuario != null) || 
-                (this.nIdUsuario != null && !this.nIdUsuario.equals(other.nIdUsuario))) {
+        if ((this.nIdUsuario == null && other.nIdUsuario != null) || (this.nIdUsuario != null && !this.nIdUsuario.equals(other.nIdUsuario))) {
             return false;
         }
         return true;

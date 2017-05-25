@@ -21,16 +21,13 @@ import javax.xml.bind.annotation.XmlRootElement;
  * @author leo
  */
 @Entity
-@Table(name = "Calificacion", catalog = "FoodCiencias", schema = "")
+@Table(name = "Calificacion")
 @XmlRootElement
 @NamedQueries({
     @NamedQuery(name = "Calificacion.findAll", query = "SELECT c FROM Calificacion c")
-    , @NamedQuery(name = "Calificacion.findByNIdUsuario", 
-            query = "SELECT c FROM Calificacion c WHERE c.calificacionPK.nIdUsuario = :nIdUsuario")
-    , @NamedQuery(name = "Calificacion.findByNIdPuesto",
-            query = "SELECT c FROM Calificacion c WHERE c.calificacionPK.nIdPuesto = :nIdPuesto")
-    , @NamedQuery(name = "Calificacion.findByCalificacion",
-            query = "SELECT c FROM Calificacion c WHERE c.calificacion = :calificacion")})
+    , @NamedQuery(name = "Calificacion.findByNIdUsuario", query = "SELECT c FROM Calificacion c WHERE c.calificacionPK.nIdUsuario = :nIdUsuario")
+    , @NamedQuery(name = "Calificacion.findByNIdPuesto", query = "SELECT c FROM Calificacion c WHERE c.calificacionPK.nIdPuesto = :nIdPuesto")
+    , @NamedQuery(name = "Calificacion.findByCalificacion", query = "SELECT c FROM Calificacion c WHERE c.calificacion = :calificacion")})
 public class Calificacion implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -38,12 +35,10 @@ public class Calificacion implements Serializable {
     protected CalificacionPK calificacionPK;
     @Column(name = "calificacion")
     private Integer calificacion;
-    @JoinColumn(name = "nIdUsuario", referencedColumnName = "nIdUsuario", 
-            nullable = false, insertable = false, updatable = false)
+    @JoinColumn(name = "nIdUsuario", referencedColumnName = "nIdUsuario", insertable = false, updatable = false)
     @ManyToOne(optional = false)
     private Usuario usuario;
-    @JoinColumn(name = "nIdPuesto", referencedColumnName = "nIdPuesto",
-            nullable = false, insertable = false, updatable = false)
+    @JoinColumn(name = "nIdPuesto", referencedColumnName = "nIdPuesto", insertable = false, updatable = false)
     @ManyToOne(optional = false)
     private Puesto puesto;
 
@@ -90,12 +85,12 @@ public class Calificacion implements Serializable {
         this.puesto = puesto;
     }
 
-  /*  @Override
+    @Override
     public int hashCode() {
         int hash = 0;
         hash += (calificacionPK != null ? calificacionPK.hashCode() : 0);
         return hash;
-    }*/
+    }
 
     @Override
     public boolean equals(Object object) {
@@ -104,8 +99,7 @@ public class Calificacion implements Serializable {
             return false;
         }
         Calificacion other = (Calificacion) object;
-        if ((this.calificacionPK == null && other.calificacionPK != null) ||
-                (this.calificacionPK != null && !this.calificacionPK.equals(other.calificacionPK))) {
+        if ((this.calificacionPK == null && other.calificacionPK != null) || (this.calificacionPK != null && !this.calificacionPK.equals(other.calificacionPK))) {
             return false;
         }
         return true;
