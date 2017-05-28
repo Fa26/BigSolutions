@@ -30,7 +30,7 @@
 
            
 
-                <p:layoutUnit position="west" size="210" header="Bienvenido" collapsible="true">
+                <p:layoutUnit position="west" size="217" header="Bienvenido" collapsible="true">
                    
                      <h:form>
                           <p:menu>
@@ -53,56 +53,87 @@
                 
                     <h:form id="myForm">
                         
-                        
+                        <p:growl id="msgs" showDetail="true"/>
                         <!--Muestra los puestos-->
-                        <p:dataTable var="p" value="#{verControl.puestos}"  rows="5" scrollRows="6" scrollable="true" liveScroll="true" scrollHeight="150">
+                        <p:dataTable var="p" value="#{verControl.puestos}"  rows="13"  editable="true" paginator="true"  >
                         <f:facet name="header">Tus Puestos</f:facet>
-                        <p:column headerText="Id"><h:outputText value="#{p.NIdPuesto}"/></p:column>
-                        <p:column headerText="Apertura" ><h:outputText value="#{p.horaApertura}"/></p:column>
-                        <p:column headerText="Cierre" ><h:outputText value="#{p.horaCierre}"/></p:column>
-                         <p:column headerText="Puesto" ><h:outputText value="#{p.nombre}"/></p:column>
-                        <p:column headerText="TipoComida"><h:outputText value="#{p.tipoComida}"/></p:column>
-                        <p:column headerText="Dueño" ><h:outputText value="#{p.nomDuenio}"/></p:column>
-                        <p:column headerText="App" ><h:outputText value="#{p.appDuenio}"/></p:column>
-                        <p:column headerText="Apm" ><h:outputText value="#{p.apmDuenio}"/></p:column>
+                        
+                           <p:ajax event="rowEdit" listener="#{editaC.onRowEdit}" update=":myForm:msgs" />
+                            <p:ajax event="rowEditCancel" listener="#{editaC.onRowCancel}" update=":myForm:msgs"  />
+                        
+                        <p:column headerText="Id"> <h:outputText value="#{p.NIdPuesto}"/> </p:column>
+                 
+                        
+                        <p:column headerText="Apertura" >
+                            <p:cellEditor>
+                                <f:facet name="output"> <h:outputText value="#{p.horaApertura}"/></f:facet>
+                                <f:facet name="input"><p:inputText id="horaApertura" value="#{p.horaApertura}"/></f:facet>
+                            </p:cellEditor>
+                         </p:column>
+                        
+                        
+                        <p:column headerText="Cierre" >
+                            <p:cellEditor>
+                                <f:facet name="output"><h:outputText value="#{p.horaCierre}"/></f:facet>
+                                <f:facet name="input"><p:inputText value="#{p.horaCierre}"/></f:facet>
+                             
+                            </p:cellEditor>
+                         </p:column>
+                        
+                         <p:column headerText="Nombre Puesto" >
+                            <p:cellEditor>
+                                <f:facet name="output"><h:outputText value="#{p.nombre}"/></f:facet>
+                                <f:facet name="input"><h:inputText value ="#{p.nombre}"/></f:facet>
+                            </p:cellEditor>
+                         </p:column>
+                        
+                        <p:column headerText="Tipo Comida">
+                            <p:cellEditor>
+                                <f:facet name="output"><h:outputText value="#{p.tipoComida}"/></f:facet>
+                                <f:facet name="input"><h:inputText value="#{p.tipoComida}"/></f:facet>
+                            </p:cellEditor>
+                        </p:column>
+                        
+                        <p:column headerText="Dueño">
+                            <p:cellEditor>
+                                <f:facet name="output"><h:outputText value="#{p.nomDuenio}"/></f:facet>
+                                <f:facet name="input"><h:inputText value="#{p.nomDuenio}"/></f:facet>
+                            </p:cellEditor>
+                        </p:column>
+                        
+                        <p:column headerText="App">
+                            <p:cellEditor>
+                                <f:facet name="output"><h:outputText value="#{p.appDuenio}"/></f:facet>
+                                <f:facet name="input"><h:inputText value="#{p.appDuenio}"/></f:facet>
+                            </p:cellEditor>
+                        </p:column>
+                        
+                         <p:column headerText="Apm">
+                            <p:cellEditor>
+                                <f:facet name="output"><h:outputText value="#{p.apmDuenio}"/></f:facet>
+                                <f:facet name="input"><h:inputText value="#{p.apmDuenio}"/></f:facet>
+                            </p:cellEditor>
+                        </p:column>
+                        
+                        
+                        
+                         <p:column style="width:32px">
+                        <p:rowEditor  />
+                        </p:column>
+                   
                         <f:facet name="footer"> 
                             En total tienes: #{verControl.total()}.
                         </f:facet>
                         
                     </p:dataTable>
-                        
-                        <br></br><br></br>
-                        <h:outputLabel value="Id del Puesto: " styleClass="pos"/><p:inputText value="#{editaC.puesto.NIdPuesto}" required="true"  id="id" size="19" placeholder="id del puesto"/>
-                        <br></br><br></br>
-                        <!-- Linea Divisora-->
-                        <hr size="5px" color="black" width="75%"></hr>
-                        <h1 class="pos2"> Puesto</h1>
-                       
-                        <h:outputLabel value="Hora Apertura: " styleClass="pos"/><p:inputText value="#{editaC.puesto.horaApertura}" required="true"  id="HA" size="19" placeholder="Hora Apertura"/>
-                        &nbsp;&nbsp;&nbsp;&nbsp; 
-                       <h:outputLabel value="Hora Cierre: "/><p:inputText value="#{editaC.puesto.horaCierre}" required="true"  id="HC" size="19" placeholder="Hora Cierre"/>
-                        <br></br><br></br>
-                        <h:outputLabel value="Nombre  Puesto: " styleClass="pos"/><p:inputText value="#{editaC.puesto.nombre}" required="true"  id="nombre" size="19" placeholder="Nombre del Puesto"/>
-                        &nbsp;&nbsp;&nbsp;&nbsp; 
-                        <h:outputLabel value="Tipo Comida: "/><p:inputText value="#{editaC.puesto.tipoComida}" required="true"  id="comida" size="19" placeholder="Tipo Comida"/>
-                        <br></br><br></br>
+                        <br></br>
+                        <p:commandButton  oncomplete="redirect()" value="Reload" icon="ui-icon-refresh"/>
+                         <script type="text/javascript">
+                                redirect=function(){
+                                    location.reload(true);
+                                }
+                                </script> 
                       
-                       
-                        <hr size="5px" color="black" width="75%"></hr>
-                        <h1 class="pos2">Dueño</h1>
-                       
-                        <h:outputLabel value="Nombre: " styleClass="pos"/><p:inputText value="#{editaC.puesto.nomDuenio}" required="true"  id="nom" size="19" placeholder="Nombre"/>
-                        &nbsp;&nbsp;&nbsp;&nbsp; 
-                        <h:outputLabel value="Ap.Paterno: "/><p:inputText value="#{editaC.puesto.appDuenio}" required="true"  id="app" size="19" placeholder="Apellido Paterno"/>
-                        <br></br> <br></br>
-                        <h:outputLabel value="Ap.Materno: " styleClass="pos"/><p:inputText value="#{editaC.puesto.apmDuenio}" required="true"  id="apm" size="19" placeholder="Apellido Mterno"/>
-                        <br></br> <br></br>
-                        
-                        <p:commandButton action="#{editaC.editar()}" value="Editar"/>
-                        <p:commandButton value="Reset" update="myForm" process="@this">
-                           
-                        <p:resetInput target="myForm"/>
-                        </p:commandButton>
                         <p:messages id="messages" autoUpdate="true" closable="true" />
                     </h:form>
                 </p:layoutUnit>

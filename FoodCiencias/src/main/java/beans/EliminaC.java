@@ -23,7 +23,6 @@ import javax.persistence.Persistence;
 import org.primefaces.event.SelectEvent;
 
 import control.PuestoJpaController;
-import control.exceptions.IllegalOrphanException;
 import javax.faces.component.UIComponent;
 /**
  *
@@ -61,7 +60,7 @@ public class EliminaC  implements Serializable{
        this.selectP=seleP;
    }
    
-   public void elimina() throws IllegalOrphanException{
+   public void elimina(){
       
      
         PuestoJpaController elimina = new PuestoJpaController(emf);

@@ -28,7 +28,7 @@
 
            
 
-                <p:layoutUnit position="west" size="210" header="Bienvenido!!" collapsible="true">
+                <p:layoutUnit position="west" size="217" header="Bienvenido!!" collapsible="true">
                     
                          <p:menu>
                         <p:submenu styleClass="color">
@@ -63,14 +63,13 @@
                         <f:facet name="footer"> Ahora tienes: #{eliminaUC.total()}.
                       
                         <p:commandButton process="multipleDT" icon="ui-icon-trash"
-                                         value="Elimina" actionListener="#{eliminaUsuarioC.elimina()}">
-                      <p:confirm message="¿Seguro de eliminar?" header="Aviso" icon="ui-icon-alert"/>
-                        </p:commandButton>
-                      
-                            <p:confirmDialog global="true">
-                             <p:commandButton value="Si" type="button" icon="ui-icon-check" styleClass="ui-confirmdialog-yes"/>
-                                <p:commandButton value="No" type="button" icon="ui-icon-close" styleClass="ui-confirmdialog-no"/>
-                             </p:confirmDialog>
+                                         value="Elimina"  oncomplete="redirect()" actionListener="#{eliminaUsuarioC.elimina()}" />
+                      <script type="text/javascript">
+                                redirect=function(){
+                                    alert('Felicidades se ha eliminado');
+                                    location.reload(true);
+                                }
+                                </script> 
                         
                         </f:facet>
                     </p:dataTable>

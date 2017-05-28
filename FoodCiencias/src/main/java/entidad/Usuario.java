@@ -41,6 +41,10 @@ import javax.xml.bind.annotation.XmlTransient;
     , @NamedQuery(name = "Usuario.findByApm", query = "SELECT u FROM Usuario u WHERE u.apm = :apm")})
 public class Usuario implements Serializable {
 
+    @Lob
+    @Column(name = "foto")
+    private byte[] foto;
+
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -65,9 +69,6 @@ public class Usuario implements Serializable {
     @Size(max = 32)
     @Column(name = "apm")
     private String apm;
-    @Lob
-    @Column(name = "foto")
-    private byte[] foto;
     @OneToMany(mappedBy = "nIdUsuario")
     private List<Comentario> comentarioList;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "usuario")
@@ -136,13 +137,6 @@ public class Usuario implements Serializable {
         this.apm = apm;
     }
 
-    public byte[] getFoto() {
-        return foto;
-    }
-
-    public void setFoto(byte[] foto) {
-        this.foto = foto;
-    }
 
     @XmlTransient
     public List<Comentario> getComentarioList() {
@@ -185,6 +179,14 @@ public class Usuario implements Serializable {
     @Override
     public String toString() {
         return "entidad.Usuario[ nIdUsuario=" + nIdUsuario + " ]";
+    }
+
+    public byte[] getFoto() {
+        return foto;
+    }
+
+    public void setFoto(byte[] foto) {
+        this.foto = foto;
     }
     
 }

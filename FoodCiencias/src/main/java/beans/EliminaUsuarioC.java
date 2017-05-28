@@ -22,7 +22,6 @@ import javax.faces.context.FacesContext;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import control.UsuarioJpaController;
-import control.exceptions.IllegalOrphanException;
 import entidad.Usuario;
 /**
  *
@@ -60,7 +59,7 @@ public class EliminaUsuarioC implements Serializable{
        this.selectP=seleP;
    }
    
-   public void elimina() throws IllegalOrphanException{
+   public void elimina(){
       
      
         UsuarioJpaController elimina = new UsuarioJpaController(emf);

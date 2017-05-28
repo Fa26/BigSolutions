@@ -29,7 +29,8 @@
 
            
 
-                <p:layoutUnit position="west" size="210" header="Bienvenido!!" collapsible="true">
+                <p:layoutUnit position="west" size="217" header="Bienvenido!!" collapsible="true">
+                    <h:form>
                      <p:menu>
                         <p:submenu styleClass="color">
                          <p:menuitem value="Inicio" outcome="AdministradorIH.xhtml"  icon="ui-icon-home"></p:menuitem>
@@ -42,6 +43,7 @@
                         <p:menuitem value="Salir" outcome="EliminarUIH.xhtml"  icon="ui-icon-log-out"></p:menuitem>
                         </p:submenu>
                     </p:menu>
+                    </h:form>
                 
                      
                 </p:layoutUnit>
@@ -50,6 +52,7 @@
                 <p:layoutUnit position="center">
                 
                     <h:form id="myForm">
+                         <p:growl id="msgs" showDetail="true"/>
                         
                         
                     <p:dataTable  id="multipleDT" var="p" value="#{verControl.puestos}" selectionMode="single" 
@@ -70,21 +73,20 @@
                             Ahora tienes: #{verControl.total()}
                        
                             <p:commandButton process="multipleDT" icon="ui-icon-trash" 
-                                             value="Elimina" actionListener="#{eliminaC.elimina}">
-                                <p:confirm message="¿Seguro de eliminar?" header="Aviso" icon="ui-icon-alert"/>
-                            </p:commandButton>
-                            
-                            <p:confirmDialog global="true">
-                                <p:commandButton value="Si" type="button" icon="ui-icon-check" styleClass="ui-confirmdialog-yes"/> >
-                                    
-                               
-                                <p:commandButton value="No" type="button" icon="ui-icon-close" styleClass="ui-confirmdialog-no"/>
-                             </p:confirmDialog>
-                           
+                                             value="Elimina"   oncomplete="redirect()" actionListener="#{eliminaC.elimina}"/>
+                          <script type="text/javascript">
+                                redirect=function(){
+                                    alert('Felicidades se ha eliminado');
+                                    location.reload(true);
+                                }
+                                </script> 
+                             
+                             
                            
                         </f:facet>
                         
                     </p:dataTable>
+                          <p:messages id="messages" autoUpdate="true" closable="true" />
                     </h:form>
                 </p:layoutUnit>
 

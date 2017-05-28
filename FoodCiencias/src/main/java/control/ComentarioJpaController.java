@@ -8,19 +8,17 @@ package control;
 import control.exceptions.NonexistentEntityException;
 import entidad.Comentario;
 import java.io.Serializable;
+import java.util.List;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
 import javax.persistence.Query;
 import javax.persistence.EntityNotFoundException;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
-import entidad.Puesto;
-import entidad.Usuario;
-import java.util.List;
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
 
 /**
  *
- * @author leo
+ * @author FaVenegas
  */
 public class ComentarioJpaController implements Serializable {
 
@@ -38,25 +36,7 @@ public class ComentarioJpaController implements Serializable {
         try {
             em = getEntityManager();
             em.getTransaction().begin();
-            Puesto NIdPuesto = comentario.getNIdPuesto();
-            if (NIdPuesto != null) {
-                NIdPuesto = em.getReference(NIdPuesto.getClass(), NIdPuesto.getNIdPuesto());
-                comentario.setNIdPuesto(NIdPuesto);
-            }
-            Usuario NIdUsuario = comentario.getNIdUsuario();
-            if (NIdUsuario != null) {
-                NIdUsuario = em.getReference(NIdUsuario.getClass(), NIdUsuario.getNIdUsuario());
-                comentario.setNIdUsuario(NIdUsuario);
-            }
             em.persist(comentario);
-            if (NIdPuesto != null) {
-                NIdPuesto.getComentarioList().add(comentario);
-                NIdPuesto = em.merge(NIdPuesto);
-            }
-            if (NIdUsuario != null) {
-                NIdUsuario.getComentarioList().add(comentario);
-                NIdUsuario = em.merge(NIdUsuario);
-            }
             em.getTransaction().commit();
         } finally {
             if (em != null) {
@@ -70,36 +50,7 @@ public class ComentarioJpaController implements Serializable {
         try {
             em = getEntityManager();
             em.getTransaction().begin();
-            Comentario persistentComentario = em.find(Comentario.class, comentario.getNIdComentario());
-            Puesto NIdPuestoOld = persistentComentario.getNIdPuesto();
-            Puesto NIdPuestoNew = comentario.getNIdPuesto();
-            Usuario NIdUsuarioOld = persistentComentario.getNIdUsuario();
-            Usuario NIdUsuarioNew = comentario.getNIdUsuario();
-            if (NIdPuestoNew != null) {
-                NIdPuestoNew = em.getReference(NIdPuestoNew.getClass(), NIdPuestoNew.getNIdPuesto());
-                comentario.setNIdPuesto(NIdPuestoNew);
-            }
-            if (NIdUsuarioNew != null) {
-                NIdUsuarioNew = em.getReference(NIdUsuarioNew.getClass(), NIdUsuarioNew.getNIdUsuario());
-                comentario.setNIdUsuario(NIdUsuarioNew);
-            }
             comentario = em.merge(comentario);
-            if (NIdPuestoOld != null && !NIdPuestoOld.equals(NIdPuestoNew)) {
-                NIdPuestoOld.getComentarioList().remove(comentario);
-                NIdPuestoOld = em.merge(NIdPuestoOld);
-            }
-            if (NIdPuestoNew != null && !NIdPuestoNew.equals(NIdPuestoOld)) {
-                NIdPuestoNew.getComentarioList().add(comentario);
-                NIdPuestoNew = em.merge(NIdPuestoNew);
-            }
-            if (NIdUsuarioOld != null && !NIdUsuarioOld.equals(NIdUsuarioNew)) {
-                NIdUsuarioOld.getComentarioList().remove(comentario);
-                NIdUsuarioOld = em.merge(NIdUsuarioOld);
-            }
-            if (NIdUsuarioNew != null && !NIdUsuarioNew.equals(NIdUsuarioOld)) {
-                NIdUsuarioNew.getComentarioList().add(comentario);
-                NIdUsuarioNew = em.merge(NIdUsuarioNew);
-            }
             em.getTransaction().commit();
         } catch (Exception ex) {
             String msg = ex.getLocalizedMessage();
@@ -128,16 +79,6 @@ public class ComentarioJpaController implements Serializable {
                 comentario.getNIdComentario();
             } catch (EntityNotFoundException enfe) {
                 throw new NonexistentEntityException("The comentario with id " + id + " no longer exists.", enfe);
-            }
-            Puesto NIdPuesto = comentario.getNIdPuesto();
-            if (NIdPuesto != null) {
-                NIdPuesto.getComentarioList().remove(comentario);
-                NIdPuesto = em.merge(NIdPuesto);
-            }
-            Usuario NIdUsuario = comentario.getNIdUsuario();
-            if (NIdUsuario != null) {
-                NIdUsuario.getComentarioList().remove(comentario);
-                NIdUsuario = em.merge(NIdUsuario);
             }
             em.remove(comentario);
             em.getTransaction().commit();

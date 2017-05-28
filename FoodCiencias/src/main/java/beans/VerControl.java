@@ -5,8 +5,11 @@
  */
 package beans;
 
+
 import Otros.PuestoBean;
+
 import control.PuestoJpaController;
+
 import entidad.Puesto;
 import java.io.Serializable;
 import java.util.LinkedList;
@@ -36,8 +39,11 @@ public class VerControl implements Serializable {
    
     private List<Puesto> puestos;
     private List<PuestoBean> pb;
-    
-
+    //Alimentos
+    /*
+    private List<Alimento> alimentos;
+    private List<AlimentoBean> ali;
+*/
  
     public VerControl(){
         FacesContext.getCurrentInstance().getViewRoot().setLocale(new Locale("es-Mx"));
@@ -48,9 +54,17 @@ public class VerControl implements Serializable {
         pb=new LinkedList();
         PuestoJpaController ve = new PuestoJpaController(emf);
         puestos=ve.findPuestoEntities();
+        //alimentos
+       /* alimentos = new LinkedList();
+        ali= new LinkedList();
+        AlimentoJpaController vea = new AlimentoJpaController(emf);
+        alimentos =vea.findAlimentoEntities();*/
+        
+        
         
         for(int i=0; i<puestos.size();i++){
             PuestoBean pbean = new PuestoBean(puestos.get(i).getNIdPuesto(),
+           
                     puestos.get(i).getHoraApertura(),
                     puestos.get(i).getHoraCierre(),
                     puestos.get(i).getTipoComida(),
@@ -58,9 +72,12 @@ public class VerControl implements Serializable {
                     puestos.get(i).getNomDuenio(),
                     puestos.get(i).getAppDuenio(),
                     puestos.get(i).getApmDuenio());
-           
-            
+        /* AlimentoBean abean = new AlimentoBean(alimentos.get(i).getNIdAlimento(),
+                    alimentos.get(i).getNombreAlimento());*/
+        // ali.add(abean);
           pb.add(pbean);
+         //pb.add(pbean);
+        
         }
     }
     
@@ -70,6 +87,14 @@ public class VerControl implements Serializable {
    public void setPuestos(List puestos){
        this.puestos=puestos;
    }
+   
+   //Alimentos
+ /*  public List getAlimentos(){
+       return this.alimentos;
+   }
+   public void setAlimentos(List alimentos){
+       this.alimentos=alimentos;
+   }*/
    
    public int total(){
        return pb.size();

@@ -44,6 +44,12 @@ import javax.xml.bind.annotation.XmlTransient;
     , @NamedQuery(name = "Puesto.findByApmDuenio", query = "SELECT p FROM Puesto p WHERE p.apmDuenio = :apmDuenio")})
 public class Puesto implements Serializable {
 
+    @Lob
+    @Column(name = "foto")
+    private byte[] foto;
+    @OneToMany(mappedBy = "nIdPuesto")
+    private List<Lugar> lugarList;
+
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -71,9 +77,6 @@ public class Puesto implements Serializable {
     @Size(max = 32)
     @Column(name = "apm_duenio")
     private String apmDuenio;
-    @Lob
-    @Column(name = "foto")
-    private byte[] foto;
     @JoinColumn(name = "nIdAdministrador", referencedColumnName = "nIdAdministrador")
     @ManyToOne
     private Administrador nIdAdministrador;
@@ -153,13 +156,6 @@ public class Puesto implements Serializable {
         this.apmDuenio = apmDuenio;
     }
 
-    public byte[] getFoto() {
-        return foto;
-    }
-
-    public void setFoto(byte[] foto) {
-        this.foto = foto;
-    }
 
     public Administrador getNIdAdministrador() {
         return nIdAdministrador;
@@ -210,6 +206,23 @@ public class Puesto implements Serializable {
     @Override
     public String toString() {
         return "entidad.Puesto[ nIdPuesto=" + nIdPuesto + " ]";
+    }
+
+    public byte[] getFoto() {
+        return foto;
+    }
+
+    public void setFoto(byte[] foto) {
+        this.foto = foto;
+    }
+
+    @XmlTransient
+    public List<Lugar> getLugarList() {
+        return lugarList;
+    }
+
+    public void setLugarList(List<Lugar> lugarList) {
+        this.lugarList = lugarList;
     }
     
 }

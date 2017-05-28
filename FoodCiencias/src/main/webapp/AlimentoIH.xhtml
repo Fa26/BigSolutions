@@ -1,3 +1,4 @@
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
@@ -35,9 +36,10 @@
                     
                     <p:menu>
                         <p:submenu styleClass="color">
-                          <p:menuitem value="Inicio" outcome="AdministradorIH.xhtml"  icon="ui-icon-home"></p:menuitem>
+                         <p:menuitem value="Inicio" outcome="AdministradorIH.xhtml"  icon="ui-icon-home"></p:menuitem>
                         <p:menuitem value="Registrar Puesto" outcome="RegistrarPIH.xhtml"  icon="ui-icon-pencil"></p:menuitem>
                        <p:menuitem value="Editar  Puesto" outcome="EditarPuesto.xhtml"  icon="ui-icon-note"></p:menuitem>
+                       <p:menuitem value="Agregar Alimento" outcome="EliminarUIH.xhtml"  icon="ui-icon-plusthick"></p:menuitem>
                        <p:menuitem value="Eliminar Puesto" outcome="ElimiPIH.xhtml"  icon="ui-icon-trash"></p:menuitem>
                         <p:menuitem value="Eliminar Usuario" outcome="EliminarUIH.xhtml"  icon="ui-icon-trash"></p:menuitem>
                         
@@ -46,40 +48,26 @@
                         <p:menuitem value="Salir" outcome="EliminarUIH.xhtml"  icon="ui-icon-log-out"></p:menuitem>
                         </p:submenu>
                     </p:menu>
-                
+              
                      
                 </p:layoutUnit>
               
                 <!-- layaut del  centro-->
                 <p:layoutUnit position="center">
-                    <h:form id="myForm">
-                    
-                        
-                        
-                        <p:dataTable  id="multipleDT" var="c" value="#{comentarioVIH.comentarios}" selectionMode="single" 
-                                      selection="#{eliminaComen.select}" rowKey="#{c.NIdComentario}" paginator="true" rows="13">
-                        
-                        <f:facet name="header">Tus Comentarios</f:facet>
-                       <p:column headerText="Id"><h:outputText value="#{c.NIdComentario}"/></p:column>
-                        <p:column headerText="Fecha" ><h:outputText value="#{c.fecha}"/></p:column>
-                        <p:column headerText="Texto" ><h:outputText value="#{c.texto}"/></p:column>
+                    <p:dataTable var="p" value="#{verControl.puestos}"  paginator="true" rows="13">
+                        <f:facet name="header">Tus Puestos</f:facet>
+                        <p:column headerText="Id"><h:outputText value="#{p.NIdPuesto}"/></p:column>
+                      
+                         <p:column headerText="Puesto" ><h:outputText value="#{p.nombre}"/></p:column>
+                        <p:column headerText="TipoComida"><h:outputText value="#{p.tipoComida}"/></p:column>
+                       <!-- <p:column headerText="Menu"><h:outputText value="#{p.nombreAlimento}"/></p:column>-->
                       
                         <f:facet name="footer"> 
-                            Ahora tienes tienes: #{comentarioVIH.total()}.
-                             <p:commandButton process="multipleDT" icon="ui-icon-trash" 
-                                              value="Elimina" oncomplete="redirect()" actionListener="#{eliminaComen.elimina()}"/>
-                             <script type="text/javascript">
-                                redirect=function(){
-                                    alert('Felicidades se ha eliminado');
-                                    location.reload(true);
-                                }
-                                </script> 
-                              
-                            
+                            En total tienes: #{verControl.total()}.
                         </f:facet>
                         
                     </p:dataTable>
-                    </h:form>
+                    <p:commandButton  action="#{alimentoC.muestra}"  value="ver" />
                    
                 </p:layoutUnit>
 

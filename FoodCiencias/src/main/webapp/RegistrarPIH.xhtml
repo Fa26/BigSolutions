@@ -31,7 +31,7 @@
 
         <h:body>
             <p:layout fullPage="true">
-                <p:layoutUnit position="west" size="210" header="Bienvenido!!" collapsible="true">
+                <p:layoutUnit position="west" size="217" header="Bienvenido!!" collapsible="true">
                     
                      <h:form>
                          <p:menu>
@@ -79,16 +79,16 @@
                   &nbsp;&nbsp;&nbsp;&nbsp;
                   <h:outputLabel value="Hora Cierre: " styleClass="posicionP"/><p:inputText value="#{puestoControl.puesto.horaCierre}" required="true" id="horacierre" size="15" placeholder="Hora Cierre"/>
                   <br></br><br></br>
-                  
-                      
-                  
-         
-        
-      
-                     <!--  -->
+              
                     <tr>
                     <td colspan="2" align="center">
-                    <p:commandButton action="#{puestoControl.addPuesto()}" value="Registrar"/>
+                    <p:commandButton action="#{puestoControl.addPuesto()}" value="Registrar" oncomplete="redirect()"/>
+                    <script type="text/javascript">
+                                redirect=function(){
+                                   
+                                    location.reload(true);
+                                }
+                                </script> 
                     <p:commandButton value="Reset" update="myForm" process="@this">
                     <p:resetInput target="myForm"/>
                     </p:commandButton>
@@ -105,21 +105,11 @@
                 <h:form>
 
             <p:gmap id="gmap" center="19.324328359583355,-99.17934268712997" zoom="20"
-                    type="HYBRID" model="#{mapas.advancedModel}"
-                    style="width:570px;height:260px;border:2px solid black;" onPointClick="handlePointClick(event);"
+                    type="HYBRID" model="#{mapaC.emptyModel}"
+                    style="width:590px;height:260px;border:2px solid black;" onPointClick="handlePointClick(event);"
                     widgetVar="map">
 
-                    <p:ajax event="overlaySelect" listener="#{mapas.onMarkerSelect}"/>
 
-            <p:gmapInfoWindow id="infoWindow">
-                <p:outputPanel style="text-align: center; display: block; margin: auto">
-
-                <h:outputText value="#{mapas.marker.title}" />
-                <br/>
-                <h:outputText value="#{mapas.marker.data}"/>
-
-                </p:outputPanel>
-            </p:gmapInfoWindow>
             </p:gmap>
 
     </h:form>
@@ -127,17 +117,18 @@
             <p:dialog widgetVar="dlg" showEffect="fade">
             <h:form prependId="false">
                 <h:panelGrid columns="2">
-                <h:outputLabel for="title" value="Comentario:" />
-                <p:inputText id="title" value="#{mapas.nombre}" />
+                <h:outputLabel for="title" value="Puesto:" />
+                <p:inputText id="title" value="#{mapaC.nombre}" />
 
                 <f:facet name="footer">
-                <p:commandButton value="Add" actionListener="#{mapas.addMarker}" update=":messages" oncomplete="markerAddComplete()" />
+                    <p:commandButton value="Add" actionListener="#{mapaC.addMarker}" 
+                                     update=":messages" oncomplete="markerAddComplete()" />
                 <p:commandButton value="Cancel" onclick="return cancel()" />
                 </f:facet>
             </h:panelGrid>
 
-            <h:inputHidden id="lat" value="#{mapas.lat}" />
-            <h:inputHidden id="lng" value="#{mapas.lng}" />
+                <h:inputHidden id="lat" value="#{mapaC.lat}" />
+                <h:inputHidden id="lng" value="#{mapaC.lng}" />
             </h:form>
             </p:dialog>
                    

@@ -8,6 +8,9 @@
     <class>entidad.Comentario</class>
     <class>entidad.Usuario</class>
     <class>entidad.Calificacion</class>
+    <class>entidad.Alimento</class>
+    <class>entidad.Lugar</class>
+    <class>entidad.Imagen</class>
     <exclude-unlisted-classes>false</exclude-unlisted-classes>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/FoodCiencias?zeroDateTimeBehavior=convertToNull"/>
