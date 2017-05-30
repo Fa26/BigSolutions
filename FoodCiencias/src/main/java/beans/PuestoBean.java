@@ -5,10 +5,14 @@
  */
 package beans;
 
-import control.ComentarioJpaController;
+import control.PuestoJpaController;
 import entidad.Puesto;
+import java.util.List;
+import java.util.Locale;
+import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
+import javax.faces.context.FacesContext;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
@@ -20,14 +24,21 @@ import javax.persistence.Persistence;
 @RequestScoped
 public class PuestoBean {
     EntityManagerFactory emf = Persistence.createEntityManagerFactory("FoodCienciasPU");
-    ComentarioJpaController cPuesto = new ComentarioJpaController(emf);
+    PuestoJpaController cPuesto = new PuestoJpaController(emf);
     private Puesto datoPuesto;
-   // private List<Puesto> listPuesto;
+    private List<Puesto> listPuesto;
     
+    
+    @PostConstruct
+    public void init() {
+        listPuesto = cPuesto.findPuestoEntities();
+    }
     /**
      * Creates a new instance of PuestoBean
      */
     public PuestoBean() {
+        FacesContext.getCurrentInstance().getViewRoot().setLocale(new Locale("es-Mx"));
+        datoPuesto = new Puesto();//importante para obtener erro
     }
 
     /**
@@ -42,6 +53,20 @@ public class PuestoBean {
      */
     public void setDatoPuesto(Puesto datoPuesto) {
         this.datoPuesto = datoPuesto;
+    }
+
+    /**
+     * @return the listPuesto
+     */
+    public List<Puesto> getListPuesto() {
+        return listPuesto;
+    }
+
+    /**
+     * @param listPuesto the listPuesto to set
+     */
+    public void setListPuesto(List<Puesto> listPuesto) {
+        this.listPuesto = listPuesto;
     }
     
 }
