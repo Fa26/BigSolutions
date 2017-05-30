@@ -5,40 +5,38 @@
       xmlns:p="http://primefaces.org/ui"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
-        <title>Facelet Title</title>
+        <title>FoodCiencias</title>
     </h:head>
     <h:body>
-    <p:layout style="min-width:500px;min-height:200px;">
-        <p:layoutUnit position="center">
-         <h:outputLink title="inicio">
-             <p:graphicImage name="/imagenes/foodCiencias.jpg" />
-        </h:outputLink>
-        Informacion puesto
-        </p:layoutUnit>
- 
-        <p:layoutUnit  position="east" resizable="true" size="700" minSize="40" maxSize="200">
-        Imagen puesto
-        </p:layoutUnit>
-    </p:layout>
-        <p:panel id="Comentario" header="Comentar un puesto."
-                 style="width: auto">
-    <h:form id="myForm">
-        <h:panelGrid columns="1" cellpadding="5">
-        <h:panelGrid columns="2" cellpadding="5">            
+    <p:panel style="width: auto; height: auto">
+        <p:panel id="basic" header="Informacion pueso" style="color: appworkspace">
+        <h:panelGrid columns="2" cellpadding="10">
+            <p:graphicImage value="/imagenes/puesto.jpeg"/>
+            <p:panelGrid columns="1">
+            <h:outputText value="Nombre: " style="font-weight: bold"/>
+            <h:outputText value="Hora de apertura: " style="font-weight: bold"/>
+            <h:outputText value="Hora de cierre" style="font-weight: bold"/>
+            <h:outputText value="Tipo de comida" style="font-weight: bold"/>  
+            </p:panelGrid>
+          
+        </h:panelGrid>
+    </p:panel>
+        
+    <h:form >
+        <h:panelGrid columns="1" cellpadding="1">
+        <h:panelGrid columns="2" cellpadding="1">            
             <p:rating value="#{calificacionBean.valor}" />
         </h:panelGrid>
-
             <p:commandButton value="Calificar" action="#{calificacionBean.addCalificacion()}" update="display" oncomplete="PF('dlg').show()" style="margin:5px" />
-
         <p:dialog header="Tu calificación" widgetVar="dlg" showEffect="fade" hideEffect="fade">
             <h:panelGrid id="display" columns="2" cellpadding="5">
                 <h:outputText value="Califacion:" />
                 <h:outputText value="#{calificacionBean.valor}" />
             </h:panelGrid>
-    </p:dialog>            
-                     
-            <td><p:commandButton value="Comentar" type="button" onclick="PF('dlg1').show();"/></td><!--Boton Comentar-->            
+        </p:dialog>                                
+            <p:commandButton value="Comentar" type="button" onclick="PF('dlg1').show();"/><!--Boton Comentar-->            
         </h:panelGrid>
+        
         <p:dialog header="Ingresar un comentario" widgetVar="dlg1" modal="true" height="500">
         <p:outputLabel id="lblIngresaComentario"/>
             <p:inputTextarea id="txtComentario"
@@ -55,26 +53,20 @@
         </p:dialog>                     
 
     </h:form> 
-   
-    <h:form>
-
-            
-        <p:dataScroller  value="#{comentarioBean.listComentarios}" var="lstComentario" chunkSize="10">
-            <f:facet name="header" >
-                Comentarios.
-            </f:facet>
-            <h:panelGrid columns="2" style="width:100%" columnClasses="logo,detail">
+ 
+        <p:dataList value="#{comentarioBean.listComentarios}" var="lstComentario" type="ordered">
+        <f:facet name="header">
+            Comentarios
+        </f:facet>
+        <h:panelGrid columns="2" style="width:auto; height:auto" columnClasses="logo,detail">
                 <p:outputPanel>
                     <h:panelGrid columns="2" cellpadding="5">
-                        <h:outputText value="Comentario:" />
-                        <h:outputText value="#{lstComentario.texto}" style="font-weight: bold"/>
+                        <h:outputText value="Comentario: #{lstComentario.texto}" style="font-weight: bold"/>
                     </h:panelGrid>
                 </p:outputPanel>
-            </h:panelGrid>
-        </p:dataScroller>
+        </h:panelGrid>
+    </p:dataList>        
+    </p:panel>
    
-    </h:form>
-        </p:panel>
-
     </h:body>
 </html>
