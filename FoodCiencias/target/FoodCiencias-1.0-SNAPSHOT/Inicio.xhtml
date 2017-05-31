@@ -17,10 +17,10 @@
             <h:form id="form">
             <p:layout fullPage="true">
                 
-                <p:layoutUnit position="north" size="100" resizable="true" closable="true" collapsible="true">
+                <p:layoutUnit position="north" size="100" resizable="true" closable="true" collapsible="true" >
                    
                     <h:panelGrid columns="5" cellpadding="10">
-                    <img src="/imagenes/foodCiencias.jpg" height="100" width="120"/>
+                    <img src="/imagenes/foodCiencias.jpg" height="60" width="120"/>
                     <p:inputText/>
                     <p:commandButton value="Buscar"></p:commandButton>
                     <p:commandButton action="#{salir.cerrarSession()}" value="Salir" update="form"></p:commandButton>
@@ -32,14 +32,12 @@
                     Footer
                 </p:layoutUnit>
 
-                <p:layoutUnit position="west" size="175" header="Left" collapsible="true">
+                <p:layoutUnit position="west" size="175" header="#{inicio.usuario.nombre}" collapsible="false" >
                     <p:menu>
-                        <p:submenu label="Resources">
-                            <p:menuitem value="Demo" url="http://www.primefaces.org/showcase-labs/ui/home.jsf" />
-                            <p:menuitem value="Documentation" url="http://www.primefaces.org/documentation.html" />
-                            <p:menuitem value="Forum" url="http://forum.primefaces.org/" />
-                            <p:menuitem value="Themes" url="http://www.primefaces.org/themes.html" />
-
+                        <p:submenu label="">
+                            <p:menuitem value="Inicio" outcome="Inicio.xhtml"/>
+                            <p:menuitem value="Editar Perfil" outcome="EditaPerfil.xhtml" />
+                            
                         </p:submenu>
 
                     </p:menu>
@@ -47,6 +45,20 @@
 
                 <p:layoutUnit position="center">
                     <h:outputText value="Bienvenido #{inicio.usuario.nombre}"/>
+                    <p:gmap center="19.324803, -99.179306" zoom="25" 
+                type="HYBRID" model="#{mapa.mapModel}"
+                onPointClick="handlePoinDEtClick(event);"
+                style="width:400px;height:500px" widgetVar="mymap">
+                <p:ajax event="overlaySelect" listener="#{mapa.onMarkerSelect}"/>
+                <p:gmapInfoWindow id="infoWindow">
+                  <p:outputPanel style="text-align: center; display: block; margin: auto">
+                    <h:outputText value="#{mapa.marker.title}" />
+                    <br/>
+                    <h:button value="Ver Detalles" />
+                  </p:outputPanel>
+                </p:gmapInfoWindow>
+             </p:gmap>
+
                 </p:layoutUnit>
                
             </p:layout>

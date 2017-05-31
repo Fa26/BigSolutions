@@ -12,7 +12,7 @@
         <link rel="stylesheet" type="text/css" href="css/estilos.css"/>
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
-         
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCi5x75xW2SQ4Z9CFGaANI2mJwdoAlPnRk" type="text/javascript"></script>
     </h:head>
     <h:body>
   
@@ -82,7 +82,19 @@
              
              <p:column rowspan="11">
               
-             <img class="" src="imagenes/foodCiencias.jpg" width="400" height="500"/>
+             <p:gmap center="19.324803, -99.179306" zoom="25" 
+                type="HYBRID" model="#{mapa.mapModel}"
+                onPointClick="handlePoinDEtClick(event);"
+                style="width:400px;height:500px" widgetVar="mymap">
+                <p:ajax event="overlaySelect" listener="#{mapa.onMarkerSelect}"/>
+                <p:gmapInfoWindow id="infoWindow">
+                  <p:outputPanel style="text-align: center; display: block; margin: auto">
+                    <h:outputText value="#{mapa.marker.title}" />
+                    <br/>
+                    <h:button value="Ver Detalles" />
+                  </p:outputPanel>
+                </p:gmapInfoWindow>
+             </p:gmap>
              
              </p:column>
              <p:column rowspan="40"></p:column>

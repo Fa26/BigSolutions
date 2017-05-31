@@ -21,6 +21,11 @@ import javax.persistence.Persistence;
 import javax.persistence.Query;
 import org.primefaces.model.UploadedFile;
 
+import java.io.IOException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+import javax.servlet.http.HttpServletResponse;
+
 /**
  *
  * @author leo
@@ -40,19 +45,24 @@ public class UsuarioEditaBean {
     private final FacesContext faceContext; // Obtiene información de la aplicación
     private FacesMessage message;
     private Usuario usuario;
-
-    public UsuarioEditaBean() {
+    private HttpSession sesion;
+    private HttpServletResponse response;
+    private final HttpServletRequest httpServletRequest; // Obtiene información de todas las peticiones de usuario.
+    
+    
+    public UsuarioEditaBean() throws IOException{
 
         faceContext = FacesContext.getCurrentInstance();
         emf = Persistence.createEntityManagerFactory("FoodCienciasPU");
         usuarioController = new UsuarioJpaController(emf);
-        usuario = usuarioController.findUsuario(16);
+       httpServletRequest = (HttpServletRequest) faceContext.getExternalContext().getRequest();
+        if(inicioSesion() == false){
+             faceContext.getExternalContext().redirect("Entrar.xhtml");
+        }
+        usuario = getUsuario();
 
     }
 
-    public Usuario getUsuario() {
-        return usuario;
-    }
 
     public void setUsuario(Usuario usuario) {
         this.usuario = usuario;
@@ -98,5 +108,48 @@ public class UsuarioEditaBean {
         }
 
     }
+    
+    public Usuario getUsuario(){
+       Usuario usr = (Usuario) httpServletRequest.getSession().getAttribute("sessionUsuario");
+       return usr;
+        
+    }
+
+
+    public FacesMessage getMessage() {
+        return message;
+    }
+
+    public void setMessage(FacesMessage message) {
+        this.message = message;
+    }
+
+    public HttpSession getSesion() {
+        return sesion;
+    }
+
+    public void setSesion(HttpSession sesion) {
+        this.sesion = sesion;
+    }
+
+    public HttpServletResponse getResponse() {
+        return response;
+    }
+
+    public void setResponse(HttpServletResponse response) {
+        this.response = response;
+    }
+    
+public String saludo(){
+    return "Bienvenido a la pagina";
+}
+
+
+
+public final boolean inicioSesion(){
+    sesion = httpServletRequest.getSession(false);
+    return sesion != null && sesion.getAttribute("sessionUsuario") != null;
+}
+
 
 }

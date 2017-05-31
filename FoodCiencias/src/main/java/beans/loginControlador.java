@@ -15,6 +15,8 @@ import javax.faces.bean.RequestScoped;
 import javax.faces.context.FacesContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 
 //import javax.servlet.http.HttpServletRequest;
 
@@ -38,17 +40,22 @@ public class loginControlador implements Serializable{
    private final FacesContext faceContext; // Obtiene información de la aplicación
     private FacesMessage message;
     private HttpSession sesion;
-    
+    private HttpServletResponse response;
+
     
     
 
     /**
      * Constructor para inicializar los valores de faceContext y
      * httpServletRequest.
+     * @throws java.io.IOException
      */
-    public loginControlador(){
+    public loginControlador() throws IOException{
         faceContext = FacesContext.getCurrentInstance();
         httpServletRequest = (HttpServletRequest) faceContext.getExternalContext().getRequest();
+        if(inicioSesion() == true){
+         faceContext.getExternalContext().redirect("Inicio.xhtml");
+        }  
     }
 
         public String getUsuario() {
@@ -150,17 +157,36 @@ public class loginControlador implements Serializable{
         }
         message = new FacesMessage(FacesMessage.SEVERITY_ERROR, "Usuario o contraseña incorrecto" + correo + "" + contrasenia, null);
         faceContext.addMessage(null, message);
-        return "Entrar";
+        return "PaginaPrincipal";
+}
+    public HttpSession getSesion() {
+        return sesion;
+    }
+
+    public void setSesion(HttpSession sesion) {
+        this.sesion = sesion;
+    }
+
+    public HttpServletResponse getResponse() {
+        return response;
+    }
+
+    public void setResponse(HttpServletResponse response) {
+        this.response = response;
+    }
+    
+public String saludo(){
+    return "Bienvenido a la pagina";
 }
 
-    public static void main(String[] args){
-        loginControlador lc = new loginControlador();
-        lc.setCorreo("pedro1@ciencias.unam.mx");
-        lc.setContrasenia("qwe");
-        System.out.println(lc.login());
-        
-        
-    }
+
+
+public final boolean inicioSesion(){
+    sesion = httpServletRequest.getSession(false);
+    return sesion != null && sesion.getAttribute("sessionUsuario") != null;
+}
+
+    
     
 }
 
