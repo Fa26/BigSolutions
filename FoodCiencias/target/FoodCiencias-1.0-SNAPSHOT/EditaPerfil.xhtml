@@ -17,14 +17,13 @@
             <p:layout fullPage="true">
                 
                 <p:layoutUnit position="north" size="100" resizable="true" closable="true" collapsible="true" >
-                   
+                    <h:form id="form2">
                     <h:panelGrid columns="5" cellpadding="20">
                     <img src="/imagenes/foodCiencias.jpg" height="60" width="120"/>
-                    <p:inputText/>
-                    <p:commandButton value="Buscar"></p:commandButton>
-                    <p:commandButton action="#{salir.cerrarSession()}" value="Salir" update="form"></p:commandButton>
-                       </h:panelGrid>
-                   
+                     <p:commandButton action="#{salir.cerrarSession()}" value="Salir" update="form2" icon="ui-icon-extlink"></p:commandButton>
+                    
+                    </h:panelGrid>
+                    </h:form>
                 </p:layoutUnit>
 
                 <p:layoutUnit position="south" size="100" closable="true" collapsible="true">
@@ -43,26 +42,26 @@
                 </p:layoutUnit>
 
         <p:layoutUnit position="center">
-            <h:panelGrid id="loginPanel" columns="2">
-                <h:outputText value="Usuario:"/>
+            <h3>Editar Perfil</h3>
+            
+            Usuario: <br/> 
              <p:inputText id="usuario" 
-                         value="#{editaUsuario.usuario.usuario}" 
+                          value="#{editaUsuario.usuario.usuario}" 
                          />
+            <br/><br/>
+    
             
-             <h:outputText value="Correo:"/>
-            <p:inputText id ="correo" placeholder="usuario@ciencias.unam.mx"
-                         value="#{editaUsuario.usuario.correo}" />
-            
-            
-            <h:outputText value="Contraseña:"/>
-            <b:inputSecret id="contrasena"  placeholder="********"
+            Contraseña: <br/>
+            <h:inputSecret id="contrasena"  maxlength="15"
                            value="#{editaUsuario.usuario.contrasenia}" required="true"
                              requiredMessage="El campo no puede estar vacío.">
-            </b:inputSecret>
+            </h:inputSecret>
+            <br/><br/>
             
             <h:outputLabel for="foto" value="Foto"  />
             <p:fileUpload id="foto" value="#{editaUsuario.foto}" mode="simple"/>
-            
+            <br/>
+            <br/>
             <p:commandButton  id="b" value="Enviar"  action="#{editaUsuario.editarUsuario()}"
                           ajax="false"/>
             
@@ -70,7 +69,7 @@
            <!-- <img src="/MuestraFoto?id=#//{editaUsuario.usuario.nIdUsuario}"/>    ES para mostara la foto de lsa seccion actual -->
             <img src="/MuestraFoto"/>
             </h:form>
-            </h:panelGrid>
+            
          </p:layoutUnit>
                
         </p:layout>

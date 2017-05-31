@@ -56,13 +56,14 @@ public class UsuarioEditaBean {
         emf = Persistence.createEntityManagerFactory("FoodCienciasPU");
         usuarioController = new UsuarioJpaController(emf);
        httpServletRequest = (HttpServletRequest) faceContext.getExternalContext().getRequest();
+       usuario = (Usuario) httpServletRequest.getSession().getAttribute("sessionUsuario");
         if(inicioSesion() == false){
              faceContext.getExternalContext().redirect("Entrar.xhtml");
         }
-        usuario = getUsuario();
 
     }
 
+    
 
     public void setUsuario(Usuario usuario) {
         this.usuario = usuario;
@@ -76,7 +77,7 @@ public class UsuarioEditaBean {
         this.foto = foto;
     }
 
-    public void editarUsuario() {
+    public String editarUsuario() {
 
         UsuarioBean usr = new UsuarioBean();
 
@@ -98,21 +99,21 @@ public class UsuarioEditaBean {
 
             usuarioController.edit(usuario);
             System.out.println(5);
-
-            message = new FacesMessage(FacesMessage.SEVERITY_ERROR, "El correo ya esta registrado por otro usuario" + usuario.getCorreo(), null);
+            message = new FacesMessage(FacesMessage.SEVERITY_INFO, "Usuario modificado correctamente", null);
             faceContext.addMessage(null, message);
+            return "EditaPerfil";
 
+            
         } catch (Exception e) {
             e.printStackTrace();
-            message = new FacesMessage(FacesMessage.SEVERITY_ERROR, "No se puede  rayos", null);
+            message = new FacesMessage(FacesMessage.SEVERITY_ERROR, "No se pudo modificar el perfil", null);
         }
-
+        return "EditaPerfil";
     }
     
+    
     public Usuario getUsuario(){
-       Usuario usr = (Usuario) httpServletRequest.getSession().getAttribute("sessionUsuario");
-       return usr;
-        
+        return usuario;
     }
 
 
