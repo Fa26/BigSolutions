@@ -4,125 +4,124 @@
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:p="http://primefaces.org/ui"
       xmlns:f="http://xmlns.jcp.org/jsf/core"
-      xmlns:b="http://bootsfaces.net/ui"> 
+      xmlns:b="http://bootsfaces.net/ui"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
     <h:head>
+        
         <title>Pagina Principal</title>
+        <link rel="stylesheet" type="text/css" href="css/estilos.css"/>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCi5x75xW2SQ4Z9CFGaANI2mJwdoAlPnRk" type="text/javascript"></script>
     </h:head>
     <h:body>
-        
-        <b:form>  
-        <div>
-            <nav class="navbar navbar-inverse navbar-fixed-top">
-                <div class="row">
-                    <div class="3">
-                        <a class="navbar-brand" href="#">
-                            <img class="food" src="imagenes/foodCiencias.jpg" width="288" height="33"/>
-                        </a>
-                    </div>
-                    <div class="busc">
-                        <b:form class="navbar-form navbar-left" role="search">
-                            <div class="form-group">
-                                <input  type="text" class="form-control" placeholder="Buscar..."/>
-                            </div>
-                            <button  type="submit" class="btn btn-success">Entrar</button>
-                            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">Registrarse!!!</button>
-                         </b:form>    
-                    </div>
-                   
-                </div>
-            </nav>
-        </div>
-
-        <div>
-
-            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
-                <div class="modal-dialog"  role="document">
-                    <div class="modal-content">
-                        <div class="encabezado" >
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                            <h3 class="modal-title" id="exampleModalLabel"></h3>
-                            <img class="Ciencia" src="imagenes/foodCiencias.jpg"/>
-                        </div>
-                        <div class="modal-body">
-                            <form action="consultas/RegistroUsuario.jsp" method="post">
-                                <div class="form-group">
-                                    <label for="exampleInputName2">Nombre</label>
-                                    <input type="text" class="form-control" name="nombre" id="Nombre" placeholder="Nombre"/>
-                                    <label for="exampleInputName2">Ap Paterno</label>
-                                    <input type="text" class="form-control" name="app" id="Paterno" placeholder="Apellido Paterno"></input>
-                                </div>
-                                <br></br>
-                                <br></br>
-                                <div class="form-group">
-                                    <label for="exampleInputName2">Ap Materno</label>
-                                    <input type="text" class="form-control" name="apm" id="Materno" placeholder="Apellido Materno"/>
-
-                                    <label for="exampleInputEmail2">Correo</label>
-                                    <input type="email" class="form-control" name="correo" id="Correo" placeholder="Correo-Electronico"/>
-                                </div>
-                                    <br></br>
-                                    <br></br>
-                                    
-                                <div class="form-group">
-                                    <label for="exampleInputName2">Contraseña</label>
-                                    <input type="password" class="form-control" name="contra" id="contra" placeholder="Contraseña"/>
-                                </div>
-                               
-                                <div class="modal-footer">
-                                    <button class="button" onclick="alert('has sido dado de alta!')" type="submit">
-                                        Enviar!
-                                    </button>
-                                </div>
-                            </form>
-                        </div>
-                       
-                    </div>
-                </div>				
-            </div>
-        </div>
-
-        </b:form>
-        
-        
-        
-    <h:form>  
-        
-          <p:layoutUnit position="center">
-         <h:outputLink title="inicio">
-            <!-- <p:graphicImage value ="/imagenes/foodCiencias.jpg" />-->
-             <img style="margin-left:200px;" class="food" src="imagenes/foodCiencias.jpg" width="288" height="50"/>
-             
-             
-             
-             
-              <p:commandButton  type="button" value="Entrar" onclick="href = 'Aquies para elromulario de registro'" />
-        </h:outputLink>
-       
-        </p:layoutUnit>
-    <p:growl id="messages"/>
-       
-        
-    <p:menubar>
-        
-        <f:facet name="options"> 
+  
+    <h:form>
+    
+    <p:toolbar>
+        <f:facet name ="left">
+            <img class="center-block" src="imagenes/foodCiencias.jpg" width="300 " height="50"/>
+        </f:facet>
+ 
+        <f:facet name ="right">
+            <p:commandButton type="button" value="Entrar" icon="ui-icon-key" onclick="PF('dlg1').show();"/>
+            <p:dialog header="Entrar" widgetVar="dlg1" showEffect="pop" >
+            <p:growl id="msg" showDetail="true" life="3000" />
+ 
+                <h:panelGrid id="loginPanel" columns="2">
+ 
+                    <h:outputText value="Correo:" />
+ 
+                    <p:inputText id="correo" value="#{login.correo}" ></p:inputText>
+ 
+                    <p:spacer></p:spacer>
+ 
+                    <p:message for="correo" ></p:message>
+ 
+                    <h:outputText value="Contraseña:" />
+ 
+                    <p:password id="contraseña" value="#{login.contrasenia}"  feedback="false"></p:password>
+ 
+                    <p:spacer></p:spacer>
+ 
+                    <p:message for="contraseña"></p:message>
+ 
+                    <p:spacer></p:spacer>
+ 
+                    <p:commandButton action ="#{login.login()}" value="Entrar" ></p:commandButton>
+ 
+                </h:panelGrid>
+            </p:dialog>
             
-            <!--<p:graphicImage value ="/imagenes/foodCiencias.jpg" />-->
-
-            <img class="center-block" src="imagenes/foodCiencias.jpg" width="288" height="40"/>
-
-            <p:commandButton type="button" value="Entrar" onclick="href = 'Aquies para elromulario de registro'" />
-            <p:commandButton type="button" value="Registrarse" onclick="self.location.href = 'faces/registro.xhtml'"  />
-            <p:commandButton type="button" image="Ciencias-icon"/> 
+            <p:commandButton id="movieBtn" type="button" value="Registrarse" icon="ui-icon-pencil" onclick="self.location.href = 'faces/registro.xhtml'" />
+        </f:facet>
+          
+    </p:toolbar>
+    </h:form>
+        
+        
+        
+        
+   
+    <p:layout style="min-width:400px;min-height:200px;">
+  
+    <p:layoutUnit position="center">
+  
+        <f:facet name ="header" >
+            <p:column colspan="4" style="text-align: right" >
+                <p:row>Facultad De Ciencias</p:row>
+            </p:column>
             
-            <p:commandButton id="movieBtn" value="Emergente" type="button" />
-            <p:overlayPanel id="FormReg" for="movieBtn" dynamic="true"  hideEvent="mousedown" dismissable="false" showCloseIcon="true" style="width:600px;height:600px;"      >
-     
-                
-            </p:overlayPanel>
-            
+
         </f:facet>
         
-    </p:menubar>
-</h:form>
+       
+        <p:row></p:row>
+         <p:row>
+             
+             
+             <p:column rowspan="11">
+              
+             <p:gmap center="19.324803, -99.179306" zoom="25" 
+                type="HYBRID" model="#{mapa.mapModel}"
+                onPointClick="handlePoinDEtClick(event);"
+                style="width:400px;height:500px" widgetVar="mymap">
+                <p:ajax event="overlaySelect" listener="#{mapa.onMarkerSelect}"/>
+                <p:gmapInfoWindow id="infoWindow">
+                  <p:outputPanel style="text-align: center; display: block; margin: auto">
+                    <h:outputText value="#{mapa.marker.title}" />
+                    <br/>
+                    <h:button value="Ver Detalles" />
+                  </p:outputPanel>
+                </p:gmapInfoWindow>
+             </p:gmap>
+             
+             </p:column>
+             <p:column rowspan="40"></p:column>
+             <p:column rowspan="11" style="font-weight: bold;">
+          <img class="posImgIn" src="img/Fciencias.jpg" width="600" height="500"/>
+          </p:column>
+         </p:row>
+         
+        
+          <div style="height:250px"></div>
+          <p:outputPanel deferred="true" deferredMode="visible">
+        <h3>Pensaba poner algo  como derechos reservados  l.</h3>
+        <p>Lorem ipsum dolor sit amet...</p>
+        
+     
+ 
+    </p:outputPanel>
+     
+        
+       
+         
+    </p:layoutUnit>
+    
+      
+        
+</p:layout>    
+        
+           
     </h:body>
 </html>

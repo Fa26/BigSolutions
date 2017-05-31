@@ -53,12 +53,12 @@
                          
                         <f:facet name="header">Tus Usuarios</f:facet>
                        <p:column headerText="Id"><h:outputText value="#{p.NIdUsuario}"/></p:column>
-                        <p:column headerText="Apertura" ><h:outputText value="#{p.usuario}"/></p:column>
-                        <p:column headerText="Cierre" ><h:outputText value="#{p.correo}"/></p:column>
-                         <p:column headerText="Puesto" ><h:outputText value="#{p.contrasenia}"/></p:column>
-                        <p:column headerText="TipoComida"><h:outputText value="#{p.nombre}"/></p:column>
-                        <p:column headerText="Dueño" ><h:outputText value="#{p.app}"/></p:column>
-                        <p:column headerText="App" ><h:outputText value="#{p.apm}"/></p:column>
+                        <p:column headerText="Usuario" ><h:outputText value="#{p.usuario}"/></p:column>
+                        <p:column headerText="Correo" ><h:outputText value="#{p.correo}"/></p:column>
+                         <p:column headerText="Contraseña" ><h:outputText value="#{p.contrasenia}"/></p:column>
+                        <p:column headerText="Nombre"><h:outputText value="#{p.nombre}"/></p:column>
+                        <p:column headerText="App" ><h:outputText value="#{p.app}"/></p:column>
+                        <p:column headerText="Apm" ><h:outputText value="#{p.apm}"/></p:column>
                        
                         <f:facet name="footer"> Ahora tienes: #{eliminaUC.total()}.
                       

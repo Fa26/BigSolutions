@@ -13,21 +13,49 @@
         <title>Editar Perfil</title>
     </h:head>
     <h:body>
+        <h:form id="form">
+            <p:layout fullPage="true">
+                
+                <p:layoutUnit position="north" size="100" resizable="true" closable="true" collapsible="true" >
+                   
+                    <h:panelGrid columns="5" cellpadding="20">
+                    <img src="/imagenes/foodCiencias.jpg" height="60" width="120"/>
+                    <p:inputText/>
+                    <p:commandButton value="Buscar"></p:commandButton>
+                    <p:commandButton action="#{salir.cerrarSession()}" value="Salir" update="form"></p:commandButton>
+                       </h:panelGrid>
+                   
+                </p:layoutUnit>
 
-        
-        <b:form horizontal="true" >
-             <p:panel header="EditarPerfil">
-            <b:inputText id="usuario" label-small-screen="4" small-screen="5"  label="Nombre de usuario" 
+                <p:layoutUnit position="south" size="100" closable="true" collapsible="true">
+                    Footer
+                </p:layoutUnit>
+
+                <p:layoutUnit position="west" size="175" header="#{inicio.usuario.nombre}" collapsible="false" >
+                    <p:menu>
+                        <p:submenu label="">
+                            <p:menuitem value="Inicio" outcome="Inicio.xhtml"/>
+                            <p:menuitem value="Editar Perfil" outcome="EditaPerfil.xhtml" />
+                            
+                        </p:submenu>
+
+                    </p:menu>
+                </p:layoutUnit>
+
+        <p:layoutUnit position="center">
+            <h:panelGrid id="loginPanel" columns="2">
+                <h:outputText value="Usuario:"/>
+             <p:inputText id="usuario" 
                          value="#{editaUsuario.usuario.usuario}" 
-                         tooltip="Ingresa usuario"/>
+                         />
             
-            
-            <b:inputText id ="correo" label-small-screen="4" small-screen="5"  label="Correo electrónico" placeholder="usuario@ciencias.unam.mx"
+             <h:outputText value="Correo:"/>
+            <p:inputText id ="correo" placeholder="usuario@ciencias.unam.mx"
                          value="#{editaUsuario.usuario.correo}" />
             
             
-            
-            <b:inputSecret id="contrasena" label-small-screen="4" small-screen="5"  label="Contraseña" placeholder="********"
+            <h:outputText value="Contraseña:"/>
+            <b:inputSecret id="contrasena"  placeholder="********"
                            value="#{editaUsuario.usuario.contrasenia}" required="true"
                              requiredMessage="El campo no puede estar vacío.">
             </b:inputSecret>
@@ -38,14 +66,14 @@
             <p:commandButton  id="b" value="Enviar"  action="#{editaUsuario.editarUsuario()}"
                           ajax="false"/>
             
-             </p:panel>
-
-        </b:form>
-
-        
-        <h:form enctype="multipart/form-data">
+            <h:form enctype="multipart/form-data">
            <!-- <img src="/MuestraFoto?id=#//{editaUsuario.usuario.nIdUsuario}"/>    ES para mostara la foto de lsa seccion actual -->
             <img src="/MuestraFoto"/>
+            </h:form>
+            </h:panelGrid>
+         </p:layoutUnit>
+               
+        </p:layout>
         </h:form>
                
     </h:body>

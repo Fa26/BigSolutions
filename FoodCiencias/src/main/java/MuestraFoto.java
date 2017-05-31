@@ -53,10 +53,10 @@ public class MuestraFoto extends HttpServlet {
         //int nId = Integer.parseInt(id);// es para pasarel el id  del usuario. de la sesion acual
         u = new UsuarioJpaController(emf);
         //usuario = u.findUsuario(nId);//busca  el usuario pr el id
-        usuario = u.findUsuario(22);
+        usuario = u.findUsuario(10);
         OutputStream foto = response.getOutputStream();
         foto.write(usuario.getFoto());
-
+        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

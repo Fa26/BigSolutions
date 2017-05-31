@@ -26,12 +26,15 @@
         </h:head>
 
         <h:body>
-
+            <h:form>
             <p:layout fullPage="true">
+                
+                
+                <p:layoutUnit position="south" size="100" closable="true" collapsible="true">
+                    Footer
+                </p:layoutUnit>
 
-           
-
-                <p:layoutUnit position="west" size="217" header="Bienvenido!!!" collapsible="true">
+                <p:layoutUnit position="west" size="175" header="#{administradorIH.adminstrador.usuario}" collapsible="true">
                     
                     <p:menu>
                         <p:submenu styleClass="color">
@@ -43,10 +46,9 @@
                         
                         <p:menuitem value="Ver Puestos" outcome="VerPuestosIH.xhtml"  icon="ui-icon-folder-open"></p:menuitem>
                         <p:menuitem value="Censurar Comentario" outcome="CensuraCIH.xhtml"  icon="ui-icon-locked"></p:menuitem>
-                        <p:menuitem value="Salir" outcome="EliminarUIH.xhtml"  icon="ui-icon-log-out"></p:menuitem>
                         </p:submenu>
                     </p:menu>
-                 
+                  
                      
                 </p:layoutUnit>
               
@@ -57,7 +59,7 @@
                 </p:layoutUnit>
 
             </p:layout>
-
+            </h:form>
         </h:body>
 
     </f:view>
