@@ -83,8 +83,17 @@
              <p:column rowspan="11">
               
              <p:gmap center="19.324803, -99.179306" zoom="25" 
-                type="HYBRID"  
-                style="width:400px;height:500px" widgetVar="mymap">                    
+                type="HYBRID" model="#{mapa.mapModel}"
+                onPointClick="handlePoinDEtClick(event);"
+                style="width:400px;height:500px" widgetVar="mymap">
+                <p:ajax event="overlaySelect" listener="#{mapa.onMarkerSelect}"/>
+                <p:gmapInfoWindow id="infoWindow">
+                  <p:outputPanel style="text-align: center; display: block; margin: auto">
+                    <h:outputText value="#{mapa.marker.title}" />
+                    <br/>
+                    <h:button value="Ver Detalles" />
+                  </p:outputPanel>
+                </p:gmapInfoWindow>
              </p:gmap>
              
              </p:column>
