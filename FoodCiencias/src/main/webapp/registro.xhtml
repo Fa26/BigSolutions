@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:b="http://bootsfaces.net/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
+    <h:head>
+        <title>Registro</title>
+    </h:head>
+    <h:body>
+        <h:form enctype="multipart/form-data">
+    <p:panel header="Registro">
+        <p:messages closable="true" />
+ 
+        <h:panelGrid columns="4" cellpadding="5">
+            <h:outputLabel for="nombre" value="Nombre:" />
+            <b:inputText id="nombre" value="#{user.usuario.nombre}" />
+            <p:message for="nombre" />
+            <h:outputText value="#{user.usuario.nombre}" />
+ 
+            <h:outputLabel for="paterno" value="Apellido Paterno:" />
+            <b:inputText id="paterno" value="#{user.usuario.app}" />
+            <p:message for="paterno" />
+            <h:outputText value="#{user.usuario.app}" />
+ 
+            <h:outputLabel for="materno" value="Apellido Materno" />
+            <b:inputText id="materno" value="#{user.usuario.apm}" />
+            <p:message for="materno" />
+            <h:outputText value="#{user.usuario.apm}" />
+ 
+            <h:outputLabel for="correo" value="Correo" />
+            <b:inputText id="correo" value="#{user.usuario.correo}"  validator-message="El correo no es del dominio de ciencias">
+                <f:validateRegex pattern=".+@ciencias\.unam\.mx"/>
+            </b:inputText>
+                
+                
+                
+            <p:message for="correo" />
+            <h:outputText value="#{user.usuario.correo}" />
+ 
+            <h:outputLabel for="contrasena" value="Contraseña" />
+             <b:inputSecret id="contrasena" placeholder="********"
+                             value="#{user.usuario.contrasenia}" required="true"
+                             requiredMessage="El campo no puede estar vacío.">
+               
+              </b:inputSecret>
+           <!-- 
+            <h:outputText value="Contraseña: " />
+            <b:password id="contrasenia" value="#{user.usuario.contrasenia}" feedback="true" inline="true" /> -->
+            
+            <h:outputLabel for="foto" value="Foto" />
+            <p:fileUpload id="foto" value="#{user.foto}" mode="simple"/>
+            
+        </h:panelGrid>
+ 
+        <p:commandButton  id="b" value="Enviar"  action="#{user.registrar()}"
+                          ajax="false"  />
+    </p:panel>
+</h:form>
+        
+    </h:body>
+</html>

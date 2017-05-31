@@ -1,0 +1,79 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:b="http://bootsfaces.net/ui">
+
+    <f:view contentType="text/html">
+        <h:head>
+            <f:facet name="first">
+                <meta content='text/html; charset=UTF-8' http-equiv="Content-Type"/>
+                 <link rel="shortcut icon" href="../img/GrisU.jpg" type="image/jpg"/> 
+                <title>AdministradorIH</title>
+            </f:facet>
+            <style>
+                .posicionImagen{
+                    margin-left: 160px;
+                    margin-top: 200px;  
+                } 
+                .color{
+                    background-color: black;
+                }
+               
+            </style>
+        </h:head>
+
+        <h:body>
+
+            <p:layout fullPage="true">
+
+           
+
+                <p:layoutUnit position="west" size="217" header="Bienvenido!!!" collapsible="true">
+                    
+                    <p:menu>
+                        <p:submenu styleClass="color">
+                         <p:menuitem value="Inicio" outcome="AdministradorIH.xhtml"  icon="ui-icon-home"></p:menuitem>
+                        <p:menuitem value="Registrar Puesto" outcome="RegistrarPIH.xhtml"  icon="ui-icon-pencil"></p:menuitem>
+                       <p:menuitem value="Editar  Puesto" outcome="EditarPuesto.xhtml"  icon="ui-icon-note"></p:menuitem>
+                       <p:menuitem value="Agregar Alimento" outcome="EliminarUIH.xhtml"  icon="ui-icon-plusthick"></p:menuitem>
+                       <p:menuitem value="Eliminar Puesto" outcome="ElimiPIH.xhtml"  icon="ui-icon-trash"></p:menuitem>
+                        <p:menuitem value="Eliminar Usuario" outcome="EliminarUIH.xhtml"  icon="ui-icon-trash"></p:menuitem>
+                        
+                        <p:menuitem value="Ver Puestos" outcome="VerPuestosIH.xhtml"  icon="ui-icon-folder-open"></p:menuitem>
+                        <p:menuitem value="Censurar Comentario" outcome="CensuraCIH.xhtml"  icon="ui-icon-locked"></p:menuitem>
+                        <p:menuitem value="Salir" outcome="EliminarUIH.xhtml"  icon="ui-icon-log-out"></p:menuitem>
+                        </p:submenu>
+                    </p:menu>
+              
+                     
+                </p:layoutUnit>
+              
+                <!-- layaut del  centro-->
+                <p:layoutUnit position="center">
+                    <p:dataTable var="p" value="#{verControl.puestos}"  paginator="true" rows="13">
+                        <f:facet name="header">Tus Puestos</f:facet>
+                        <p:column headerText="Id"><h:outputText value="#{p.NIdPuesto}"/></p:column>
+                      
+                         <p:column headerText="Puesto" ><h:outputText value="#{p.nombre}"/></p:column>
+                        <p:column headerText="TipoComida"><h:outputText value="#{p.tipoComida}"/></p:column>
+                       <!-- <p:column headerText="Menu"><h:outputText value="#{p.nombreAlimento}"/></p:column>-->
+                      
+                        <f:facet name="footer"> 
+                            En total tienes: #{verControl.total()}.
+                        </f:facet>
+                        
+                    </p:dataTable>
+                    <p:commandButton  action="#{alimentoC.muestra}"  value="ver" />
+                   
+                </p:layoutUnit>
+
+            </p:layout>
+
+        </h:body>
+
+    </f:view>
+</html>

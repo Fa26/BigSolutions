@@ -1,0 +1,90 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:b="http://bootsfaces.net/ui">
+
+    <f:view contentType="text/html">
+        <h:head>
+            <f:facet name="first">
+                <meta content='text/html; charset=UTF-8' http-equiv="Content-Type"/>
+                 <link rel="shortcut icon" href="../img/GrisU.jpg" type="image/jpg"/> 
+                <title>AdministradorIH</title>
+            </f:facet>
+            <style>
+                .posicionImagen{
+                    margin-left: 160px;
+                    margin-top: 200px;  
+                } 
+                .color{
+                    background-color: black;
+                }
+               
+            </style>
+        </h:head>
+
+        <h:body>
+
+            <p:layout fullPage="true">
+                
+           
+
+                <p:layoutUnit position="west" size="217"  collapsible="true">
+                    
+                    <p:menu>
+                        <p:submenu styleClass="color">
+                          <p:menuitem value="Inicio" outcome="AdministradorIH.xhtml"  icon="ui-icon-home"></p:menuitem>
+                        <p:menuitem value="Registrar Puesto" outcome="RegistrarPIH.xhtml"  icon="ui-icon-pencil"></p:menuitem>
+                       <p:menuitem value="Editar  Puesto" outcome="EditarPuesto.xhtml"  icon="ui-icon-note"></p:menuitem>
+                       <p:menuitem value="Eliminar Puesto" outcome="ElimiPIH.xhtml"  icon="ui-icon-trash"></p:menuitem>
+                        <p:menuitem value="Eliminar Usuario" outcome="EliminarUIH.xhtml"  icon="ui-icon-trash"></p:menuitem>
+                        
+                        <p:menuitem value="Ver Puestos" outcome="VerPuestosIH.xhtml"  icon="ui-icon-folder-open"></p:menuitem>
+                        <p:menuitem value="Censurar Comentario" outcome="CensuraCIH.xhtml"  icon="ui-icon-locked"></p:menuitem>
+                        </p:submenu>
+                    </p:menu>
+                
+                     
+                </p:layoutUnit>
+              
+                <!-- layaut del  centro-->
+                <p:layoutUnit position="center">
+                    <h:form id="myForm">
+                    
+                        
+                        
+                        <p:dataTable  id="multipleDT" var="c" value="#{comentarioVIH.comentarios}" selectionMode="single" 
+                                      selection="#{eliminaComen.select}" rowKey="#{c.NIdComentario}" paginator="true" rows="13">
+                        
+                        <f:facet name="header">Tus Comentarios</f:facet>
+                       <p:column headerText="Id"><h:outputText value="#{c.NIdComentario}"/></p:column>
+                        <p:column headerText="Fecha" ><h:outputText value="#{c.fecha}"/></p:column>
+                        <p:column headerText="Texto" ><h:outputText value="#{c.texto}"/></p:column>
+                      
+                        <f:facet name="footer"> 
+                            Ahora tienes tienes: #{comentarioVIH.total()}.
+                             <p:commandButton process="multipleDT" icon="ui-icon-trash" 
+                                              value="Elimina" oncomplete="redirect()" actionListener="#{eliminaComen.elimina()}"/>
+                             <script type="text/javascript">
+                                redirect=function(){
+                                    alert('Felicidades se ha eliminado');
+                                    location.reload(true);
+                                }
+                                </script> 
+                              
+                            
+                        </f:facet>
+                        
+                    </p:dataTable>
+                    </h:form>
+                   
+                </p:layoutUnit>
+
+            </p:layout>
+
+        </h:body>
+
+    </f:view>
+</html>

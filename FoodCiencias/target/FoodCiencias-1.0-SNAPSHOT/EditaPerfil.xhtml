@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:b="http://bootsfaces.net/ui"
+
+      xmlns:f="http://java.sun.com/jsf/core"
+
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
+    <h:head>
+        <title>Editar Perfil</title>
+    </h:head>
+    <h:body>
+        <h:form id="form">
+            <p:layout fullPage="true">
+                
+                <p:layoutUnit position="north" size="100" resizable="true" closable="true" collapsible="true" >
+                    <h:form id="form2">
+                    <h:panelGrid columns="5" cellpadding="20">
+                    <img src="/imagenes/foodCiencias.jpg" height="60" width="120"/>
+                     <p:commandButton action="#{salir.cerrarSession()}" value="Salir" update="form2" icon="ui-icon-extlink"></p:commandButton>
+                    
+                    </h:panelGrid>
+                    </h:form>
+                </p:layoutUnit>
+
+                <p:layoutUnit position="south" size="100" closable="true" collapsible="true">
+                    Footer
+                </p:layoutUnit>
+
+                <p:layoutUnit position="west" size="175" header="#{inicio.usuario.nombre}" collapsible="false" >
+                    <p:menu>
+                        <p:submenu label="">
+                            <p:menuitem value="Inicio" outcome="Inicio.xhtml"/>
+                            <p:menuitem value="Editar Perfil" outcome="EditaPerfil.xhtml" />
+                            
+                        </p:submenu>
+
+                    </p:menu>
+                </p:layoutUnit>
+
+        <p:layoutUnit position="center">
+            <h3>Editar Perfil</h3>
+            
+            Usuario: <br/> 
+             <p:inputText id="usuario" 
+                          value="#{inicio.usuario.usuario}" 
+                         />
+            <br/><br/>
+    
+            
+            Contraseña: <br/>
+            <h:inputSecret id="contrasena"  maxlength="15"
+                           value="#{inicio.usuario.contrasenia}" required="true"
+                             requiredMessage="El campo no puede estar vacío.">
+            </h:inputSecret>
+            <br/><br/>
+            
+            <h:outputLabel for="foto" value="Foto"  />
+            <p:fileUpload id="foto" value="#{inicio.usuario.foto}" mode="simple"/>
+            <br/>
+            <br/>
+            <p:commandButton  id="b" value="Enviar"  action="#{editaUsuario.editarUsuario()}"
+                          ajax="false"/>
+            
+            <h:form enctype="multipart/form-data">
+           <!-- <img src="/MuestraFoto?id=#//{editaUsuario.usuario.nIdUsuario}"/>    ES para mostara la foto de lsa seccion actual -->
+            <img src="/MuestraFoto"/>
+            </h:form>
+            
+         </p:layoutUnit>
+               
+        </p:layout>
+        </h:form>
+               
+    </h:body>
+</html>

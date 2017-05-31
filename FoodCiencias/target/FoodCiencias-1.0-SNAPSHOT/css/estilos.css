@@ -1,0 +1,58 @@
+/* Selector del id barra para que el la barra de busqueda quede al lade de la imagen*/
+#barra
+{
+    margin-top: 27px;
+}
+/* Selector del id boton1 para que el la barra de busqueda quede al lade de la imagen*/
+#boton1
+{
+    margin-top: 27px;
+}
+/* Selector del id boton2 para que el la barra de busqueda quede al lade de la imagen*/
+#boton2
+{
+    margin-top: 27px;
+}
+.food
+{
+    margin-top: -6px;
+    margin-left: 200px;
+    border-radius: 150px;
+}
+.busc
+{
+    margin-right: 15px;
+}
+.lug
+{
+    margin-top: 30px;
+}
+.Ciencia
+{
+    width: 200px; height: 69px; 
+    border-radius: 30px;
+    margin-top: 20px;
+    margin-left: 170px;
+
+}
+.Encabezado
+{
+    background-color: black;
+}
+
+.Ciencias-icon
+{
+    background-image: url('imagenes/foodCiencias.png') !important;
+    height:16px;
+    width:16px;
+}
+
+.centrado{
+    margin:10px auto;
+    display:block;
+}
+
+.posImgIn{
+                    margin-left: 220px;
+                    margin-top: 100px;  
+                }
