@@ -13,6 +13,7 @@ import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.faces.context.FacesContext;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
@@ -22,6 +23,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import javax.servlet.http.Part;
 
 /**
@@ -36,6 +38,12 @@ public class MuestraFoto extends HttpServlet {
     Usuario usuario;
     UsuarioBean userB;
     UsuarioJpaController u;
+     private FacesContext faceContext; // Obtiene información de la aplicación
+    private HttpSession sesion;
+    private HttpServletResponse response;
+    private HttpServletRequest httpServletRequest; // Obtiene información de todas las peticiones de usuario.
+  
+    
 //request es para recibir algo 
 
     /**
@@ -49,11 +57,15 @@ public class MuestraFoto extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+           faceContext = FacesContext.getCurrentInstance();
+          httpServletRequest = (HttpServletRequest) faceContext.getExternalContext().getRequest();
+        
         //String  id = request.getParameter("id"); te da el paramero por arte de magia
         //int nId = Integer.parseInt(id);// es para pasarel el id  del usuario. de la sesion acual
         u = new UsuarioJpaController(emf);
         //usuario = u.findUsuario(nId);//busca  el usuario pr el id
-        usuario = u.findUsuario(10);
+        //usuario = u.findUsuario(10);
+        usuario = (Usuario) httpServletRequest.getSession().getAttribute("sessionUsuario");
         OutputStream foto = response.getOutputStream();
         foto.write(usuario.getFoto());
         

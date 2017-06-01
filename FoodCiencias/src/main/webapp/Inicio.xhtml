@@ -25,12 +25,21 @@
             <h:form id="form">
             <p:layout fullPage="true">
                 
+                
+                      
+
+
                 <p:layoutUnit id="norte" position="north" size="100" resizable="true" closable="true" collapsible="true">
-                   
-                    <h:panelGrid columns="5" cellpadding="10">
-                    <img src="/imagenes/foodCiencias.jpg" height="60" width="120"/>
-                    <p:commandButton action="#{salir.cerrarSession()}" value="Salir" update="form" icon="ui-icon-extlink"></p:commandButton>
-                       </h:panelGrid>
+                    <h:form>
+                        <p:toolbar>
+                            <f:facet name ="left">
+                                <img class="center-block" src="imagenes/foodCiencias.jpg" width="400 " height="70"/>
+                            </f:facet>
+                            <f:facet name ="right">
+                                <p:commandButton action="#{salir.cerrarSession()}" value="Salir" update="form" icon="ui-icon-extlink"></p:commandButton>
+                            </f:facet>
+                        </p:toolbar>
+                   </h:form>
                    
                 </p:layoutUnit>
 
@@ -65,6 +74,12 @@
                 </p:gmapInfoWindow>
              </p:gmap>
 
+                    <h:form enctype="multipart/form-data">
+                        <h3>es  cenrtro</h3>
+                        <img src="/MuestraFoto?id=#{editaUsuario.usuario.foto}"/> 
+                           <!--  <img src="/MuestraFoto"/>-->
+                            </h:form>
+                    
                 </p:layoutUnit>
                
             </p:layout>

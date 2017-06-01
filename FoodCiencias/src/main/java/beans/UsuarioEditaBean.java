@@ -148,8 +148,9 @@ public class UsuarioEditaBean {
             System.out.println(1);
             //if(usuarioController.findUsuario(19) != null){
             System.out.println(2);
-
+            
             if (foto != null) {
+            
                 usuario.setFoto(foto.getContents());
                 System.out.println(3);
             }

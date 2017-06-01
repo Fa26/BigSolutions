@@ -18,12 +18,16 @@
 
                 <p:layoutUnit position="north" size="100" resizable="true" closable="true" collapsible="true" >
 
-                    <h:panelGrid columns="5" cellpadding="20">
-                        <img src="/imagenes/foodCiencias.jpg" height="60" width="120"/>
-                        <p:inputText/>
-                        <p:commandButton value="Buscar"></p:commandButton>
-                        <p:commandButton action="#{salir.cerrarSession()}" value="Salir" update="form"></p:commandButton>
-                    </h:panelGrid>
+                    <h:form>
+                        <p:toolbar>
+                            <f:facet name ="left">
+                                <img class="center-block" src="imagenes/foodCiencias.jpg" width="400 " height="70"/>
+                            </f:facet>
+                            <f:facet name ="right">
+                               <p:commandButton action="#{salir.cerrarSession()}" value="Salir" update="form" icon="ui-icon-extlink"></p:commandButton>
+                            </f:facet>
+                        </p:toolbar>
+                   </h:form>
 
                 </p:layoutUnit>
 
@@ -31,7 +35,7 @@
                     Footer
                 </p:layoutUnit>
 
-                <p:layoutUnit position="west" size="175" header="#{editaUsuario.usuario.usuario}" collapsible="false" >
+                <p:layoutUnit position="west" size="175" header="#{inicio.usuario.usuario}" collapsible="false" >
                     <p:menu>
                         <p:submenu label="">
                             <p:menuitem value="Inicio" outcome="Inicio.xhtml"/>
