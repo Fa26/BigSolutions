@@ -15,66 +15,79 @@
     <h:body>
         <h:form id="form">
             <p:layout fullPage="true">
-                
+
                 <p:layoutUnit position="north" size="100" resizable="true" closable="true" collapsible="true" >
-                   
+
                     <h:panelGrid columns="5" cellpadding="20">
-                    <img src="/imagenes/foodCiencias.jpg" height="60" width="120"/>
-                    <p:inputText/>
-                    <p:commandButton value="Buscar"></p:commandButton>
-                    <p:commandButton action="#{salir.cerrarSession()}" value="Salir" update="form"></p:commandButton>
-                       </h:panelGrid>
-                   
+                        <img src="/imagenes/foodCiencias.jpg" height="60" width="120"/>
+                        <p:inputText/>
+                        <p:commandButton value="Buscar"></p:commandButton>
+                        <p:commandButton action="#{salir.cerrarSession()}" value="Salir" update="form"></p:commandButton>
+                    </h:panelGrid>
+
                 </p:layoutUnit>
 
                 <p:layoutUnit position="south" size="100" closable="true" collapsible="true">
                     Footer
                 </p:layoutUnit>
 
-                <p:layoutUnit position="west" size="175" header="#{inicio.usuario.nombre}" collapsible="false" >
+                <p:layoutUnit position="west" size="175" header="#{editaUsuario.usuario.usuario}" collapsible="false" >
                     <p:menu>
                         <p:submenu label="">
                             <p:menuitem value="Inicio" outcome="Inicio.xhtml"/>
                             <p:menuitem value="Editar Perfil" outcome="EditaPerfil.xhtml" />
-                            
+
                         </p:submenu>
 
                     </p:menu>
                 </p:layoutUnit>
 
-        <p:layoutUnit position="center">
-            <h:panelGrid id="loginPanel" columns="2">
-                <h:outputText value="Usuario:"/>
-             <p:inputText id="usuario" 
-                         value="#{editaUsuario.usuario.usuario}" 
-                         />
-            
-             <h:outputText value="Correo:"/>
-            <p:inputText id ="correo" placeholder="usuario@ciencias.unam.mx"
-                         value="#{editaUsuario.usuario.correo}" />
-            
-            
-            <h:outputText value="Contraseña:"/>
-            <b:inputSecret id="contrasena"  placeholder="********"
-                           value="#{editaUsuario.usuario.contrasenia}" required="true"
-                             requiredMessage="El campo no puede estar vacío.">
-            </b:inputSecret>
-            
-            <h:outputLabel for="foto" value="Foto"  />
-            <p:fileUpload id="foto" value="#{editaUsuario.foto}" mode="simple"/>
-            
-            <p:commandButton  id="b" value="Enviar"  action="#{editaUsuario.editarUsuario()}"
-                          ajax="false"/>
-            
-            <h:form enctype="multipart/form-data">
-           <!-- <img src="/MuestraFoto?id=#//{editaUsuario.usuario.nIdUsuario}"/>    ES para mostara la foto de lsa seccion actual -->
-            <img src="/MuestraFoto"/>
-            </h:form>
-            </h:panelGrid>
-         </p:layoutUnit>
                
-        </p:layout>
+
+                <p:layoutUnit position="center">
+                   
+
+                    <b:form horizontal="true" >
+                    <p:panel header="EditarPerfil">
+                        <b:inputText id="usuario" label-small-screen="4" small-screen="5"  label="Nombre de usuario" 
+                                     value="#{editaUsuario.usuario.usuario}" 
+                                     tooltip="Ingresa usuario"/>
+
+                        <br></br>
+                        <br></br>
+                                                
+                        <b:inputSecret id="contrasena" label-small-screen="4" small-screen="5"  label="Contraseña" placeholder="********"
+                                       value="#{editaUsuario.usuario.contrasenia}" required="true"
+                                       requiredMessage="El campo no puede estar vacío.">
+                        </b:inputSecret>
+                        
+                        <br></br>
+                        <br></br>
+
+                        <h:outputLabel for="foto" value="Foto"  />
+                        <p:fileUpload id="foto" value="#{editaUsuario.foto}" mode="simple"/>
+                        
+                        <br></br>
+                        <br></br>
+
+                        <p:commandButton  id="b" value="Enviar"  action="#{editaUsuario.editarUsuario()}"
+                                          ajax="false"/>
+
+                    </p:panel>
+
+                </b:form>
+
+
+                <h:form enctype="multipart/form-data">
+                    <!-- <img src="/MuestraFoto?id=#//{editaUsuario.usuario.nIdUsuario}"/>    ES para mostara la foto de lsa seccion actual -->
+                    <img src="/MuestraFoto"/>
+                </h:form>
+
+
+                </p:layoutUnit>
+
+            </p:layout>
         </h:form>
-               
+
     </h:body>
 </html>

@@ -13,12 +13,18 @@ import javax.faces.context.FacesContext;
 import entidad.Usuario;
 import control.ComentarioJpaController;
 import control.UsuarioJpaController;
+import java.io.IOException;
 import java.io.Serializable;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.Query;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import org.primefaces.model.UploadedFile;
 
 /**
@@ -40,6 +46,12 @@ public class UsuarioEditaBean {
     private final FacesContext faceContext; // Obtiene información de la aplicación
     private FacesMessage message;
     private Usuario usuario;
+    private HttpSession sesion;
+    private HttpServletResponse response;
+    private final HttpServletRequest httpServletRequest; // Obtiene información de todas las peticiones de usuario.
+    
+    
+    
 
     public UsuarioEditaBean() {
 
@@ -47,7 +59,59 @@ public class UsuarioEditaBean {
         emf = Persistence.createEntityManagerFactory("FoodCienciasPU");
         usuarioController = new UsuarioJpaController(emf);
         usuario = usuarioController.findUsuario(9);
+        httpServletRequest = (HttpServletRequest) faceContext.getExternalContext().getRequest();
+        usuario = (Usuario) httpServletRequest.getSession().getAttribute("sessionUsuario");
+        if(inicioSesion() == false){
+            try {
+                faceContext.getExternalContext().redirect("Entrar.xhtml");
+            } catch (IOException ex) {
+                Logger.getLogger(UsuarioEditaBean.class.getName()).log(Level.SEVERE, null, ex);
+            }
+}
+        
+        
+        
+        
+    }
 
+    public EntityManagerFactory getEmf() {
+        return emf;
+    }
+
+    public void setEmf(EntityManagerFactory emf) {
+        this.emf = emf;
+    }
+
+    public UsuarioJpaController getUsuarioController() {
+        return usuarioController;
+    }
+
+    public void setUsuarioController(UsuarioJpaController usuarioController) {
+        this.usuarioController = usuarioController;
+    }
+
+    public FacesMessage getMessage() {
+        return message;
+    }
+
+    public void setMessage(FacesMessage message) {
+        this.message = message;
+    }
+
+    public HttpSession getSesion() {
+        return sesion;
+    }
+
+    public void setSesion(HttpSession sesion) {
+        this.sesion = sesion;
+    }
+
+    public HttpServletResponse getResponse() {
+        return response;
+    }
+
+    public void setResponse(HttpServletResponse response) {
+        this.response = response;
     }
 
     public Usuario getUsuario() {
@@ -65,6 +129,12 @@ public class UsuarioEditaBean {
     public void setFoto(UploadedFile foto) {
         this.foto = foto;
     }
+    
+    public final boolean inicioSesion(){
+    sesion = httpServletRequest.getSession(false);
+    return sesion != null && sesion.getAttribute("sessionUsuario") != null;
+}
+
 
     public void editarUsuario() {
 

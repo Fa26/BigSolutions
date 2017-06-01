@@ -37,28 +37,8 @@ public class CalificacionBean {
         FacesContext.getCurrentInstance().addMessage(null, message);
     }
 
- 
 
-
-    public int addCalificacion() throws Exception{
-        valor  = new Integer(10);
-        
-        if(valor != null){
-            System.out.println("Calificacion: "+ valor);
-            Calificacion c = new Calificacion();
-            c.setCalificacion(valor);
-            cCalificacion.create(c);
-            FacesContext.getCurrentInstance().addMessage(null,
-                    new FacesMessage(FacesMessage.SEVERITY_INFO, "Calificacion registrada", ""));
-            
-            calif = null;
-        }else{
-             FacesContext.getCurrentInstance().addMessage(null,
-                     new FacesMessage(FacesMessage.SEVERITY_ERROR, "Calificacion no registrada", ""));
-        }
-        return 0;
-    }
-    public void imprime() throws Exception{
+    public void addCalificacion() throws Exception{
       
         CalificacionPK cpk = new CalificacionPK();
         cpk.setNIdPuesto(1);

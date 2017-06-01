@@ -6,13 +6,22 @@
       >
     <h:head>
         <title>login</title>
+        <style>
+            body {
+                background-image: url("imagenes/ciencias6.jpg");
+            }
+            
+        </style>
+    
+    
+    
     </h:head>
     <h:body>
         <h:form id="loginForm">
  
            
             <p:growl id="msg" showDetail="true" life="3000" />
-            <p:panel header="Login" style="width: 360px;">
+            <p:panel header="Entrar" style="width: 380px; margin-top: 16%; margin-left: 39%;" >
  
                 <h:panelGrid id="loginPanel" columns="2">
  
@@ -33,7 +42,9 @@
                     <p:message for="contraseña"></p:message>
  
                     <p:spacer></p:spacer>
- 
+                    
+                    <p:commandButton onclick="self.location.href = 'faces/PaginaPrincipal.xhtml'" type="button" value="Regresar" />
+                    <p:spacer></p:spacer>
                     <p:commandButton action="#{login.login()}" value="Login" update="loginForm" ></p:commandButton>
  
                 </h:panelGrid>

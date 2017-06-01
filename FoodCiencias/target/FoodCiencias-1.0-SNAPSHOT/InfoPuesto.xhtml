@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:b="http://bootsfaces.net/ui"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:c="http://java.sun.com/jsp/jstl/core"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        
+        <title>Pagina Principal</title>
+        <link rel="stylesheet" type="text/css" href="css/estilos.css"/>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCi5x75xW2SQ4Z9CFGaANI2mJwdoAlPnRk" type="text/javascript"></script>
+    </h:head>
+    
+    <body>
+
+        <f:metadata>
+            <f:viewParam id="id" name="id" value="#{verPuesto.id}"/>
+            <f:viewAction action="#{verPuesto.obtenerPuesto}" />
+        </f:metadata>
+      <style>
+        #gmap {
+          height: 400px;
+          width: 50%;
+          float: left;
+        }
+      </style>
+      <div>            
+        <p:gmap id="gmap" center="#{verPuesto.lugar.latitud}, #{verPuesto.lugar.longitud}" zoom="20"
+                type="HYBRID" model="#{mapa.mapModel}"
+                widgetVar="map">
+          <p:ajax event="overlaySelect" listener="#{mapa.onMarkerSelect}"/>
+          <p:gmapInfoWindow id="infoWindow">
+            <p:outputPanel style="text-align: center; display: block; margin: auto">
+              <h:outputText value="#{mapa.marker.title}" />
+              <br/>
+              <h:button value="Ver mas" outcome="InfoPuesto.xhtml?id=#{mapa.marker.data.id}" />
+           </p:outputPanel>
+          </p:gmapInfoWindow>    
+        </p:gmap>
+        <h:inputHidden id="pLatitud" value="#{verPuesto.lugar.latitud}" />
+        <h:inputHidden id="pLongitud" value="#{verPuesto.lugar.longitud}" />  
+        <h:inputHidden id="pNombre" value="#{verPuesto.puesto.nombre}" />
+        <div id="info">
+          <div>
+            <h1><h:outputText value="#{verPuesto.puesto.nombre}"/></h1>
+            <h3><h:outputText value="Tipo de comida: #{verPuesto.puesto.tipoComida}"/></h3>
+          </div>
+        </div>
+      </div>
+      <h:form styleClass="form-signin" prependId="false">
+        <b:row>
+          <!-- Botón para el overlay de comentar -->
+          <p:commandButton value="Comentar" type="button" onclick="PF('comOverlay').show();"/>
+          <p:dialog header="Comentar" widgetVar="comOverlay" height="250" width="400">
+            <b:row>
+              <b:column col-xs="12" col-sm="12" col-md="12" col-lg="12">
+                <br/>
+                <br/>
+                <b:inputTextarea placeholder="Comenta aquí..." />
+              </b:column>
+            </b:row>
+            <b:row>
+              <br/>
+              <br/>
+              <b:commandButton look="primary btn-block" value="Agregar" size="lg" >
+                
+              </b:commandButton>
+            </b:row>
+          </p:dialog>
+          <!-- Botón para el overlay de calificar -->
+          <p:commandButton value="Calificar" type="button" onclick="PF('calOverlay').show();"/>
+          <p:dialog header="Calificar" widgetVar="calOverlay" height="200" width="400">
+            <b:row>
+              <b:column col-xs="12" col-sm="12" col-md="12" col-lg="12">
+                <div align="center" draggable="false">
+                  <h:outputText value="Calificación"/>
+                </div>
+                <br/>
+                <br/>
+                <p:rating style="width: 96px; margin: 0 auto;"/>
+              </b:column>
+            </b:row>
+            <b:row>
+              <br/>
+              <br/>
+              <b:commandButton look="primary btn-block" value="Agregar" size="lg" >
+                
+              </b:commandButton>
+            </b:row>
+          </p:dialog>
+        </b:row>
+      </h:form>
+    <h:form id="the-form">
+    <h:panelGroup id="comentarios" layout="block" style="width: 100%">
+
+        <ui:repeat value="#{verPuesto.comentario}" var="c">
+          <div style="width: 100%">
+            <div class="cNombre">
+              
+                <p>#{c.NIdUsuario.nombre}</p>
+            </div>
+            <div class="cFecha">
+              <p>#{c.fecha}</p>
+            </div>
+            <div class="cComentario">
+              <p>#{c.texto}</p>
+            </div>
+          </div>
+        </ui:repeat>
+    </h:panelGroup>
+    </h:form>
+        
+    <script type="text/javascript">
+        $( document ).ready(function() {
+            pLatitud = document.getElementById('pLatitud').value;
+            pLongitud = document.getElementById('pLongitud').value;
+            pNombre = document.getElementById('pNombre').value;
+            
+            starMarker = new google.maps.Marker({
+                position:new google.maps.LatLng(pLatitud, pLongitud),
+                icon: 'http://maps.google.com/mapfiles/kml/paddle/blu-circle.png',
+                animation: google.maps.Animation.DROP
+            });
+            
+            PF('map').addOverlay(starMarker);
+        });
+    </script>
+
+</body>
+</html>

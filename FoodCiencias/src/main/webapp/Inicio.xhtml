@@ -11,19 +11,25 @@
                 <meta content='text/html; charset=UTF-8' http-equiv="Content-Type"/>
                 <title>PrimeFaces</title>
             </f:facet>
+            <style>
+                ui-layout-unit div.ui-layout-unit-content{
+                    background-color: #333c4b !important;
+                }
+                
+                
+            </style>
+           
         </h:head>
 
         <h:body>
             <h:form id="form">
             <p:layout fullPage="true">
                 
-                <p:layoutUnit position="north" size="100" resizable="true" closable="true" collapsible="true" >
+                <p:layoutUnit id="norte" position="north" size="100" resizable="true" closable="true" collapsible="true">
                    
                     <h:panelGrid columns="5" cellpadding="10">
                     <img src="/imagenes/foodCiencias.jpg" height="60" width="120"/>
-                    <p:inputText/>
-                    <p:commandButton value="Buscar"></p:commandButton>
-                    <p:commandButton action="#{salir.cerrarSession()}" value="Salir" update="form"></p:commandButton>
+                    <p:commandButton action="#{salir.cerrarSession()}" value="Salir" update="form" icon="ui-icon-extlink"></p:commandButton>
                        </h:panelGrid>
                    
                 </p:layoutUnit>

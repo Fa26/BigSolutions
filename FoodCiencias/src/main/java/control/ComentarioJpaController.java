@@ -7,12 +7,14 @@ package control;
 
 import control.exceptions.NonexistentEntityException;
 import entidad.Comentario;
+import entidad.Puesto;
 import java.io.Serializable;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Query;
 import javax.persistence.EntityNotFoundException;
+import javax.persistence.TypedQuery;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 
@@ -130,6 +132,20 @@ public class ComentarioJpaController implements Serializable {
             cq.select(em.getCriteriaBuilder().count(rt));
             Query q = em.createQuery(cq);
             return ((Long) q.getSingleResult()).intValue();
+        } finally {
+            em.close();
+        }
+    }
+    
+    
+    public List<Comentario> findAllByPuestoID(Puesto id) {
+        EntityManager em = getEntityManager();
+        try {
+            TypedQuery<Comentario> query
+                = em.createNamedQuery("Comentario.findByPuesto", Comentario.class);
+            query.setParameter("nIdPuesto", id);
+            List<Comentario> results = query.getResultList();
+            return results;
         } finally {
             em.close();
         }

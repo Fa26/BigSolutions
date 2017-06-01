@@ -30,11 +30,8 @@
             <p:layout fullPage="true">
                 
                 
-                <p:layoutUnit position="south" size="100" closable="true" collapsible="true">
-                    Footer
-                </p:layoutUnit>
-
-                <p:layoutUnit position="west" size="175" header="#{administradorIH.adminstrador.usuario}" collapsible="true">
+            
+                <p:layoutUnit position="west" size="227" header="#{administradorIH.adminstrador.usuario}" collapsible="true">
                     
                     <p:menu>
                         <p:submenu styleClass="color">
@@ -46,6 +43,7 @@
                         
                         <p:menuitem value="Ver Puestos" outcome="VerPuestosIH.xhtml"  icon="ui-icon-folder-open"></p:menuitem>
                         <p:menuitem value="Censurar Comentario" outcome="CensuraCIH.xhtml"  icon="ui-icon-locked"></p:menuitem>
+                          <p:menuitem value="Salir" outcome="Inicio.xhtml"  icon="ui-icon-log-out"></p:menuitem>
                         </p:submenu>
                     </p:menu>
                   
@@ -54,7 +52,7 @@
               
                 <!-- layaut del  centro-->
                 <p:layoutUnit position="center">
-                    <img  src="../img/logoCiBN3.jpg" width="590" height="170" style="float: top" class="posicionImagen "/>
+                    <img  src="../img/logoCiBN3.jpg" width="600" height="190" style="float: top" class="posicionImagen "/>
                    
                 </p:layoutUnit>
 

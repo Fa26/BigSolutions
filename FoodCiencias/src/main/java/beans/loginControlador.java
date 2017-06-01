@@ -127,7 +127,7 @@ public class loginControlador implements Serializable{
         AdministradorController adm = new AdministradorController();
         Administrador a = adm.buscaUsuario(correo, contrasenia);
         if(correo.equals("") || contrasenia.equals("")){
-            message = new FacesMessage(FacesMessage.SEVERITY_ERROR, "Usuario o contraseña incorrecta" + correo + "" + contrasenia, null);
+            message = new FacesMessage(FacesMessage.SEVERITY_ERROR, "Usuario o contraseña incorrecta", null);
         faceContext.addMessage(null, message);
            return "Entrar"; 
             
@@ -155,9 +155,9 @@ public class loginControlador implements Serializable{
             faceContext.addMessage(null, message);
             return "Inicio";
         }
-        message = new FacesMessage(FacesMessage.SEVERITY_ERROR, "Usuario o contraseña incorrecto" + correo + "" + contrasenia, null);
+        message = new FacesMessage(FacesMessage.SEVERITY_ERROR, "Usuario o contraseña incorrecto", null);
         faceContext.addMessage(null, message);
-        return "PaginaPrincipal";
+        return "Entrar";
 }
     public HttpSession getSesion() {
         return sesion;

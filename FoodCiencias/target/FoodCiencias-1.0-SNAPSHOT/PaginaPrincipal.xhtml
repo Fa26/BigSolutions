@@ -7,7 +7,7 @@
       xmlns:b="http://bootsfaces.net/ui"
       xmlns:ui="http://java.sun.com/jsf/facelets">
     <h:head>
-        
+
         <title>Pagina Principal</title>
         <link rel="stylesheet" type="text/css" href="css/estilos.css"/>
         <meta charset="utf-8"/>
@@ -15,113 +15,110 @@
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCi5x75xW2SQ4Z9CFGaANI2mJwdoAlPnRk" type="text/javascript"></script>
     </h:head>
     <h:body>
-  
-    <h:form>
-    
-    <p:toolbar>
-        <f:facet name ="left">
-            <img class="center-block" src="imagenes/foodCiencias.jpg" width="300 " height="50"/>
-        </f:facet>
- 
-        <f:facet name ="right">
-            <p:commandButton type="button" value="Entrar" icon="ui-icon-key" onclick="PF('dlg1').show();"/>
-            <p:dialog header="Entrar" widgetVar="dlg1" showEffect="pop" >
-            <p:growl id="msg" showDetail="true" life="3000" />
- 
-                <h:panelGrid id="loginPanel" columns="2">
- 
-                    <h:outputText value="Correo:" />
- 
-                    <p:inputText id="correo" value="#{login.correo}" ></p:inputText>
- 
-                    <p:spacer></p:spacer>
- 
-                    <p:message for="correo" ></p:message>
- 
-                    <h:outputText value="Contraseña:" />
- 
-                    <p:password id="contraseña" value="#{login.contrasenia}"  feedback="false"></p:password>
- 
-                    <p:spacer></p:spacer>
- 
-                    <p:message for="contraseña"></p:message>
- 
-                    <p:spacer></p:spacer>
- 
-                    <p:commandButton action ="#{login.login()}" value="Entrar" ></p:commandButton>
- 
-                </h:panelGrid>
-            </p:dialog>
-            
-            <p:commandButton id="movieBtn" type="button" value="Registrarse" icon="ui-icon-pencil" onclick="self.location.href = 'faces/registro.xhtml'" />
-        </f:facet>
-          
-    </p:toolbar>
-    </h:form>
-        
-        
-        
-        
-   
-    <p:layout style="min-width:400px;min-height:200px;">
-  
-    <p:layoutUnit position="center">
-  
-        <f:facet name ="header" >
-            <p:column colspan="4" style="text-align: right" >
-                <p:row>Facultad De Ciencias</p:row>
-            </p:column>
-            
 
-        </f:facet>
-        
-       
-        <p:row></p:row>
-         <p:row>
-             
-             
-             <p:column rowspan="11">
-              
-             <p:gmap center="19.324803, -99.179306" zoom="25" 
-                type="HYBRID" model="#{mapa.mapModel}"
-                onPointClick="handlePoinDEtClick(event);"
-                style="width:400px;height:500px" widgetVar="mymap">
-                <p:ajax event="overlaySelect" listener="#{mapa.onMarkerSelect}"/>
-                <p:gmapInfoWindow id="infoWindow">
-                  <p:outputPanel style="text-align: center; display: block; margin: auto">
-                    <h:outputText value="#{mapa.marker.title}" />
-                    <br/>
-                    <h:button value="Ver Detalles" />
-                  </p:outputPanel>
-                </p:gmapInfoWindow>
-             </p:gmap>
-             
-             </p:column>
-             <p:column rowspan="40"></p:column>
-             <p:column rowspan="11" style="font-weight: bold;">
-          <img class="posImgIn" src="img/Fciencias.jpg" width="600" height="500"/>
-          </p:column>
-         </p:row>
-         
-        
-          <div style="height:250px"></div>
-          <p:outputPanel deferred="true" deferredMode="visible">
-        <h3>Pensaba poner algo  como derechos reservados  l.</h3>
-        <p>Lorem ipsum dolor sit amet...</p>
-        
-     
- 
-    </p:outputPanel>
-     
-        
-       
-         
-    </p:layoutUnit>
-    
-      
-        
-</p:layout>    
-        
-           
+        <h:form>
+
+            <p:toolbar>
+                <f:facet name ="left">
+                    <img class="center-block" src="imagenes/foodCiencias.jpg" width="300 " height="50"/>
+                </f:facet>
+
+                <f:facet name ="right">
+                    <p:commandButton type="button" value="Entrar" icon="ui-icon-key" onclick="PF('dlg1').show();"/>
+                    <p:dialog header="Entrar" widgetVar="dlg1" showEffect="pop" >
+                        <p:growl id="msg" showDetail="true" life="3000" />
+
+                        <h:panelGrid id="loginPanel" columns="2">
+
+                            <h:outputText value="Correo:" />
+
+                            <p:inputText id="correo" value="#{login.correo}" ></p:inputText>
+
+                            <p:spacer></p:spacer>
+
+                            <p:message for="correo" ></p:message>
+
+                            <h:outputText value="Contraseña:" />
+
+                            <p:password id="contraseña" value="#{login.contrasenia}"  feedback="false"></p:password>
+
+                            <p:spacer></p:spacer>
+
+                            <p:message for="contraseña"></p:message>
+
+                            <p:spacer></p:spacer>
+
+                            <p:commandButton action ="#{login.login()}" value="Entrar" ></p:commandButton>
+
+                        </h:panelGrid>
+                    </p:dialog>
+
+                    <p:commandButton id="movieBtn" type="button" value="Registrarse" icon="ui-icon-pencil" onclick="self.location.href = 'faces/registro.xhtml'" />
+                </f:facet>
+
+            </p:toolbar>
+        </h:form>
+
+
+
+
+
+        <p:layout style="min-width:400px;min-height:200px;">
+
+            <p:layoutUnit position="center">
+
+                <f:facet name ="header" >
+                    <p:column colspan="4" style="text-align: right" >
+                        <p:row>Facultad De Ciencias</p:row>
+                    </p:column>
+
+
+                </f:facet>
+
+
+                <p:row></p:row>
+                <p:row>
+
+
+                    <p:column rowspan="11">
+
+                        <p:gmap center="19.324803, -99.179306" zoom="25" 
+                                type="HYBRID" model="#{mapa.mapModel}"
+                                onPointClick="handlePoinDEtClick(event);"
+                                style="width:400px;height:500px" widgetVar="mymap">
+                            <p:ajax event="overlaySelect" listener="#{mapa.onMarkerSelect}"/>
+                            <p:gmapInfoWindow id="infoWindow">
+                                <p:outputPanel style="text-align: center; display: block; margin: auto">
+                                    <h:outputText value="#{mapa.marker.title}" />
+                                    <br/>
+                                    <h:button value="Ver mas" outcome="InfoPuesto.xhtml?id=#{mapa.marker.data.id}"/>
+                                </p:outputPanel>
+                            </p:gmapInfoWindow>
+                        </p:gmap>
+
+                    </p:column>
+                    <p:column rowspan="40"></p:column>
+                    <p:column rowspan="11" style="font-weight: bold;">
+                        <img class="posImgIn" src="img/Fciencias.jpg" width="600" height="500"/>
+                    </p:column>
+                </p:row>
+
+
+                <div style="height:250px"></div>
+                <p:outputPanel deferred="true" deferredMode="visible">
+                    <h3>Pensaba poner algo  como derechos reservados  l.</h3>
+                    <p>Lorem ipsum dolor sit amet...</p>
+
+
+
+                </p:outputPanel>
+
+
+            </p:layoutUnit>
+
+
+        </p:layout>    
+
+
     </h:body>
 </html>
