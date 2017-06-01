@@ -8,15 +8,27 @@
         <title>FoodCiencias</title>
     </h:head>
     <h:body>
+       <h:form id="form">     
+        <p:layoutUnit position="north" size="100" resizable="true" closable="true" collapsible="true" >
+                   
+                    <h:panelGrid columns="5" cellpadding="10">
+                    <img src="/imagenes/foodCiencias.jpg" height="60" width="120"/>
+                    <p:inputText/>
+                    <p:commandButton value="Buscar"></p:commandButton>
+                    <p:commandButton action="#{salir.cerrarSession()}" value="Salir" update="form"></p:commandButton>
+                    </h:panelGrid>
+                   
+        </p:layoutUnit>
+        
     <p:panel style="width: auto; height: auto">
         <p:panel id="basic" header="Informacion pueso" style="color: appworkspace">
         <h:panelGrid columns="2" cellpadding="10">
             <p:graphicImage value="/imagenes/puesto.jpeg"/>
             <p:panelGrid columns="1">
-                <h:outputText value="Nombre: #{puestoBean.datoPuesto.nombre} " style="font-weight: bold"/>
-                <h:outputText value="Hora de apertura: #{puestoBean.datoPuesto.horaApertura}" style="font-weight: bold"/>
-                <h:outputText value="Hora de cierre: #{puestoBean.datoPuesto.horaCierre}"  style="font-weight: bold"/>
-                <h:outputText value="Tipo de comida: #{puestoBean.datoPuesto.tipoComida}" style="font-weight: bold"/>  
+                <h:outputText value="Nombre: #{verPuesto.puesto.nombre}" style="font-weight: bold"/>
+                <h:outputText value="Hora de apertura:"  style="font-weight: bold"/>
+                <h:outputText value="Hora de cierre: "  style="font-weight: bold"/>
+                <h:outputText value="Tipo de comida: #{verPuesto.puesto.tipoComida}" style="font-weight: bold"/>  
             </p:panelGrid>
           
         </h:panelGrid>
@@ -67,6 +79,6 @@
         </h:panelGrid>
     </p:dataList>        
     </p:panel>
-   
+       </h:form>
     </h:body>
 </html>
